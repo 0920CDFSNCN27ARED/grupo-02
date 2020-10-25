@@ -1,0 +1,24 @@
+{
+  "name": "grupo-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0920CDFSNCN27ARED/grupo-02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0920CDFSNCN27ARED/grupo-02/issues"
+  },
+  "homepage": "https://github.com/0920CDFSNCN27ARED/grupo-02#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "request": "^2.88.2"
+  }
+}
