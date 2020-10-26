@@ -13,4 +13,4 @@
 ### Jofré, Iliana Micaela
     - mail: ilianamicaela@gmail.com
     - nacimiento: 31-jul-1991 (29 años)
-    - hobbies: hacer actividad física, hacer pizzas los sábados y jugar con Mia (mi perrita).
+    - hobbies: hacer actividad física (musculación, HIIT), hacer pizzas los sábados por la noche y jugar con Mia (mi perrita).
