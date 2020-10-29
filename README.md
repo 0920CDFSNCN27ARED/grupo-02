@@ -1,5 +1,5 @@
 # grupo-2
-## Temática del Marketplace
+# Temática del Marketplace
 
 Elegimos la temática "pastelería" dado que la venta de tortas personalizadas creció mucho el último tiempo y es una de las tendencias actuales, está de moda comprar tortas muy decoradas y temáticas para distintos eventos como cumpleaños, nacimientos, bautismos, aniversarios. 
 
@@ -15,7 +15,7 @@ Localidad: En caso de solicitar el envío a domicilio debe estar en el radio de 
 
 Plus: Uso de redes sociales donde podemos publicitar la web o uso de internet ya que podríamos utilizar Google Adds para una mayor conversión. 
 
-## Inspiración
+# Inspiración
 
 Nos inspiramos en referentes conocidos en la pastelería, notamos que el objetivo de la Home es tentar a quién entra a su Sitio utilizando imágenes y banners llamativos, contando su historia o qué los inpira a cocinar y siempre disponibilizando la opción de pedidos y envíos. 
 
@@ -29,7 +29,7 @@ Para el diseño de la web buscamos otros referentes conocidos en la venta de ali
 - https://elclubdelamilanesa.com/
 - https://www.hechoenlapasteleria.com.ar/
 
-## Integrantes:
+# Integrantes:
 
 ### Becce, Enzo Norberto
 
