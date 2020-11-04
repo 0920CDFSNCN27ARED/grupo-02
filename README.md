@@ -47,3 +47,7 @@ Para el diseño de la web buscamos otros referentes conocidos en la venta de ali
     - hobbies: hacer actividad física (musculación, HIIT), hacer pizzas los sábados por la noche y jugar con Mia (mi perrita).
 
     // Link a wireframe del home. https://wireframe.cc/4D6xig
+
+# Tablero de trabajo
+
+    - Trello: https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh
