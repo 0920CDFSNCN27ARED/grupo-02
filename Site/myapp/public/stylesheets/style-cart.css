@@ -1,0 +1,33 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.cart-main-container{
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.5em;
+    border-radius: 1%;
+    border: 1px solid grey;
+    background-color: lightgray;
+}
+
+.cart-item-quantity{
+    width: 50%;
+}
+
+.cart-title{
+    background-color: none;
+    height: 100%;
+    padding: 1em;
+}
+.cart-quantity-button{
+    width: 1em;
+    height: 1em;
+}
