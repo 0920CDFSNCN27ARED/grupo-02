@@ -21,7 +21,6 @@ header button {
   color: white;
 }
 
-
 h1 {
   font-family: 'Cinzel', serif;	
   font-size: 20px;
@@ -63,3 +62,48 @@ nav.nav-bar ul li:hover {
   position: relative;
   left: 90px;
 }
+
+main{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.banner {
+  height: 330px;
+  background-color: rgb(245, 238, 238);
+  background-image: url("/images/banner2.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.word {
+  border: 3px;
+  border-style: double;
+  border-color: rgba(235, 31, 99, 0.479);
+  position: absolute;
+  left: 73%;
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+.word p { 
+  text-align: center;
+  color: grey;
+  font-size: 40px;
+  padding: 10px 3px;
+}
+
+.optionBanner{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  position: relative;
+  right: -67%;
+  top: -20px;
+}
+
+.optionBanner:hover{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  color: rgb(241, 123, 143);
+}
+
