@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/style-cart.css">
     <title>Tu carrito</title>
@@ -23,82 +24,53 @@
     </header>
     <main class="cart-main-container">
         <h2 class="cart-title">
-            Tu carrito
+            Tu carrito de compras
         </h2>
         <article class="flex">
             <div class="cart-item-img">
-                    <a href="https://google.com.ar" target="_blank">
-                        <img src="https://d1uz88p17r663j.cloudfront.net/original/6383606c9b54e782cc49dbccede9d9f6__0000s_0019_06_-_Torta_de_Manzana.jpg" alt="Una imagen cualquiera" width="50px" height="50px">
-                    </a>
+                <img src="https://d1uz88p17r663j.cloudfront.net/original/6383606c9b54e782cc49dbccede9d9f6__0000s_0019_06_-_Torta_de_Manzana.jpg" alt="Una imagen cualquiera" width="50px" height="50px">
             </div>
-            <div class="cart-item-name"> 
-                <p><a href="">Torta de Manzana</a></p>
-            </div>
-            <div class="cart-item-quantity flex">
-                <button class="cart-quantity-button">-</button>
-                <p>10</p>
-                <button class="cart-quantity-button">+</button>
-            </div>
-            <div class="cart-item-price">
-                <p>$ 1.000</p>
-            </div>
-        </article>
-        <article class="flex">
-            <div class="cart-item-img">
-                    <a href="https://google.com.ar" target="_blank">
-                        <img src="https://d1uz88p17r663j.cloudfront.net/original/6383606c9b54e782cc49dbccede9d9f6__0000s_0019_06_-_Torta_de_Manzana.jpg" alt="Una imagen cualquiera" width="50px" height="50px">
-                    </a>
-            </div>
-            <div class="cart-item-name"> 
-                <p><a href="">Torta de Manzana</a></p>
-            </div>
-            <div class="cart-item-quantity flex">
-                <button class="cart-quantity-button">-</button>
-                <p>10</p>
-                <button class="cart-quantity-button">+</button>
-            </div>
-            <div class="cart-item-price">
-                <p>$ 1.000</p>
-            </div>
-        </article>
-        <article class="flex">
-            <div class="cart-item-img">
-                    <a href="https://google.com.ar" target="_blank">
-                        <img src="https://d1uz88p17r663j.cloudfront.net/original/6383606c9b54e782cc49dbccede9d9f6__0000s_0019_06_-_Torta_de_Manzana.jpg" alt="Una imagen cualquiera" width="50px" height="50px">
-                    </a>
-            </div>
-            <div class="cart-item-name"> 
-                <p><a href="">Torta de Manzana</a></p>
-            </div>
-            <div class="cart-item-quantity flex">
-                <button class="cart-quantity-button">-</button>
-                <p>10</p>
-                <button class="cart-quantity-button">+</button>
-            </div>
-            <div class="cart-item-price">
-                <p>$ 1.000</p>
-            </div>
-        </article>
-        <article class="flex">
-            <div class="cart-item-img">
-                    <a href="https://google.com.ar" target="_blank">
-                        <img src="https://d1uz88p17r663j.cloudfront.net/original/6383606c9b54e782cc49dbccede9d9f6__0000s_0019_06_-_Torta_de_Manzana.jpg" alt="Una imagen cualquiera" width="50px" height="50px">
-                    </a>
-            </div>
-            <div class="cart-item-name"> 
-                <p><a href="">Torta de Manzana</a></p>
-            </div>
-            <div class="cart-item-quantity flex">
-                <button class="cart-quantity-button">-</button>
-                <p>10</p>
-                <button class="cart-quantity-button">+</button>
+            <div class="cart-container-name-quantity">
+                <div class="cart-item-name">
+                    <p><a href="">Torta de Manzana</a></p>
+                </div>
+                <div class="cart-item-quantity flex">
+                    <button class="cart-quantity-button">-</button>
+                    <p>10</p>
+                    <button class="cart-quantity-button">+</button>
+                </div>
             </div>
             <div class="cart-item-price">
                 <p>$ 1.000</p>
             </div>
         </article>
     </main>
+    <div class="flex buttons-return-continue">
+        <button class="b-return"><p>Seguir comprando</p></button>
+        <button class="b-continue"><p>Finalizar compra</p></button>
+    </div>
     <footer>
+        <div class="contacto">
+            <p class="p-footer">Dónde encontrarnos</p>
+            <ul class="ul-footer">
+                <li>E-mail: <a href="mailto:someone@example.com">lazuccheriera-info@gmail.com.ar</a></li>
+                <li>Télefono: <a href="tel:+541131158094">4750-5050</a></li>
+                <li>Dirección: José Luis Cantil 4501, Devoto</li>
+            </ul>
+        </div>
+        <div class="socialRed">
+            <p class="p-footer">Redes Sociales</p>
+            <i class="fab fa-instagram fa-2x"></i>
+            <i id="fb" class="fab fa-facebook-square fa-2x"></i>
+        </div>
+        <div class="atencion">
+            <p class="p-footer">Horarios de atención</p>
+            <ul class="ul-footer">
+                <li>Lunes a Viernes 9 a 13hs. y 16 a 19hs.</li>
+                <li>Sábados 9 a 13hs</li>
+                <li>Domingos 8 a 11 hs.</li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
