@@ -67,7 +67,6 @@ nav.nav-bar ul li:hover {
 
 main{
   position: relative;
-  box-sizing: border-box;
 }
 
 .banner {
@@ -110,7 +109,7 @@ main{
 }
 
 .articleA {
-  margin: 0% 14%;
+  margin: 2% 14%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -148,7 +147,7 @@ h2 {
 }
 
 .conjunto {
-  margin-top: 3%;
+  margin-top: 4%;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -219,25 +218,80 @@ h2 {
   padding: 5px;
 }
 
-.maps {  
-  background-color: whitesmoke;
-  margin-top: 5%;
+.sale {
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+}
+
+mark {
+  background-color: rgb(245, 223, 26);
+}
+
+.retiro {
   position: relative;
 }
 
-.maps h3 {
-  margin-bottom: 1%;
-  align-items: flex-start;
+.retiro p {
   font-size: 25px;
+  position: absolute;
+  left: 23.5%;
+  margin-top: 22%;
+}
+
+.location {
+  margin: 6% 15% 5% 10%;
+  display: flex;
+  align-items: center;
+}
+
+.location h3 {
   text-align: center;
 }
 
-.maps iframe {
-  position: absolute;
-  left: 31%;
+.location h3 img{
+  width: 25%;
 }
 
 footer {
-  height: 10%;
-  background-color: black;
+  background-color: rgb(245, 231, 231);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  color: rgb(105, 61, 61);
 }
+
+.p-footer {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.ul-footer {
+  padding: 0px 0px;
+  margin: 0px 0px;;
+}
+.ul-footer li {
+  list-style: none;
+}
+
+.ul-footer li a{
+  text-decoration: none;
+  color: rgb(105, 61, 61);
+}
+
+.ul-footer li a:hover{
+  color: red
+}
+
+.socialRed i{
+  padding-right: 5px;
+  color: rgb(228, 28, 178);
+}
+
+#fb {
+  color: blue;
+}
+
