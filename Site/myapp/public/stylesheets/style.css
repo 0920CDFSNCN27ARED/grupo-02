@@ -1,8 +1,9 @@
 body {
   margin: auto;
   font-family: "Calibri","Roboto","arial";
-	font-size: 15px;
-	color: black;
+  font-size: 15px;
+  width: 100%;
+	color: grey;
 }
 
 header {
@@ -28,6 +29,7 @@ h1 {
 		border-color: rgba(235, 31, 99, 0.479);
     border-width: 3px;
     padding: 5px;
+    color: black;
 }
 
 .nav-bar {
@@ -78,7 +80,7 @@ main{
 }
 
 .word {
-  border: 3px;
+  border: 7px;
   border-style: double;
   border-color: rgba(235, 31, 99, 0.479);
   position: absolute;
@@ -107,3 +109,135 @@ main{
   color: rgb(241, 123, 143);
 }
 
+.articleA {
+  margin: 0% 14%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.articleA img {
+  width: 30%;
+}
+
+.articleA div {
+  position: relative;
+}
+
+h2 {
+  font-size: 33px;;
+  color: rgb(129, 111, 111);
+}
+
+.articleA div p {
+  width: 80% ;
+  font-size: 20px;;
+}
+
+.articleA div button {
+  position: absolute;
+  left: 65%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.conjunto {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleB {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 6%;
+}
+
+.articleB img {
+  width: 40%;
+}
+
+.articleB div {
+  position: relative;
+  left: 3%;
+}
+
+.articleB div p {
+  width: 80%;
+  font-size: 20px;
+}
+
+.articleB div button {
+  position: absolute;
+  right: 40%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.articleC {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleC img {
+  width: 35%;
+}
+
+.articleC div {
+  position: relative;
+  left: 3%;
+}
+
+.articleC div p {
+  width: 80%;
+  font-size: 20px;  
+}
+
+.articleC div button {
+  position: absolute;
+  left: 45%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.maps {  
+  background-color: whitesmoke;
+  margin-top: 5%;
+  position: relative;
+}
+
+.maps h3 {
+  margin-bottom: 1%;
+  align-items: flex-start;
+  font-size: 25px;
+  text-align: center;
+}
+
+.maps iframe {
+  position: absolute;
+  left: 31%;
+}
+
+footer {
+  height: 10%;
+  background-color: black;
+}
