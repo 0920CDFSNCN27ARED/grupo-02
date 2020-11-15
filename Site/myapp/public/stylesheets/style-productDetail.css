@@ -1,0 +1,350 @@
+body {
+  margin: auto;
+  font-family: "Calibri","Roboto","arial";
+  font-size: 15px;
+  width: 100%;
+	color: grey;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+}
+
+header button {
+  margin: 0px 12px;
+  padding: 10px;
+  border-style: none;
+  background-color: rgba(236, 133, 210, 0.774);
+  color: white;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;	
+  font-size: 20px;
+  border-style: solid;
+		border-color: rgba(235, 31, 99, 0.479);
+    border-width: 3px;
+    padding: 5px;
+    color: black;
+}
+
+.nav-bar {
+  width: 40%;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  color: grey;
+  padding-left: 50px;
+  font-size: 19px;
+}
+
+nav.nav-bar ul li:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.img-cart {
+  width: 3%;
+  position: relative;
+  left: 75px;;
+}
+
+.img-logo {
+  width: 8%;
+  position: relative;
+  left: 90px;
+}
+
+main{
+  position: relative;
+}
+
+.banner {
+  height: 330px;
+  background-color: rgb(245, 238, 238);
+  background-image: url("/images/banner2.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.word {
+  border: 7px;
+  border-style: double;
+  border-color: rgba(235, 31, 99, 0.479);
+  position: absolute;
+  left: 73%;
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+.word p { 
+  text-align: center;
+  color: grey;
+  font-size: 40px;
+  padding: 10px 3px;
+}
+
+.optionBanner{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  position: relative;
+  right: -67%;
+  top: -20px;
+}
+
+.optionBanner:hover{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  color: rgb(241, 123, 143);
+}
+
+.articleA {
+  margin: 2% 14%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.articleA img {
+  width: 30%;
+}
+
+.articleA div {
+  position: relative;
+}
+
+h2 {
+  font-size: 33px;;
+  color: rgb(129, 111, 111);
+}
+
+.articleA div p {
+  width: 80% ;
+  font-size: 20px;;
+}
+
+.articleA div button {
+  position: absolute;
+  left: 65%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.conjunto {
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleB {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 6%;
+}
+
+.articleB img {
+  width: 40%;
+}
+
+.articleB div {
+  position: relative;
+  left: 3%;
+}
+
+.articleB div p {
+  width: 80%;
+  font-size: 20px;
+}
+
+.articleB div button {
+  position: absolute;
+  right: 40%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.articleC {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleC img {
+  width: 35%;
+}
+
+.articleC div {
+  position: relative;
+  left: 3%;
+}
+
+.articleC div p {
+  width: 80%;
+  font-size: 20px;  
+}
+
+.articleC div button {
+  position: absolute;
+  left: 45%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.sale {
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+}
+
+mark {
+  background-color: rgb(245, 223, 26);
+}
+
+.retiro {
+  position: relative;
+}
+
+.retiro p {
+  font-size: 25px;
+  position: absolute;
+  left: 23.5%;
+  margin-top: 22%;
+}
+
+.location {
+  margin: 6% 15% 5% 10%;
+  display: flex;
+  align-items: center;
+}
+
+.location h3 {
+  text-align: center;
+}
+
+.location h3 img{
+  width: 25%;
+}
+
+footer {
+  background-color: rgb(245, 231, 231);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  color: rgb(105, 61, 61);
+}
+
+.p-footer {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.ul-footer {
+  padding: 0px 0px;
+  margin: 0px 0px;;
+}
+.ul-footer li {
+  list-style: none;
+}
+
+.ul-footer li a{
+  text-decoration: none;
+  color: rgb(105, 61, 61);
+}
+
+.ul-footer li a:hover{
+  color: red
+}
+
+.socialRed i{
+  padding-right: 5px;
+  color: rgb(228, 28, 178);
+}
+
+#fb {
+  color: blue;
+}
+
+
+
+
+
+
+ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
+li.active{border-bottom:3px solid silver;}
+
+.item-photo{display:flex;justify-content:center;align-items:center;border-right:1px solid #f6f6f6;}
+.menu-items{list-style-type:none;font-size:11px;display:inline-flex;margin-bottom:0;margin-top:20px}
+.btn-success{width:100%;border-radius:0;}
+.section{width:100%;margin-left:-15px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
+.title-price{margin-top:30px;margin-bottom:0;color:black}
+.title-attr{margin-top:0;margin-bottom:0;color:black;}
+.btn-minus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-right:0;}
+.btn-plus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-left:0;}
+div.section > div {width:100%;display:inline-flex;}
+div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-right:5px;max-width:18%;text-align:center;}
+.attr,.attr2{cursor:pointer;margin-right:5px;height:20px;font-size:10px;padding:2px;border:1px solid gray;border-radius:2px;}
+.attr.active,.attr2.active{ border:1px solid orange;}
+
+@media (max-width: 426px) {
+    .container {margin-top:0px !important;}
+    .container > .row{padding:0 !important;}
+    .container > .row > .col-xs-12.col-sm-5{
+        padding-right:0 ;    
+    }
+    .container > .row > .col-xs-12.col-sm-9 > div > p{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .container > .row > .col-xs-12.col-sm-9 > div > ul{
+        padding-left:10px !important;
+        
+    }            
+    .section{width:104%;}
+    .menu-items{padding-left:0;}
+}
+
+
+.product {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  size: 300px;
+}
+
+.product img {
+  display: flex;
+  width: 30%;
+  border-radius: 3%;
+
+}
