@@ -267,6 +267,8 @@ footer {
   font-weight: bold;
   font-size: 18px;
   margin: 10px 0px;
+  display: flex;
+  bottom: 650px;
 }
 
 .ul-footer {
@@ -294,6 +296,9 @@ footer {
 #fb {
   color: blue;
 }
+
+
+
 ul > li{margin-right:25px;font-weight:lighter;cursor:pointer}
 li.active{border-bottom:3px solid silver;}
 
