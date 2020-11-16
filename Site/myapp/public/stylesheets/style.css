@@ -2,8 +2,7 @@ body {
   margin: auto;
   font-family: "Calibri","Roboto","arial";
   font-size: 15px;
-  width: 100%;
-	color: grey;
+ 	color: grey;
 }
 
 header {
@@ -67,6 +66,7 @@ nav.nav-bar ul li:hover {
 
 main{
   position: relative;
+  margin: 1.5em;
 }
 
 .banner {
@@ -98,7 +98,7 @@ main{
   border-style: none;
   background-color:rgb(245, 238, 238);
   position: relative;
-  right: -67%;
+  right: -72.5%;
   top: -20px;
 }
 
@@ -117,7 +117,8 @@ main{
 }
 
 .articleA img {
-  width: 30%;
+  width: 35%;
+  border-radius: 5%;
 }
 
 .articleA div {
@@ -162,6 +163,7 @@ h2 {
 
 .articleB img {
   width: 40%;
+  border-radius: 5%;
 }
 
 .articleB div {
@@ -194,6 +196,7 @@ h2 {
 
 .articleC img {
   width: 35%;
+  border-radius: 5%;
 }
 
 .articleC div {
@@ -252,6 +255,10 @@ mark {
 
 .location h3 img{
   width: 25%;
+}
+
+iframe {
+  border-radius: 5%;
 }
 
 footer {
