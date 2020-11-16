@@ -15,3 +15,11 @@ app.get('/cart', (req,res)=>{
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/index.html');
 });
+
+app.get('/producDetail', (req,res)=>{
+    res.sendFile(__dirname + '/views/producDetail.html');
+});
+
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
