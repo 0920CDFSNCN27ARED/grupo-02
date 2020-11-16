@@ -2,7 +2,11 @@ body {
   margin: auto;
   font-family: "Calibri","Roboto","arial";
   font-size: 15px;
- 	color: grey;
+   color: grey;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
 header {
