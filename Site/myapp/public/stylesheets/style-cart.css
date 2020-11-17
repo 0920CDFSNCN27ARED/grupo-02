@@ -4,7 +4,7 @@
     position: relative;
     margin: 2em;
     border-radius: 1em; 
-    background-color: rgb(245, 238, 238);
+    background-color: rgba(245, 238, 238, 0.904);
 }
 
 .title{
@@ -15,7 +15,7 @@
 .detail{
     align-self: center;
     padding: 1%;
-    margin: 0 auto;
+    margin: 1em auto;
     width: 75%;
     border: 3px solid white;
 }
