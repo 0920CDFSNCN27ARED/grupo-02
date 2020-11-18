@@ -1,0 +1,20 @@
+.options {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 1%;
+    text-align: center;
+}
+.formRegister {
+    display: flex;
+    justify-content: center;
+}
+
+.formRegister p {
+    text-align: center;
+}
+
