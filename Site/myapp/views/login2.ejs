@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('partialls/head') %>
+    <link  href="/stylesheets/style-register.css" rel="stylesheet">
+</head>
+    <body>
+        <%- include('partialls/header') %>
+      <main>
+        <section class="options">
+            <h2>Creá tu cuenta</h2>
+            <div class="buttons">
+                <button class="gmail" name="gmail"><i class="fab fa-google-plus-g fa-2x"></i></button>
+                <button name="facebook"><i id="fb" class="fab fa-facebook-square fa-2x"></i></button>
+            </div>
+        </section>
+            <section>
+                <form class="formRegister" acction=" " method="POST">
+                    <fieldset>
+                        <p>
+                            <input class="register" placeholder="tuemail@ejemplo.com" name="email" type="text">
+                        </p>
+                        <p>
+                            <input class="register" placeholder="Password" name="password" type="password"
+                                value="">
+                        </p>
+                        <p class="checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" value="Recordarme"> Recordarme
+                            </label>
+                        </p>
+                        <p class="psubmit">
+                            <input class="created"  type="submit" value="Login">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <%- include('partialls/footer') %>
+    </body>
+</html>

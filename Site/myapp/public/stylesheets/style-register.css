@@ -8,6 +8,10 @@
 h2 {
     margin: 1%;
     text-align: center;
+    border: solid 1.2px;
+    padding: 0px 45px;
+    background-color: rgb(238, 232, 232);
+    font-size: 30px;
 }
 .formRegister {
     display: flex;
