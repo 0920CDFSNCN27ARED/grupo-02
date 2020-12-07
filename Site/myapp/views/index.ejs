@@ -1,25 +1,9 @@
 <!DOCTYPE html>
 <head lang="es">
-	<meta charset="utf-8">
-	<title>La zuccheriera</title>
-	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link  href="/stylesheets/style.css" rel="stylesheet">
+	<%- include('partialls/head') %> 
 </head>
 <body>
-	<header>
-		<button name="menu"><i class="fas fa-bars"></i></button>
-		<h1>Regalá algo rico, podés programar tu pedido</h1>
-		<nav class="nav-bar">
-			<ul class="nav-menu-list">
-				<li>Productos</li>
-				<li>Catering</li>
-				<li>Login</li>
-			</ul>
-		</nav>
-		<img class="img-cart" src="/images/cart.png" alt="Imagen de carrito de comprar">
-		<img class="img-logo" src="/images/vector-logo.png" alt="Logo de cupcake">	
-	</header>
+	<%- include('partialls/header') %>
 	<main>
 		<div class="banner">
 			<div class="word">
@@ -66,27 +50,5 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9412547137886!2d-58.51749068514886!3d-34.60564696510641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ce1c7cd781%3A0x3878fb7845b83541!2sJos%C3%A9%20Luis%20Cantilo%204500-4448%2C%20C1419HOH%20CABA!5e0!3m2!1ses-419!2sar!4v1605319007429!5m2!1ses-419!2sar" width="600" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
 		</section>
 	</main>
-	<footer>
-		<div class="contacto">
-			<p class="p-footer">Dónde encontrarnos</p>
-			<ul class="ul-footer">
-				<li>E-mail: <a href="mailto:someone@example.com">lazuccheriera-info@gmail.com.ar</a></li>
-				<li>Télefono: <a href="tel:+541131158094">4750-5050</a></li>
-				<li>Dirección: José Luis Cantil 4501, Devoto</li>
-			</ul>
-		</div>
-		<div class="socialRed">
-			<p class="p-footer">Redes Sociales</p>
-			<i class="fab fa-instagram fa-2x"></i>
-			<i id="fb" class="fab fa-facebook-square fa-2x"></i>
-		</div>
-		<div class="atencion">
-			<p class="p-footer">Horarios de atención</p>
-			<ul class="ul-footer">
-				<li>Lunes a Viernes 9 a 13hs. y 16 a 19hs.</li>
-				<li>Sábados 9 a 13hs</li>
-				<li>Domingos 8 a 11 hs.</li>
-			</ul>
-		</div>
-	</footer>
+	<%- include('partialls/footer') %>
 </body>

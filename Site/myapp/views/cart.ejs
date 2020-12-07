@@ -1,100 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <%- include('partialls/head') %>
         <link rel="stylesheet" href="/stylesheets/style-cart.css">
-        <link rel="stylesheet" href="/stylesheets/style.css">
-        <title>Tu carrito</title>
     </head>
     <body>
-        <header>
-            <button name="menu"><i class="fas fa-bars"></i></button>
-            <h1>Regalá algo rico, podés programar tu pedido</h1>
-            <nav class="nav-bar">
-                <ul class="nav-menu-list">
-                    <li>Productos</li>
-                    <li>Catering</li>
-                    <li>Login</li>
-                </ul>
-            </nav>
-            <img class="img-cart" src="/images/cart.png" alt="Imagen de carrito de comprar">
-            <img class="img-logo" src="/images/vector-logo.png" alt="Logo de cupcake">
-        </header>
+        <%- include('partialls/header') %>
         <main class="cart-main-container">
             <section class="title">
                 <h2 class="cart-title">
                     Tu carrito de compras
                 </h2>
             </section>
-            <section class="detail">
-                <article class="product">
-                    <div class="cart-item-img">
-                        <img src="/images/cake-frutilla.jpeg" alt="Tarta frutilla">
-                    </div>
-                    <div class="cart-container-name-quantity">
-                        <h3 class="tittleCompra">TORTA DE MANZANA</h3>
-                        <div class="cart-item-quantity-flex">
-                            <input class="cart-quantity-button" type="button" name="less" value="-">
-                            <input class="quantity" type="number" name="quantity" value="1" readonly>
-                            <input class="cart-quantity-button" type="button" name="more" value="+">
-                        </div>
-                    </div>
-                    <div class="cart-item-price">
-                        <p>$1.000</p>
-                    </div>
-                </article>
-            </section>
-            <section class="detail">
-                <article class="product">
-                    <div class="cart-item-img">
-                        <img src="/images/cake-frutilla.jpeg" alt="Tarta frutilla">
-                    </div>
-                    <div class="cart-container-name-quantity">
-                        <h3 class="tittleCompra">TORTA DE MANZANA</h3>
-                        <div class="cart-item-quantity-flex">
-                            <input class="cart-quantity-button" type="button" name="less" value="-">
-                            <input class="quantity" type="number" name="quantity" value="1" readonly>
-                            <input class="cart-quantity-button" type="button" name="more" value="+">
-                        </div>
-                    </div>
-                    <div class="cart-item-price">
-                        <p>$1.000</p>
-                    </div>
-                </article>
-            </section>
-            <section class="flex cart-total">
-                <h4>TOTAL:</h4>
-                <p>$ 2.000</p>
-            </section>
+            <% for (let i = 0; i < 3 ; i++){ %>
+                <%- include('partialls/cart-item') %> 
+            <% } %>
             <section class="flex buttons-return-continue">
                     <input class="b-return" type="button" name="return" value="SEGUIR COMPRANDO">
                     <input class="b-continue" type="button" name="continue" value="CONTINUAR">
             </section>
         </main>
-        <footer>
-            <div class="contacto">
-                <p class="p-footer">Dónde encontrarnos</p>
-                <ul class="ul-footer">
-                    <li>E-mail: <a href="mailto:someone@example.com">lazuccheriera-info@gmail.com.ar</a></li>
-                    <li>Télefono: <a href="tel:+541131158094">4750-5050</a></li>
-                    <li>Dirección: José Luis Cantil 4501, Devoto</li>
-                </ul>
-            </div>
-            <div class="socialRed">
-                <p class="p-footer">Redes Sociales</p>
-                <i class="fab fa-instagram fa-2x"></i>
-                <i id="fb" class="fab fa-facebook-square fa-2x"></i>
-            </div>
-            <div class="atencion">
-                <p class="p-footer">Horarios de atención</p>
-                <ul class="ul-footer">
-                    <li>Lunes a Viernes 9 a 13hs. y 16 a 19hs.</li>
-                    <li>Sábados 9 a 13hs</li>
-                    <li>Domingos 8 a 11 hs.</li>
-                </ul>
-            </div>
-        </footer>
+        <%- include('partialls/footer') %>
     </body>
 </html>

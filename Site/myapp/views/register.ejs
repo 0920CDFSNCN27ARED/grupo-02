@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <head lang="es">
-	<meta charset="utf-8">
-	<title>La zuccheriera</title>
-	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link  href="/stylesheets/style.css" rel="stylesheet">
+	<%- include('partialls/head') %>
     <link  href="/stylesheets/style-register.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<button name="menu"><i class="fas fa-bars"></i></button>
-		<h1>Regalá algo rico, podés programar tu pedido</h1>
-		<nav class="nav-bar">
-			<ul class="nav-menu-list">
-				<li>Productos</li>
-				<li>Catering</li>
-				<li>Login</li>
-			</ul>
-		</nav>
-		<img class="img-cart" src="/images/cart.png" alt="Imagen de carrito de comprar">
-		<img class="img-logo" src="/images/vector-logo.png" alt="Logo de cupcake">	
-    </header>
+	<%- include('partialls/header') %>
     <main>
         <section class="options">
             <h2>Creá tu cuenta</h2>
@@ -51,27 +35,5 @@
             </form>
         </section>
     </main>
-    <footer>
-		<div class="contacto">
-			<p class="p-footer">Dónde encontrarnos</p>
-			<ul class="ul-footer">
-				<li>E-mail: <a href="mailto:someone@example.com">lazuccheriera-info@gmail.com.ar</a></li>
-				<li>Télefono: <a href="tel:+541131158094">4750-5050</a></li>
-				<li>Dirección: José Luis Cantil 4501, Devoto</li>
-			</ul>
-		</div>
-		<div class="socialRed">
-			<p class="p-footer">Redes Sociales</p>
-			<i class="fab fa-instagram fa-2x"></i>
-			<i id="fb" class="fab fa-facebook-square fa-2x"></i>
-		</div>
-		<div class="atencion">
-			<p class="p-footer">Horarios de atención</p>
-			<ul class="ul-footer">
-				<li>Lunes a Viernes 9 a 13hs. y 16 a 19hs.</li>
-				<li>Sábados 9 a 13hs</li>
-				<li>Domingos 8 a 11 hs.</li>
-			</ul>
-		</div>
-	</footer>
+	<%- include('partialls/footer') %>
 </body>
