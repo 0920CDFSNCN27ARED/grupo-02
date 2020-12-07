@@ -12,12 +12,14 @@
                     Tu carrito de compras
                 </h2>
             </section>
-            <% for (let i = 0; i < 3 ; i++){ %>
+            <% for (let i = 0; i < 6 ; i++){ %>
                 <%- include('partialls/cart-item') %> 
             <% } %>
-            <section class="flex buttons-return-continue">
+            <section>
+                <form class="flex buttons-return-continue" action="">
                     <input class="b-return" type="button" name="return" value="SEGUIR COMPRANDO">
                     <input class="b-continue" type="button" name="continue" value="CONTINUAR">
+                </form>
             </section>
         </main>
         <%- include('partialls/footer') %>

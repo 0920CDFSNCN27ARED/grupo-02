@@ -2,10 +2,19 @@
     {
         "id": 1,
 		"name": "Cafetera Moulinex Dolce Gusto",
-		"description": "Cafetera Dolce Guåsto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-		"price": 12000,
-		"discount": 50,
-		"image": "img-cafetera-moulinex.jpg",
-		"category": "in-sale"
-    }
+		"description": "Base de pionono, mousse de chocolate amargo, chocolate blanco y chocolate con leche.",
+		"price": 650,
+		"color": "brown",
+		"image": "tresmousse1.jpg",
+		"category": "cake"
+	},
+	{
+    "id": 2,
+    "name": "Torta de Frutilla",
+    "description": "Una torta con frutillas",
+    "price": 1000,
+    "color": "white",
+    "image": "cake-frutilla.jpg",
+    "category": "cake"
+  }
 ]

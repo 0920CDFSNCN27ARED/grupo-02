@@ -8,6 +8,9 @@ let productDetailController = {
     getProduct: (req,res)=>{
         res.render('productDetail');
     },
+    editProductForm:(req,res)=>{
+        res.render('editProduct')
+    },
 };
 
 module.exports = productDetailController;

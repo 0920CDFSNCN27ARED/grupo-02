@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <head lang="es">
-	<%- include('partialls/head') %>
-    <link  href="/stylesheets/style-register.css" rel="stylesheet">
+    <%- include('partialls/head') %>
+    <link href="/stylesheets/style-register.css" rel="stylesheet">
 </head>
+
 <body>
-	<%- include('partialls/header') %>
+    <%- include('partialls/header') %>
     <main>
         <section class="options">
             <h2>Creá tu cuenta</h2>
@@ -14,7 +16,7 @@
             </div>
         </section>
         <section>
-            <form class="formRegister" action="#" method="POST">
+            <form class="formRegister">
                 <fieldset>
                     <p>
                         <input class="register" type="text" id="name" name="name" placeholder="Valeria">
@@ -30,10 +32,10 @@
                     </p>
                     <p class="psubmit">
                         <input class="created" type="submit" value="Registrarse">
-					</p>             
+                    </p>
                 </fieldset>
             </form>
         </section>
     </main>
-	<%- include('partialls/footer') %>
+    <%- include('partialls/footer') %>
 </body>

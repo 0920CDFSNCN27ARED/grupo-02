@@ -1,45 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<head>
-    <meta charset="utf-8">
-    <title>La zuccheriera</title>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="/stylesheets/style-productDetail.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <button name="menu"><i class="fas fa-bars"></i></button>
-        <h1>Regalá algo rico, podés programar tu pedido</h1>
-        <nav class="nav-bar">
-            <ul class="nav-menu-list">
-                <li>Productos</li>
-                <li>Catering</li>
-                <li>Login</li>
-            </ul>
-        </nav>
-        <img class="img-cart" src="/images/cart.png" alt="Imagen de carrito de comprar">
-        <img class="img-logo" src="/images/vector-logo.png" alt="Logo de cupcake">
-    </header>
-    <main>
-
-        <div class="word">
-            <p>TRES MOUSSES</p>
-        </div>
- 
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <%- include('partialls/head') %>
+        <link href="/stylesheets/style-productDetail.css" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('partialls/header') %>
+        <main>
+            <div class="word">
+                <p>TRES MOUSSES</p>
+            </div>
             <article class="product">
                 <img src="/images/tresmousse1.jpg" alt="Producto seleccionado">
-       
-           
             <div class="col-xs-5" style="border:0px solid gray">
                 <!-- Datos del vendedor y titulo del producto -->
                 <h3>Torta Tres Mousses</h3>
-                <small><h5 style="color:#337ab7"> Más de (5054
-                        ventas)</h5></small>
+                <small>
+                    <h5 style="color:#337ab7"> Más de (5054 ventas)</h5>
+                </small>
 
                 <!-- Precios -->
                 <h6 class="title-price"><small>PRECIO OFERTA</small></h6>
@@ -56,19 +37,12 @@
                 <div class="section" style="padding-bottom:5px;">
                     <div>
                         <form action="../../form-result.php" method="post" target="_blank">
-                        
-                            <p>
-                        
-                                Hazla a tu Gusto:<br>
-                        
+                            <p>Hazla a tu Gusto:<br>
                                 <label><input type="checkbox" name="cb-Chips"> Extra Chips</label><br>
                                 <label><input type="checkbox" name="cb-Sin TACC"> Sin TACC</label><br>
                                 <label><input type="checkbox" name="cb-Sugar Rush"> Sugar Rush</label>
-                        
                             </p>
-                        
                             <p><input type="submit" value="Send data"></p>
-                        
                         </form>
                     </div>
                 </div>
@@ -86,12 +60,15 @@
                     <button class="btn btn-success"><span style="margin-right:20px"
                             class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al
                         carro</button>
-                    <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span>
-                            Agregar a lista de deseos</a></h6>
+                    <h6>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;">
+                            </span>Agregar a lista de deseos
+                        </a>
+                    </h6>
                 </div>
             </div>
-<div class="description">
-
+            <div class="description">
                 <ul class="menu-items">
                     <li class="active">Detalle del producto</li>
                     <li>Envío</li>
@@ -107,38 +84,14 @@
                             <li>Para 12 personas.</li>
                             <li>La cubierta de chocolate personalizable.</li>
                             <li>Se puede combinar con "Sugar Rush" donde la torta es decorada con las mas deliciosas golosinas.</li>
-                           
                         </ul>
                     </small>
                 </div>
             </div>
         </div>
     </div>
-</main>
-<footer>
-    <div class="contacto">
-        <p class="p-footer">Dónde encontrarnos</p>
-        <ul class="ul-footer">
-            <li>E-mail: <a href="mailto:someone@example.com">lazuccheriera-info@gmail.com.ar</a></li>
-            <li>Télefono: <a href="tel:+541131158094">4750-5050</a></li>
-            <li>Dirección: José Luis Cantil 4501, Devoto</li>
-        </ul>
-    </div>
-    <div class="socialRed">
-        <p class="p-footer">Redes Sociales</p>
-        <i class="fab fa-instagram fa-2x"></i>
-        <i id="fb" class="fab fa-facebook-square fa-2x"></i>
-    </div>
-    <div class="atencion">
-        <p class="p-footer">Horarios de atención</p>
-        <ul class="ul-footer">
-            <li>Lunes a Viernes 9 a 13hs. y 16 a 19hs.</li>
-            <li>Sábados 9 a 13hs</li>
-            <li>Domingos 8 a 11 hs.</li>
-        </ul>
-    </div>
-</footer>
+    </main>
+    <%- include('partialls/footer') %>
 
-</body>
-
+    </body>
 </html>
