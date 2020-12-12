@@ -6,8 +6,8 @@
 	<%- include('partialls/header') %>
 	<main>
             <section class="products">
-                <% for(let i = 0; i < 5; i++) { %> 
-                    <%- include('partialls/product') %>
+                <% for(let i = 0; i < products.length; i++) { %> 
+                    <%- include('partialls/product', {products: products[i]}) %>
                 <% } %>
             </section>
         </main>
