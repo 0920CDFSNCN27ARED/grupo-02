@@ -5,7 +5,7 @@
 <body>
 	<%- include('partialls/header') %>
 	<main>
-            <section class="products">
+            <section class="products" style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between;">
                 <% for(let i = 0; i < products.length; i++) { %> 
                     <%- include('partialls/product', {products: products[i]}) %>
                 <% } %>

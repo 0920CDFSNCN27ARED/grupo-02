@@ -1,29 +1,26 @@
 [
-  {
-    "id": 1,
-		"name": "Producto 1",
-		"description": "1 Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
-		"price": 1650,
-		"Decoración adicional": "Cookies temáticas",
-		"image": "letra-numero-chico.jpg",
-		"category": "sin-tacc"
-  },  
-  {
-    "id": 2,
-		"name": "Producto 2",
-		"description": "Descripción del producto 2.",
-		"price": 1500,
-		"Decoración adicional": "Cookies temáticas",
-		"image": "letra-numero-chico.jpg",
-		"category": "sin-tacc"
-  },  
-  {
-    "id": 3,
-		"name": "Producto 3",
-		"description": "Descripción del producto 3.",
-		"price": 2000,
-		"Decoración adicional": "Cookies temáticas",
-		"image": "letra-numero-chico.jpg",
-		"category": "sin-tacc"
-  } 
+    {
+        "id": 1,
+        "name": "Producto 1",
+        "description": "1 Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
+        "price": 1650,
+        "image": "letra-numero-chico.jpg",
+        "category": "sin-tacc"
+    },
+    {
+        "id": 2,
+        "name": "Producto 2",
+        "description": "Descripción del producto 2.",
+        "price": 1500,
+        "image": "letra-numero-chico.jpg",
+        "category": "sin-tacc"
+    },
+    {
+        "id": 3,
+        "name": "Producto 3",
+        "description": "Descripción del producto 3.",
+        "price": 2000,
+        "image": "letra-numero-chico.jpg",
+        "category": "sin-tacc"
+    }
 ]

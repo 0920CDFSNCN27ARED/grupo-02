@@ -4,11 +4,12 @@ const productController = require('../controllers/productController');
 
 router.get('/', productController.getProduct);
 router.get('/:id/detail', productController.getProductDetail);
+
+router.get('/newProduct', productController.newProductForm);
+router.post('/newProduct', productController.newProductPost);
 /*
 router.get('/:id/edit', productController.editProductForm);
-router.put('/:id/edit', productDetailController.editProduct);
+router.put('/:id/edit', productController.editProduct);
 
-router.get('/newProduct', productDetailController.newProductForm);
-router.post('/newProduct', productDetailController.newProduct);
 */
 module.exports = router;
