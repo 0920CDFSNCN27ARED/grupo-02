@@ -341,12 +341,12 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  size: 300px;
+  
 }
 
 .product img {
   display: flex;
-  width: 30%;
+  width: 45%;
   border-radius: 3%;
   left: 30;
 
