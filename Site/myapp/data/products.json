@@ -17,10 +17,10 @@
     },
     {
         "id": 3,
-        "name": "Producto C",
-        "description": "Descripción del producto 3.",
-        "price": 2000,
-        "image": "letra-numero-chico.jpg",
+        "name": "Tarta de ricota",
+        "description": "Holaa",
+        "price": "980",
+        "image": "",
         "category": "clásica"
     }
 ]
