@@ -38,20 +38,19 @@ let productController = {
     },
     updateProduct: (req,res) => {
         const products = getProduct.getProducts();
-        let product = products.find((prod)=>{
-            return prod.id == req.params.id
-        });
-        product = {
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.body.image,
-            category: req.body.category
-        };
+        for (let i = 0; products.length; i++) {
+            if (req.body.id == products[i].id) {
+                products[i].id = Number(req.body.id);
+                products[i].name = req.body.name;
+                products[i].description = req.body.description;
+                products[i].price = req.body.price;
+                products[i].image = req.body.image;
+                products[i].category = req.body.category;
 
-        getProduct.updateProduct(productsUpdate);
-        res.redirect("/product/:id/detail");
-    }
+                getProduct.updateProduct(products);
+                return res.redirect('/product')
+            } 
+        }
+    },
 };
-
 module.exports = productController;

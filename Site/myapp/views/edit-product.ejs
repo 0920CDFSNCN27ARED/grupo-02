@@ -9,16 +9,19 @@
     <%- include('partialls/header') %>
     <main>
         <section class="options">
-            <h2>Editar: <%= products.name %> </h2>
+            <h2>Editar: <%= products.name %></h2>
         </section>
         <section>
             <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST">
                 <fieldset>
+                    <p style="display: none">
+                        <label for="id">ID del producto: </label>
+                        <input class="register" type="text" id="id" name="id" value= "<%= products.id %>">
+                    </p>
                     <p>
                         <label for="name">Nombre del producto: </label>
                         <input class="register" type="text" id="name" name="name" value= "<%= products.name %>">
                     </p>
-                    
                     <p>
                         <label for="price">Precio: $</label>
                         <input class="register" type="number" id="price" name="price" value= "<%= products.price %>">
@@ -26,8 +29,8 @@
                     <p>
                         <label for="category">Categoría: </label>
                         <select name="category" id="category" >
-                            <option value="clasic" <%= products.category == "clásica" ? "selected" : "" %> >Clásica</option>
-                            <option value="decorated" <%= products.category == "decorada" ? "selected" : "" %> >Decorada</option>
+                            <option value="clásica" <%= products.category == "clásica" ? "selected" : "" %> >Clásica</option>
+                            <option value="decorada" <%= products.category == "decorada" ? "selected" : "" %> >Decorada</option>
                         </select>
                     </p>
                     <p>
