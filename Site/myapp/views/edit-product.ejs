@@ -12,7 +12,7 @@
             <h2>Editar: <%= products.name %></h2>
         </section>
         <section>
-            <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST">
+            <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <p style="display: none">
                         <label for="id">ID del producto: </label>

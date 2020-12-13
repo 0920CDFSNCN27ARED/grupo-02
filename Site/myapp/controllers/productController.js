@@ -15,14 +15,14 @@ let productController = {
     newProductForm: (req, res)=>{
         res.render('new-Product');
     },
-    newProductPost: (req, res) => {
+    newProductPost: (req, res, next) => {
         let productos = getProduct.getProducts();
         let newProduct = {
             id: productos[productos.length -1].id + 1,
             name: req.body.name,
             description: req.body.description,
             price: req.body.price,
-            image: req.body.image,
+            image: req.files[0].filename,
             category: req.body.category
         };
         productos.push(newProduct);
@@ -36,7 +36,7 @@ let productController = {
         });
         (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('edit-product',{products: product});
     },
-    updateProduct: (req,res) => {
+    updateProduct: (req,res, next) => {
         const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {
@@ -44,7 +44,7 @@ let productController = {
                 products[i].name = req.body.name;
                 products[i].description = req.body.description;
                 products[i].price = req.body.price;
-                products[i].image = req.body.image;
+                products[i].image = req.files[0].filename;
                 products[i].category = req.body.category;
 
                 getProduct.updateProduct(products);
