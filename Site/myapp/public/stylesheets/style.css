@@ -25,7 +25,7 @@ header button {
   color: white;
 }
 
-  h1 {
+h1 {
   font-family: 'Cinzel', serif;	
   font-size: 20px;
   border-style: solid;
@@ -33,10 +33,7 @@ header button {
     border-width: 3px;
     padding: 5px;
     color: black;
-  }
-
-
-
+}
 
 .nav-bar {
   width: 40%;
@@ -309,3 +306,318 @@ footer {
   color: blue;
 }
 
+body {
+  margin: auto;
+  font-family: "Calibri","Roboto","arial";
+  font-size: 15px;
+   color: grey;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+}
+@media (max-width:900px){
+ header button {
+display: none;
+  margin: 0px 12px;
+  padding: 10px;
+  border-style: none;
+  background-color: rgba(236, 133, 210, 0.774);
+  font-family: 'Cinzel', serif;	
+  font-size: 20px;
+  border-style: solid;
+  border-color: rgba(235, 31, 99, 0.479);
+  color: white;
+}
+ }
+@media (max-width:900px){
+ h1 {
+   display: none;
+  font-family: 'Cinzel', serif;
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgba(235, 31, 99, 0.479);
+    border-width: 3px;
+    padding: 5px;
+    color: black;
+}
+}
+.nav-bar {
+  width: 40%;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar ul li {
+  list-style: none;
+  color: grey;
+  padding-left: 50px;
+  font-size: 19px;
+}
+
+@media (max-width:900px){
+nav.nav-bar ul li:hover {
+  color: black;
+  font-weight: bold;
+}
+}
+.img-cart {
+  width: 3%;
+  position: relative;
+  left: 75px;;
+}
+
+.img-logo {
+  width: 8%;
+  position: relative;
+  left: 90px;
+}
+
+main{
+  position: relative;
+  margin: 1.5em;
+}
+
+.banner {
+  height: 330px;
+  background-color: rgb(245, 238, 238);
+  background-image: url("/images/banner2.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.word {
+  border: 7px;
+  border-style: double;
+  border-color: rgba(235, 31, 99, 0.479);
+  position: absolute;
+  left: 73%;
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+.word p { 
+  text-align: center;
+  color: grey;
+  font-size: 40px;
+  padding: 10px 3px;
+}
+
+.optionBanner{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  position: relative;
+  right: -72.5%;
+  top: -20px;
+}
+
+.optionBanner:hover{
+  border-style: none;
+  background-color:rgb(245, 238, 238);
+  color: rgb(241, 123, 143);
+}
+
+.articleA {
+  margin: 2% 14%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.articleA img {
+  width: 35%;
+  border-radius: 5%;
+}
+
+.articleA div {
+  position: relative;
+}
+
+h2 {
+  font-size: 33px;;
+  color: rgb(129, 111, 111);
+}
+
+.articleA div p {
+  width: 80% ;
+  font-size: 20px;;
+}
+
+.articleA div button {
+  position: absolute;
+  left: 65%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.conjunto {
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleB {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 6%;
+}
+
+.articleB img {
+  width: 40%;
+  border-radius: 5%;
+}
+
+.articleB div {
+  position: relative;
+  left: 3%;
+}
+
+.articleB div p {
+  width: 80%;
+  font-size: 20px;
+}
+
+.articleB div button {
+  position: absolute;
+  right: 40%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.articleC {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.articleC img {
+  width: 35%;
+  border-radius: 5%;
+}
+
+.articleC div {
+  position: relative;
+  left: 3%;
+}
+
+.articleC div p {
+  width: 80%;
+  font-size: 20px;  
+}
+
+.articleC div button {
+  position: absolute;
+  left: 45%;
+  margin-top: 15px;
+  border-radius: 7px;
+  color: rgb(104, 88, 88);
+  border: none;
+  background-color: pink;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.sale {
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 3px;
+  color: black;
+}
+
+mark {
+  background-color: rgb(245, 223, 26);
+}
+
+.retiro {
+  position: relative;
+}
+
+.retiro p {
+  font-size: 25px;
+  position: absolute;
+  left: 23.5%;
+  margin-top: 22%;
+}
+
+.location {
+  margin: 6% 15% 5% 10%;
+  display: flex;
+  align-items: center;
+}
+
+.location h3 {
+  text-align: center;
+}
+
+.location h3 img{
+  width: 25%;
+}
+
+iframe {
+  border-radius: 5%;
+}
+
+footer {
+  background-color: rgb(245, 231, 231);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0px;
+  color: rgb(105, 61, 61);
+}
+
+.p-footer {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.ul-footer {
+  padding: 0px 0px;
+  margin: 0px 0px;;
+}
+.ul-footer li {
+  list-style: none;
+}
+
+.ul-footer li a{
+  text-decoration: none;
+  color: rgb(105, 61, 61);
+}
+
+.ul-footer li a:hover{
+  color: red
+}
+
+.socialRed i{
+  padding-right: 5px;
+  color: rgb(228, 28, 178);
+}
+
+#fb {
+  color: blue;
+}
