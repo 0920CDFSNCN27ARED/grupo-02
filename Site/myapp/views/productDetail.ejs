@@ -12,12 +12,15 @@
 <body>
     <%- include('partialls/header') %>
     <main>
-        <article class="product">
-            <img src="/images/<%= products.image %>" alt="Producto seleccionado">
-            <div class="col-xs-5" style="border:0px solid gray">
+        <div class="row">
+            <div class="col-sm-5">
+            <article class="product">
+            <img class= "img-responsive" src="/images/<%= products.image %>" alt="Producto seleccionado">
+            </div>
+            <div class="col-xs-7" style="border:0px solid gray">
                 <h2><%= products.name %></h2>
                 <p><%= products.description %></p>
-                <h3 style="margin-top:50px;">AR$ <%= products.price %></h3>
+                <h3 style="margin-top:0px">AR$ <%= products.price %></h3>
                 <div class="section">
                     <h6 class="title-attr" style="margin-top:15px;"><small>Especificaciones: </small></h6>
                     <form action="#">
@@ -41,7 +44,7 @@
                     </form>
                 </div>
             </div>
-        </article>
+        </div>
     </main>
     <%- include('partialls/footer') %>
 
