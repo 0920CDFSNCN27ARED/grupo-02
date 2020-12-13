@@ -7,8 +7,9 @@ const productRoutes = require('./routes/product');
 const methodOverride = require('method-override');
 const app = express();
 
-app.use(express.urlencoded());
+app.use(express.urlencoded( { extended: false }));
 app.use(methodOverride('_method'));
+app.use(express.json());
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');

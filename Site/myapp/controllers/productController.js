@@ -29,6 +29,29 @@ let productController = {
         getProduct.addProduct(productos);
         res.redirect('/product/newProduct');
     },
+    editProductForm: (req, res) => {
+        const products = getProduct.getProducts();
+        const product = products.find((prod)=>{
+            return prod.id == req.params.id
+        });
+        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('edit-product',{products: product});
+    },
+    updateProduct: (req,res) => {
+        const products = getProduct.getProducts();
+        let product = products.find((prod)=>{
+            return prod.id == req.params.id
+        });
+        product = {
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.body.image,
+            category: req.body.category
+        };
+
+        getProduct.updateProduct(productsUpdate);
+        res.redirect("/product/:id/detail");
+    }
 };
 
 module.exports = productController;

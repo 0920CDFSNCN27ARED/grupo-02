@@ -5,6 +5,9 @@ let JSONProducts= {
     },
     addProduct: (newProduct)=>{
         fs.writeFileSync(__dirname + '/../data/products.json',JSON.stringify(newProduct,null, 4));
+    },
+    updateProduct: (product)=>{
+        fs.writeFileSync(__dirname + '/../data/products.json',JSON.stringify(product));
     }
 }
 module.exports = JSONProducts;

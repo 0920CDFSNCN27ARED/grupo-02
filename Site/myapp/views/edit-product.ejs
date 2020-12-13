@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head lang="es">
+    <%- include('partialls/head') %>
+    <link href="/stylesheets/style-register.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('partialls/header') %>
+    <main>
+        <section class="options">
+            <h2>Editar: <%= products.name %> </h2>
+        </section>
+        <section>
+            <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST">
+                <fieldset>
+                    <p>
+                        <label for="name">Nombre del producto: </label>
+                        <input class="register" type="text" id="name" name="name" value= "<%= products.name %>">
+                    </p>
+                    
+                    <p>
+                        <label for="price">Precio: $</label>
+                        <input class="register" type="number" id="price" name="price" value= "<%= products.price %>">
+                    </p>
+                    <p>
+                        <label for="category">Categoría: </label>
+                        <select name="category" id="category" >
+                            <option value="clasic" <%= products.category == "clásica" ? "selected" : "" %> >Clásica</option>
+                            <option value="decorated" <%= products.category == "decorada" ? "selected" : "" %> >Decorada</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="image">Imagen: <%= products.image %></label>
+                        <input class="register" type="file" id="image" name="image" value= <%= products.image %>>
+                    </p>
+                    <p>
+                        <textarea class="register" id="description" name="description" placeholder="<%= products.description %>" ></textarea>
+                    </p>
+                    <p class="psubmit">
+                        <input class="created" type="submit" value="Guardar cambios">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <%- include('partialls/footer') %>
+</body>
