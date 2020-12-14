@@ -2,50 +2,46 @@
 
 <head lang="es">
     <%- include('../partialls/head') %>
-        <link href="/stylesheets/style-register.css" rel="stylesheet">
+        <link href="/stylesheets/style-new-product-and-edit-product.css" rel="stylesheet">
 </head>
-
 <body>
     <%- include('../partialls/header') %>
-        <main>
-            <section class="options">
-                <h2>Cargar un nuevo producto</h2>
-            </section>
-            <section>
-                <form class="formRegister" action="/product/newProduct" method="POST" enctype="multipart/form-data">
-                    <fieldset>
-                        <p>
-                            <label for="name">Nombre del producto: </label>
-                            <input class="register" type="text" id="name" name="name" placeholder="Torta de manzana"
-                                required>
-                        </p>
-
-                        <p>
-                            <label for="price">Precio: AR$</label>
-                            <input class="register" type="number" id="price" name="price" placeholder="1000" required>
-                        </p>
-                        <p>
-                            <label for="category">Categoría: </label>
-                            <select name="category" id="category" required>
-                                <option value="">-Elegir-</option>
-                                <option value="Clásica">Clásica</option>
-                                <option value="Decorada">Decorada</option>
-                            </select>
-                        </p>
-                        <p>
-                            <label for="image">Imagen: </label>
-                            <input class="register" type="file" id="image" name="image" required>
-                        </p>
-                        <p>
-                            <textarea class="register" id="description" name="description"
-                                placeholder="Agregar descripción del producto" required></textarea>
-                        </p>
-                        <p class="psubmit">
-                            <input class="created" type="submit" value="Agregar producto">
-                        </p>
-                    </fieldset>
-                </form>
-            </section>
-        </main>
-        <%- include('../partialls/footer') %>
+    <main>
+        <h2 class="title-main">Cargar un nuevo producto</h2>
+        <form class="formRegister" action="/product/newProduct" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <section class="inputs">
+                    <p>
+                    <label class="label" for="name">Nombre del producto: </label>
+                        <input class="style-border-input" type="text" id="name" name="name" placeholder="Torta de manzana" required>
+                    </p>
+                    <p>
+                        <label class="label" for="price">Precio:</label>
+                        <input class="style-border-input" type="number" id="price" name="price" placeholder="1000" required>
+                    </p>
+                    <p>
+                        <label class="label"  for="category">Categoría: </label>
+                        <select name="category" id="category" required>
+                            <option value="">-Elegir-</option>
+                            <option value="Clásica">Clásica</option>
+                            <option value="Decorada">Decorada</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label class="label"  for="image">Imagen: </label>
+                        <input type="file" id="image" name="image" required>
+                    </p>
+                    <p>
+                        <label class="label" for="description">Descripción:</label></br>
+                        <textarea class="style-border-input"  id="description" name="description"
+                            placeholder="Agregar descripción del producto" required></textarea>
+                    </p>
+                </section>
+                <p>
+                    <input class="submit" type="submit" value="Agregar producto">
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <%- include('../partialls/footer') %>
 </body>

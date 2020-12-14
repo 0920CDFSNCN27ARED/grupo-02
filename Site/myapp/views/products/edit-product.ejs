@@ -2,50 +2,48 @@
 
 <head lang="es">
     <%- include('../partialls/head') %>
-    <link href="/stylesheets/style-register.css" rel="stylesheet">
+    <link href="/stylesheets/style-new-product-and-edit-product.css" rel="stylesheet">
 </head>
-
 <body>
     <%- include('../partialls/header') %>
     <main>
-        <section class="options">
-            <h2>Editar: <%= products.name %></h2>
-        </section>
-        <section>
-            <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-                <fieldset>
+        <h2 class="title-main">Editar: <%= products.name %></h2>
+        <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <section class="inputs">
                     <p style="display: none">
-                        <label for="id">ID del producto: </label>
+                        <label class="label" for="id">ID del producto: </label>
                         <input class="register" type="text" id="id" name="id" value= "<%= products.id %>">
                     </p>
                     <p>
-                        <label for="name">Nombre del producto: </label>
-                        <input class="register" type="text" id="name" name="name" value= "<%= products.name %>">
+                        <label class="label" for="name">Nombre del producto: </label>
+                        <input class="style-border-input" type="text" id="name" name="name" value= "<%= products.name %>" required>
                     </p>
                     <p>
-                        <label for="price">Precio: $</label>
-                        <input class="register" type="number" id="price" name="price" value= "<%= products.price %>">
+                        <label class="label" for="price">Precio:</label>
+                        <input class="style-border-input" type="number" id="price" name="price" value= "<%= products.price %>" required>
                     </p>
                     <p>
                         <label for="category">Categoría: </label>
-                        <select name="category" id="category" >
+                        <select name="category" id="category" required>
                             <option value="clásica" <%= products.category == "clásica" ? "selected" : "" %> >Clásica</option>
                             <option value="decorada" <%= products.category == "decorada" ? "selected" : "" %> >Decorada</option>
                         </select>
                     </p>
                     <p>
-                        <label for="image">Imagen: <%= products.image %></label>
-                        <input class="register" type="file" id="image" name="image" value= <%= products.image %>>
+                        <label class="label" for="image">Imagen: <%= products.image %></label>
+                        <input type="file" id="image" name="image" value= <%= products.image %> required>
                     </p>
                     <p>
-                        <textarea class="register" id="description" name="description" placeholder="<%= products.description %>" ></textarea>
+                        <label class="label" for="description">Descripción:</label></br>
+                        <textarea class="style-border-input" id="description" name="description" placeholder="<%= products.description %>" required></textarea>
                     </p>
-                    <p class="psubmit">
-                        <input class="created" type="submit" value="Guardar cambios">
-                    </p>
-                </fieldset>
-            </form>
-        </section>
+                </section>
+                <p>
+                    <input class="submit" type="submit" value="Guardar cambios">
+                </p>
+            </fieldset>
+        </form>
     </main>
     <%- include('../partialls/footer') %>
 </body>

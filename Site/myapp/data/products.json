@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "name": "Letra o número chico",
+        "name": "1 Letra o número chico",
         "description": "Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
-        "price": 1650,
-        "image": "letra-numero-chico-2.jpg",
-        "category": "Decorada"
+        "price": "1650",
+        "image": "undefined-1607958365787.jpg",
+        "category": "decorada"
     },
     {
         "id": 2,
@@ -37,6 +37,14 @@
         "description": "3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla",
         "price": "3200",
         "image": "moana.jpeg",
+        "category": "Decorada"
+    },
+    {
+        "id": 6,
+        "name": "Mini Flores",
+        "description": "Pesa 1.5 kg y rinde 8 a 10 porciones. \r\nBizcochuelo de chocolate relleno de 2 capas de Nutella, buttercream de Nutella y pedacitos de Ferrero Rocher.",
+        "price": "2800",
+        "image": "undefined-1607958543461.jpg",
         "category": "Decorada"
     }
 ]
