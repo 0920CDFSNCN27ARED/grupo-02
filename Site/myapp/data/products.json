@@ -22,5 +22,21 @@
         "price": "980",
         "image": "",
         "category": "clásica"
+    },
+    {
+        "id": 4,
+        "name": "Torta de frutillas",
+        "description": "torta de frutillas ",
+        "price": "1350",
+        "image": "",
+        "category": "clásica"
+    },
+    {
+        "id": 5,
+        "name": "Torta de ricota",
+        "description": "",
+        "price": "900",
+        "image": "image-1607904190822.jpg",
+        "category": "clásica"
     }
 ]
