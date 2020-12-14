@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <head lang="es">
-	<%- include('partialls/head') %> 
+	<%- include('../partialls/head') %> 
 </head>
 <body>
-	<%- include('partialls/header') %>
+	<%- include('../partialls/header') %>
 	<main>
             <section class="products">
                 <% for(let i = 0; i < products.length; i++) { %> 
-                    <%- include('partialls/product', {products: products[i]}) %>
+                    <%- include('../partialls/product', {products: products[i]}) %>
                 <% } %>
             </section>
         </main>
-        <%- include('partialls/footer') %>
+        <%- include('../partialls/footer') %>
     </body>
 </html>

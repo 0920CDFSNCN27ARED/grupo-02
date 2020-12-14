@@ -3,17 +3,17 @@ const getProduct = require('../utils/getProducts');
 let productController = {
     getProduct: (req,res)=>{
         const products = getProduct.getProducts();
-        res.render('product', {products: products});
+        res.render('products/product', {products: products});
     },
     getProductDetail: (req, res)=>{
         const products = getProduct.getProducts();
         const product = products.find((prod)=>{
             return prod.id == req.params.id
         });
-        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('productDetail',{products: product});
+        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('products/productDetail',{products: product});
     },
     newProductForm: (req, res)=>{
-        res.render('new-Product');
+        res.render('products/new-Product');
     },
     newProductPost: (req, res, next) => {
         let productos = getProduct.getProducts();
@@ -34,7 +34,7 @@ let productController = {
         const product = products.find((prod)=>{
             return prod.id == req.params.id
         });
-        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('edit-product',{products: product});
+        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('products/edit-product',{products: product});
     },
     updateProduct: (req,res, next) => {
         const products = getProduct.getProducts();

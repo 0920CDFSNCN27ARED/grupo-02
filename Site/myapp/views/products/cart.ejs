@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <%- include('partialls/head') %>
+        <%- include('../partialls/head') %>
         <link rel="stylesheet" href="/stylesheets/style-cart.css">
     </head>
     <body>
-        <%- include('partialls/header') %>
+        <%- include('../partialls/header') %>
         <main class="cart-main-container">
             <section class="title">
                 <h2 class="cart-title">
@@ -13,7 +13,7 @@
                 </h2>
             </section>
             <% for (let i = 0; i < 6 ; i++){ %>
-                <%- include('partialls/cart-item') %> 
+                <%- include('../partialls/cart-item') %> 
             <% } %>
             <section>
                 <form class="flex buttons-return-continue" action="">
@@ -22,6 +22,6 @@
                 </form>
             </section>
         </main>
-        <%- include('partialls/footer') %>
+        <%- include('../partialls/footer') %>
     </body>
 </html>
