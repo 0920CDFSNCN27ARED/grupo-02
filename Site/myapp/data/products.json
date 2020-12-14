@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "name": "Producto A",
+        "name": "Letra o número chico",
         "description": "Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
         "price": 1650,
-        "image": "letra-numero-chico.jpg",
-        "category": "decorada"
+        "image": "letra-numero-chico-2.jpg",
+        "category": "Decorada"
     },
     {
         "id": 2,
-        "name": "Producto B",
-        "description": "Descripción del producto 2.",
-        "price": 1500,
-        "image": "letra-numero-chico.jpg",
-        "category": "decorada"
+        "name": "Rogel",
+        "description": "Rogel clásico con merengue italiano, relleno de dulce de leche.",
+        "price": 950,
+        "image": "torta-rogel.jpg",
+        "category": "Clásica"
     },
     {
         "id": 3,
-        "name": "Tarta de ricota",
-        "description": "Holaa",
-        "price": "980",
-        "image": "",
+        "name": "Cheesecake Frutos Rojos",
+        "description": "Base de galletitas crocante, relleno de queso crema y cobertura de frutos rojos según estación (compota casera, con frutillas y arandanos en temporada o frutos rojos congelados fuera de temporada).",
+        "price": "1200",
+        "image": "Cheesecake-Frutos-Rojos.jpeg",
         "category": "clásica"
     },
     {
         "id": 4,
         "name": "Torta de frutillas",
-        "description": "torta de frutillas ",
-        "price": "1350",
-        "image": "",
+        "description": "Base de masa sablée, relleno de dulce de leche y crema chantilly o crema pastelera y cobertura de frutos rojos de estación (frutillas y/o arándanos en temporada primavera/verano) ",
+        "price": "950",
+        "image": "cake-frutilla.jpeg",
         "category": "clásica"
     },
     {
         "id": 5,
-        "name": "Torta de ricota",
-        "description": "",
-        "price": "900",
-        "image": "image-1607904190822.jpg",
-        "category": "clásica"
+        "name": "Moana",
+        "description": "3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla",
+        "price": "3200",
+        "image": "moana.jpeg",
+        "category": "Decorada"
     }
 ]
