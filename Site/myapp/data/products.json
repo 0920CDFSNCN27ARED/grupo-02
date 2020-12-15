@@ -3,8 +3,8 @@
         "id": 1,
         "name": "1 Letra o número chico",
         "description": "Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
-        "price": "1650",
-        "image": "undefined-1607958365787.jpg",
+        "price": "1300",
+        "image": "undefined-1608073609204.jpg",
         "category": "decorada"
     },
     {
@@ -46,5 +46,13 @@
         "price": "2800",
         "image": "undefined-1607958543461.jpg",
         "category": "Decorada"
+    },
+    {
+        "id": 7,
+        "name": "Piepito",
+        "description": "hola",
+        "price": "900",
+        "image": "undefined-1608073651643.jpeg",
+        "category": "Clásica"
     }
 ]
