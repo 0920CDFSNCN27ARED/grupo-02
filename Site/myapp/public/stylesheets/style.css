@@ -324,9 +324,23 @@ header {
   background-color: whitesmoke;
   box-sizing: border-box;
 }
-@media (max-width:900px){
+
  header button {
-display: none;
+  margin: 0px 12px;
+  padding: 10px;
+  border-style: none;
+  background-color: rgba(236, 133, 210, 0.774);
+  font-family: 'Cinzel', serif;	
+  font-size: 20px;
+  border-style: solid;
+  border-color: rgba(235, 31, 99, 0.479);
+  color: white;
+}
+ 
+
+ @media (max-width:500px){
+ header button {
+   display:none;
   margin: 0px 12px;
   padding: 10px;
   border-style: none;
@@ -338,9 +352,20 @@ display: none;
   color: white;
 }
  }
-@media (max-width:900px){
  h1 {
-   display: none;
+  font-family: 'Cinzel', serif;
+    font-size: 20px;
+    border-style: solid;
+    border-color: rgba(235, 31, 99, 0.479);
+    border-width: 3px;
+    padding: 5px;
+    color: black;
+}
+
+
+@media (max-width:549px){
+ h1 {
+   display:none;
   font-family: 'Cinzel', serif;
     font-size: 20px;
     border-style: solid;
@@ -350,6 +375,7 @@ display: none;
     color: black;
 }
 }
+
 .nav-bar {
   width: 40%;
 }
@@ -360,9 +386,20 @@ display: none;
 }
 
 .nav-bar ul li {
+  align-content: ;
   list-style: none;
   color: grey;
-  padding-left: 50px;
+  padding-left: 11px;
+  font-size: 19px;
+}
+@media (max-width:500px){
+.nav-bar ul li {
+  left: 70%;
+  position: relative;
+  align-content: revert;
+  list-style: none;
+  color: grey;
+  padding-left: 11px;
   font-size: 19px;
 }
 
@@ -372,16 +409,45 @@ nav.nav-bar ul li:hover {
   font-weight: bold;
 }
 }
+@media (max-width:500px){
 .img-cart {
-  width: 3%;
+  width: 30px;
   position: relative;
-  left: 75px;;
+  left: 38%;;
 }
 
 .img-logo {
-  width: 8%;
+  width: 50px;
   position: relative;
-  left: 90px;
+  left: 40%;
+}
+}
+
+}
+.img-cart {
+  width: 30px;
+  position: relative;
+  left: 1%;;
+}
+
+.img-logo {
+  width: 50px;
+  position: relative;
+  left: 2%;
+}
+
+@media (max-width:500px){
+.img-cart {
+  width: 30px;
+  position: relative;
+  left: 38%;;
+}
+
+.img-logo {
+  width: 50px;
+  position: relative;
+  left: 40%;
+}
 }
 
 main{
