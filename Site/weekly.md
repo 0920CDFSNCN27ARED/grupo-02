@@ -1,3 +1,35 @@
+# Sprint-4 | Semana 26-dic-20
+
+## ¿Qué hicimos esta semana?
+    - El 16/12 tuvimos el feedback del sprint 3
+    - Retro sprint 3. 
+    - División tareas backlog. 
+    - Carga de tareas de sprint 4 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh)
+    - División de tareas de sprint 4.
+## ¿Se encontró algún impedimiento?
+## ¿Qué se hará esta semana?
+
+   -Comenzar con las tareas asignadas
+# Sprint-3 | Semana 15-dic-20
+## ¿Qué hicimos esta semana?
+
+    - Repaso de contenidos. 
+    - Cierre sprint 3. 
+    - Se sumaron funcionalidades de cargar y editar productos. 
+    - Cargar en backlog los puntos no finalizados. 
+    - Empezamos a hacer el sitio responsive. 
+
+## ¿Se encontró algún impedimiento?
+
+    - No haber pensado el e-commerce first-mobile. 
+    - Estadarizar las clases en ejs para reducir la carga de css. 
+
+## ¿Qué se hará esta semana?
+
+    - Retro sprint 3. 
+    - División tareas backlog. 
+    - Carga de tareas de sprint 4 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh)
+    - División de tareas de sprint 4. 
 # Sprint-3 | Semana 30-nov-20
 
 ## ¿Qué hicimos esta semana?
@@ -18,25 +50,3 @@
     - Separar componetes repetidos en archivos parciales. 
     - Sumar archivos, creación y edición de productos. 
     - Separar vistas en carpetas (views/products, views/users).
-
-# Sprint-4 | Semana 15-dic-20
-
-## ¿Qué hicimos esta semana?
-
-    - Repaso de contenidos. 
-    - Cierre sprint 3. 
-    - Se sumaron funcionalidades de cargar y editar productos. 
-    - Cargar en backlog los puntos no finalizados. 
-    - Empezamos a hacer el sitio responsive. 
-
-## ¿Se encontró algún impedimiento?
-
-    - No haber pensado el e-commerce first-mobile. 
-    - Estadarizar las clases en ejs para reducir la carga de css. 
-
-## ¿Qué se hará esta semana?
-
-    - Retro sprint 3. 
-    - División tareas backlog. 
-    - Carga de tareas de sprint 4 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh)
-    - División de tareas de sprint 4. 

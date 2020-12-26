@@ -34,7 +34,11 @@ let productController = {
         const product = products.find((prod)=>{
             return prod.id == req.params.id
         });
-        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('products/edit-product',{products: product});
+        if (!product){
+            res.status(404).send('Error <404> No se encontró el producto solicitado')
+        }else{
+            res.render('products/edit-product',{products: product});
+        }
     },
     updateProduct: (req,res, next) => {
         const products = getProduct.getProducts();

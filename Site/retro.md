@@ -1,18 +1,20 @@
-# Srpint-1 
+# Sprint-3
 
 ## Start Doing.
-    - Asignación de tareas con más anticipación. Y seguimiento de las mismas desde Trello. 
+    - Asignación de tareas al iniciar el sprint para poder ir consultando dudas.
+    - Avisar al resto del equipo si una semana no se va a poder avanzar con el proyecto o estar atento a los mensajes, para que se pueda tener en cuenta.
 ## More of. 
-    - Mayor uso de las herramientas de comunicación y organización sugeridas por Pablo. (Discord y Trello).
-    - Atender a los enunciados de nuestros compañeros/as en Discord a fin de responder sin demoras a las consultas o propuestas. 
-    - Instaurar reuniones periódicas a fin de evaluar los avances. Primer sugerencia, los martes a las 19.30. (a definir) La sala de reunión será: [meet](https://meet.google.com/hvm-rihq-cfq)
+    - Estar más atentos al chat de Discord. Si pactamos algo, por ejemplo la fecha y hora de una weekly, y uno no responde, el resto del equipo puede avanzar y será responsabilidad de quien no respondió ponerse a día.
+    - Avisar de los cambios que se realizan en el proyecto. Si bien queda el mensaje del commit en git, podemos generar conflictos en los avances de los compañeros.
 ## Keep Doing. 
-    - Buena onda
+    - Seguir siendo honestos en las charlas y diferencias que pueden llegar a surgir para llegar a acuerdos consensuados.
+    - Mantener el compromiso con el proyecto.
+    - Seguir ayudando cuando surguen dudas.
 ## Less of. 
-    - Es muy pronto para considerar que algo no lleva a ninguna parte. 
+    - Evitar posponerlas weeklys.
 ## Stop Doing. 
-    - Es muy pronto para considerar que algo no lleva a ninguna parte (bis).
-
+    - No responder sobre la hora de las meets.
+    - Respetar las weeklys, no proponer pasarlas.
 # Sprint-2 
 
 ## Start Doing.
@@ -29,4 +31,19 @@
     - Evitar posponerlas weeklys. 
 ## Stop Doing. 
     - No responder sobre la hora de las meets.
-    - Respetar las weeklys, no proponer pasarlas. 
+    - Respetar las weeklys, no proponer pasarlas.
+# Srpint-1 
+
+## Start Doing.
+    - Asignación de tareas con más anticipación. Y seguimiento de las mismas desde Trello. 
+## More of. 
+    - Mayor uso de las herramientas de comunicación y organización sugeridas por Pablo. (Discord y Trello).
+    - Atender a los enunciados de nuestros compañeros/as en Discord a fin de responder sin demoras a las consultas o propuestas. 
+    - Instaurar reuniones periódicas a fin de evaluar los avances. Primer sugerencia, los martes a las 19.30. (a definir) La sala de reunión será: [meet](https://meet.google.com/hvm-rihq-cfq)
+## Keep Doing. 
+    - Buena onda
+## Less of. 
+    - Es muy pronto para considerar que algo no lleva a ninguna parte. 
+## Stop Doing. 
+    - Es muy pronto para considerar que algo no lleva a ninguna parte (bis).
+
