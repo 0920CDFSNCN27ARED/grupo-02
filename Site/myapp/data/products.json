@@ -49,10 +49,18 @@
     },
     {
         "id": 7,
-        "name": "Piepito",
-        "description": "hola",
-        "price": "900",
-        "image": "undefined-1608073651643.jpeg",
+        "name": "oreo",
+        "description": "hola!! ",
+        "price": "1200",
+        "image": "undefined-1608139614079.jpeg",
+        "category": "clásica"
+    },
+    {
+        "id": 8,
+        "name": "Torta de frutillas",
+        "description": "afss",
+        "price": "800",
+        "image": "undefined-1608139649761.jpg",
         "category": "Clásica"
     }
 ]
