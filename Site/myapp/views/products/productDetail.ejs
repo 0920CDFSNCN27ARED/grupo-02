@@ -1,53 +1,50 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <%- include('../partials/head') %>
-    <link href="/stylesheets/style-productDetail.css" rel="stylesheet">
-</head>
-
-<body>
-    <%- include('../partials/header') %>
-    <main>
-        <div class="row">
-            <div class="col-sm-5">
-            <article class="product">
-            <img class= "img-responsive" src="/images/products-images/<%=products.image %>" alt="Producto seleccionado">
-            </div>
-            <div class="col-xs-7" style="border:0px solid gray">
-                <h2><%= products.name %></h2>
-                <p><%= products.description %></p>
-                <h3 style="margin-top:0px">AR$ <%= products.price %></h3>
-                <div class="section">
-                    <h6 class="title-attr" style="margin-top:15px;"><small>Especificaciones: </small></h6>
-                    <form action="#">
-                        <select name="category" id="">
-                            <option value="none" selected>Ninguna</option>
-                            <option value="sn-tacc">Sin TACC</option>
-                        </select>
-                        <div class="section" style="padding-bottom:20px;">
-                            <h6 class="title-attr"><small>CANTIDAD</small></h6>
-                            <div>
-                                <div class="btn-minus">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </div>
-                                <input value="1" />
-                                <div class="btn-plus">
-                                    <span class="glyphicon glyphicon-plus"></span>
+<html lang="es">
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <%- include('../partials/head') %>
+        <link href="/stylesheets/style-productDetail.css" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <div class="row">
+                <div class="col-sm-5">
+                    <article class="product">
+                        <img class= "img-responsive" src="/images/products-images/<%=products.image %>" alt="Producto seleccionado">
+                    </artcile>
+                </div>
+                <div class="col-xs-7" style="border:0px solid gray">
+                    <h2><%= products.name %></h2>
+                    <p><%= products.description %></p>
+                    <h3 style="margin-top:0px">AR$ <%= products.price %></h3>
+                    <div class="section">
+                        <h6 class="title-attr" style="margin-top:15px;"><small>Especificaciones: </small></h6>
+                        <form action="#">
+                            <select name="category">
+                                <option value="none" selected>Ninguna</option>
+                                <option value="sn-tacc">Sin TACC</option>
+                            </select>
+                            <div class="section" style="padding-bottom:20px;">
+                                <h6 class="title-attr"><small>CANTIDAD</small></h6>
+                                <div>
+                                    <div class="btn-minus">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </div>
+                                    <input value="1" />
+                                    <div class="btn-plus">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <input class="btn btn-success" type="submit" value="Agregar al carrito">
-                    </form>
+                            <input class="btn btn-success" type="submit" value="Agregar al carrito">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <%- include('../partials/footer') %>
-
-</body>
-
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
 </html>

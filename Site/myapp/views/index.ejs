@@ -1,54 +1,56 @@
 <!DOCTYPE html>
-<head lang="es">
-	<%- include('partials/head') %> 
-</head>
-<body>
-	<%- include('partials/header') %>
-	<main>
-		<div class="banner">
-			<div class="word">
-				<p> M A C A R O N S</p>
-			</div>
-		</div>	
-		<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
-		<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
-		<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
-		<section>
-			<article class="articleA">
-				<div>
-					<h2>Regalá</h2>	
-					<p>En estos momentos, sorprendé y acompaña de cerca a tus seres queridos.</p>
-					<button name="moreInfo">Más info</button>
+<html lang="es">
+	<head>
+		<%- include('partials/head') %> 
+	</head>
+	<body>
+		<%- include('partials/header') %>
+		<main>
+			<div class="banner">
+				<div class="word">
+					<p> M A C A R O N S</p>
 				</div>
-				<img src="/images/Mini.jpg" alt="Foto de box de cumpleaños">
-			</article>
-			<p class="sale"><mark>ABONANDO EN EFECTIVO EN EL LOCAL >>> ¡15% DE DESCUENTO!</mark></p>
-			<div class="conjunto">
-				<article class="articleB">
-					<img src="/images/number.jpeg" alt="Foto de box de cumpleaños">
+			</div>	
+			<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
+			<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
+			<button class="optionBanner" name="optionBanner"><i class="far fa-circle"></i></button>
+			<section>
+				<article class="articleA">
 					<div>
-						<h2>Tortas Decoradas</h2>	
-						<p>¡Elgí la base, el relleno y gama de colores que más te guste!</p>
+						<h2>Regalá</h2>	
+						<p>En estos momentos, sorprendé y acompaña de cerca a tus seres queridos.</p>
 						<button name="moreInfo">Más info</button>
 					</div>
+					<img src="/images/Mini.jpg" alt="Foto de box de cumpleaños">
 				</article>
-				<article class="articleC">
-					<img src="/images/clasica.jpg" alt="Foto de box de cumpleaños">
-					<div>
-						<h2>Tortas Clásicas</h2>	
-						<p>Porque a todos nos gustan los clásicos, también tenemos esta opción.</p>
-						<button name="moreInfo">Más info</button>
-					</div>
-				</article>
+				<p class="sale"><mark>ABONANDO EN EFECTIVO EN EL LOCAL >>> ¡15% DE DESCUENTO!</mark></p>
+				<div class="conjunto">
+					<article class="articleB">
+						<img src="/images/number.jpeg" alt="Foto de box de cumpleaños">
+						<div>
+							<h2>Tortas Decoradas</h2>	
+							<p>¡Elgí la base, el relleno y gama de colores que más te guste!</p>
+							<button name="moreInfo">Más info</button>
+						</div>
+					</article>
+					<article class="articleC">
+						<img src="/images/clasica.jpg" alt="Foto de box de cumpleaños">
+						<div>
+							<h2>Tortas Clásicas</h2>	
+							<p>Porque a todos nos gustan los clásicos, también tenemos esta opción.</p>
+							<button name="moreInfo">Más info</button>
+						</div>
+					</article>
+				</div>
+			</section>
+			<div class="retiro"> 
+				<p>Punto de retiro</p>
 			</div>
-		</section>
-		<div class="retiro"> 
-			<p>Punto de retiro</p>
-		</div>
-		<section class="location">
-			<h3><img src="/images/location.jpg" alt="Imágen de ubicación en mapa"></h3>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9412547137886!2d-58.51749068514886!3d-34.60564696510641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ce1c7cd781%3A0x3878fb7845b83541!2sJos%C3%A9%20Luis%20Cantilo%204500-4448%2C%20C1419HOH%20CABA!5e0!3m2!1ses-419!2sar!4v1605319007429!5m2!1ses-419!2sar" width="600" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
-		</section>
-	</main>
-	<%- include('partials/footer') %>
-</body>
+			<section class="location">
+				<h3><img src="/images/location.jpg" alt="Imágen de ubicación en mapa"></h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.9412547137886!2d-58.51749068514886!3d-34.60564696510641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7ce1c7cd781%3A0x3878fb7845b83541!2sJos%C3%A9%20Luis%20Cantilo%204500-4448%2C%20C1419HOH%20CABA!5e0!3m2!1ses-419!2sar!4v1605319007429!5m2!1ses-419!2sar" width="600" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>	
+			</section>
+		</main>
+		<%- include('partials/footer') %>
+	</body>
+</html>

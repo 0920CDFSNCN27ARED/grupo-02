@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<head lang="es">
-	<%- include('../partials/head') %>
-    <link  href="/stylesheets/style-register.css" rel="stylesheet">
-</head>
-<body>
-	<%- include('../partials/header') %>
-    <main>
-        <section class="options">
-            <h2>Creá tu cuenta</h2>
-            <div class="buttons">
-                <button class="gmail" name="gmail"><i class="fab fa-google-plus-g fa-2x"></i></button>
-                <button name="facebook"><i id="fb" class="fab fa-facebook-square fa-2x"></i></button>
-            </div>
-        </section>
-        <section>
-            <form class="formRegister" action="#" method="POST">
-                <fieldset>
-                    <p>
-                        <input class="register" type="text" id="name" name="name" placeholder="Valeria">
-                    </p>
-                    <p>
-                        <input class="register" type="text" id="last-name" name="last-name" placeholder="Gomes">
-                    </p>
-                    <p>
-                        <input class="register" type="mail" id="mail" name="mail" placeholder="valeria.gomes@gmail.com">
-                    </p>
-                    <p>
-                        <input class="register" type="password" id="password" name="password" placeholder="******">
-                    </p>
-                    <p class="psubmit">
-                        <input class="created" type="submit" value="Registrarse">
-					</p>             
-                </fieldset>
-            </form>
-        </section>
-    </main>
-	<%- include('../partials/footer') %>
-</body>
+<html lang="es">
+    <head>
+        <%- include('../partials/head') %>
+        <link  href="/stylesheets/style-register.css" rel="stylesheet">
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <section class="options">
+                <h2>Creá tu cuenta</h2>
+                <div class="buttons">
+                    <button class="gmail" name="gmail"><i class="fab fa-google-plus-g fa-2x"></i></button>
+                    <button name="facebook"><i id="fb" class="fab fa-facebook-square fa-2x"></i></button>
+                </div>
+            </section>
+            <section>
+                <form class="formRegister" action="#" method="POST">
+                    <fieldset>
+                        <p>
+                            <input class="register" type="text" id="name" name="name" placeholder="Valeria">
+                        </p>
+                        <p>
+                            <input class="register" type="text" id="last-name" name="last-name" placeholder="Gomes">
+                        </p>
+                        <p>
+                            <input class="register" type="email" id="email" name="email" placeholder="valeria.gomes@gmail.com">
+                        </p>
+                        <p>
+                            <input class="register" type="password" id="password" name="password" placeholder="******">
+                        </p>
+                        <p class="psubmit">
+                            <input class="created" type="submit" value="Registrarse">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

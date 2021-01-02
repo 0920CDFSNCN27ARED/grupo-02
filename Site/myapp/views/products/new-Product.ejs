@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-
-<head lang="es">
-    <%- include('../partials/head') %>
+<html lang="es">
+    <head>
+        <%- include('../partials/head') %>
         <link href="/stylesheets/style-new-product-and-edit-product.css" rel="stylesheet">
-</head>
-<body>
-    <%- include('../partials/header') %>
-    <main>
-        <h2 class="title-main">Cargar un nuevo producto</h2>
-        <form class="formRegister" action="/product/newProduct" method="POST" enctype="multipart/form-data">
-            <fieldset>
-                <section class="inputs">
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <h2 class="title-main">Cargar un nuevo producto</h2>
+            <form class="formRegister" action="/product/newProduct" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <section class="inputs">
+                        <p>
+                            <label class="label" for="name">Nombre del producto: </label>
+                            <input class="style-border-input" type="text" id="name" name="name" placeholder="Torta de manzana" required>
+                        </p>
+                        <p>
+                            <label class="label" for="price">Precio:</label>
+                            <input class="style-border-input" type="number" id="price" name="price" placeholder="1000" required>
+                        </p>
+                        <p>
+                            <label class="label"  for="category">Categoría: </label>
+                            <select name="category" id="category" required>
+                                <option value="">-Elegir-</option>
+                                <option value="Clásica">Clásica</option>
+                                <option value="Decorada">Decorada</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label class="label"  for="image">Imagen: </label>
+                            <input type="file" id="image" name="image" required>
+                        </p>
+                        <p>
+                            <label class="label" for="description">Descripción:</label><br>
+                            <textarea class="style-border-input"  id="description" name="description" placeholder="Agregar descripción del producto" required></textarea>
+                        </p>
+                    </section>
                     <p>
-                    <label class="label" for="name">Nombre del producto: </label>
-                        <input class="style-border-input" type="text" id="name" name="name" placeholder="Torta de manzana" required>
+                        <input class="submit" type="submit" value="Agregar producto">
                     </p>
-                    <p>
-                        <label class="label" for="price">Precio:</label>
-                        <input class="style-border-input" type="number" id="price" name="price" placeholder="1000" required>
-                    </p>
-                    <p>
-                        <label class="label"  for="category">Categoría: </label>
-                        <select name="category" id="category" required>
-                            <option value="">-Elegir-</option>
-                            <option value="Clásica">Clásica</option>
-                            <option value="Decorada">Decorada</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label class="label"  for="image">Imagen: </label>
-                        <input type="file" id="image" name="image" required>
-                    </p>
-                    <p>
-                        <label class="label" for="description">Descripción:</label></br>
-                        <textarea class="style-border-input"  id="description" name="description"
-                            placeholder="Agregar descripción del producto" required></textarea>
-                    </p>
-                </section>
-                <p>
-                    <input class="submit" type="submit" value="Agregar producto">
-                </p>
-            </fieldset>
-        </form>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+                </fieldset>
+            </form>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>
