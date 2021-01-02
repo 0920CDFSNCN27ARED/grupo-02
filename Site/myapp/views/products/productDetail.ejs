@@ -24,8 +24,8 @@
                         <h6 class="title-attr" style="margin-top:15px;"><small>Especificaciones: </small></h6>
                         <form action="#">
                             <select name="category">
-                                <option value="none" selected>Ninguna</option>
-                                <option value="sn-tacc">Sin TACC</option>
+                                <option class="option" value="none" selected>Ninguna</option>
+                                <option class="option" value="sn-tacc">Sin TACC</option>
                             </select>
                             <div class="section" style="padding-bottom:20px;">
                                 <h6 class="title-attr"><small>CANTIDAD</small></h6>
@@ -41,8 +41,12 @@
                             </div>
                             <input class="btn btn-success" type="submit" value="Agregar al carrito">
                             <div class="btn-edit-delet">
-                                <input class="btn-edit" type="submit" value="Editar Producto"> 
-                                <input class="btn-delete" type="submit" value="Eliminar Producto">
+                                <a href="/product/<%=products.id%>/edit">
+                                    <input class="btn-edit" type="button" value="Editar Producto">
+                                </a>
+                                <a href="#">
+                                    <input class="btn-delete" type="button" value="Eliminar Producto">
+                                </a>
                             </div>
                         </form>
                     </div>
