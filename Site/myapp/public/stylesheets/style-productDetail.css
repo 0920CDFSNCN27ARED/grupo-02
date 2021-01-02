@@ -6,7 +6,7 @@ li.active{border-bottom:3px solid silver;}
 .btn-success{width:100%;border-radius:0;}
 .section{width:100%;margin-left:-15px;padding:2px;padding-left:15px;padding-right:15px;background:#f8f9f9}
 .title-price{margin-top:30px;margin-bottom:0;color:black}
-.title-attr{margin-top:0;margin-bottom:0;color:black;}
+.title-attr{margin-top:0;margin-bottom:0;color:black;font-size: 150%;}
 .btn-minus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-right:0;}
 .btn-plus{cursor:pointer;font-size:7px;display:flex;align-items:center;padding:5px;padding-left:10px;padding-right:10px;border:1px solid gray;border-radius:2px;border-left:0;}
 div.section > div {width:100%;display:flex;}
@@ -15,40 +15,56 @@ div.section > div > input {margin:0;padding-left:5px;font-size:10px;padding-righ
 .attr.active,.attr2.active{ border:1px solid orange;}
 
 @media (max-width: 760px) {
-    .container {margin-top:10px !important;}
-    .container > .row{padding:10 !important;}
-    .container > .row > .col-xs-12.col-sm-5{
-        padding-right:0 ;    
-    }
-    .container > .row > .col-xs-12.col-sm-9 > div > p{
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-    .container > .row > .col-xs-12.col-sm-9 > div > ul{
-        padding-left:10px !important;
-        
-    }      
-    .col-xs-7 {
-      width: 100%;
-    }      
+  .container {margin-top:10px !important;}
+  .container > .row{padding:10 !important;}
+  .container > .row > .col-xs-12.col-sm-5{
+      padding-right:0 ;
+  }
+  .container > .row > .col-xs-12.col-sm-9 > div > p{
+      padding-left:0 !important;
+      padding-right:0 !important;
+  }
+  .container > .row > .col-xs-12.col-sm-9 > div > ul{
+      padding-left:10px !important;
+  }
+  .col-xs-7 {
+    width: 100%;
+  }
 }
-
 .description{
   position: relative;
- 
 }
-
 .product {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  
 }
-
 .product img {
   display: flex;
   width: 70%;
   border-radius: 3%;
   margin: auto;
-
+}
+.btn-edit-delet{
+  display: flex;
+  flex-direction: row;
+}
+.btn-edit{
+  width: 48%;
+  margin: 3% 1%;
+  border-radius:0;
+  border: none;
+  color: #fff;
+  background-color: #f5b107;
+}
+.btn-delete{
+  width: 48%;
+  margin: 3% 1%;
+  border-radius:0;
+  border: none;
+  color: #fff;
+  background-color: #f8402c;
+}
+.col-xs-7 > p {
+  font-size: 130%;
 }
