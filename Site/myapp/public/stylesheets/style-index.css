@@ -12,33 +12,6 @@ main{
 .optionBanner {
     display: none;
 }
-/*
-.banner {
-  height: 330px;
-  background-color: rgb(245, 238, 238);
-  background-image: url("/images/banner2.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.word p { 
-    text-align: center;
-    color: grey;
-    font-size: 40px;
-    padding: 10px 3px;
-}
-.optionBanner{
-    border-style: none;
-    background-color:rgb(245, 238, 238);
-    position: relative;
-    right: -72.5%;
-    top: -20px;
-}
-.optionBanner:hover{
-    border-style: none;
-    background-color:rgb(245, 238, 238);
-    color: rgb(241, 123, 143);
-} */
 h2 {
     display: none;
 }
@@ -158,8 +131,6 @@ iframe {
     .articleA div button {
         margin-right: 0%;
         margin-left: 80%;
-    }
-    .conjunto {
     }
     .articleB {
         flex-direction: row;
