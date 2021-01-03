@@ -48,9 +48,9 @@ let productController = {
                 products[i].name = req.body.name;
                 products[i].description = req.body.description;
                 products[i].price = req.body.price;
-                products[i].image = req.files[0].filename;
                 products[i].category = req.body.category;
-
+                products[i].image = typeof(req.files[0]) === "undefined" ? products[i].image : req.files[0].filename;
+                console.log(req.files[0]);
                 getProduct.updateProduct(products);
                 return res.redirect('/product')
             } 

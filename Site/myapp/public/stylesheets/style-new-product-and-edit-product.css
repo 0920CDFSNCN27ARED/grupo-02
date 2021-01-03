@@ -46,6 +46,9 @@ textarea{
 .submit:hover{
     background-color: #4fd44a;
 }
+.img-now {
+    height: 35vh;
+}
 @media (min-width: 361px){
 .inputs  p input {
     margin-top: 1%;

@@ -30,13 +30,16 @@
                                 <option value="decorada" <%= products.category == "decorada" ? "selected" : "" %> >Decorada</option>
                             </select>
                         </p>
+                        <p> 
+                            Imagen actual: 
+                        </p>
+                        <img class="img-now" src="/images/products-images/<%= products.image %>" alt="Imágen de la torta">
                         <p>
-                            <label class="label" for="image">Imagen: <%= products.image %></label>
-                            <input type="file" id="image" name="image" value= <%= products.image %> required>
+                            <input type="file" id="image" name="image">
                         </p>
                         <p>
                             <label class="label" for="description">Descripción:</label><br>
-                            <textarea class="style-border-input" id="description" name="description" placeholder="<%= products.description %>" required></textarea>
+                            <textarea class="style-border-input" id="description" name="description" required><%= products.description %></textarea>
                         </p>
                     </section>
                     <p>
