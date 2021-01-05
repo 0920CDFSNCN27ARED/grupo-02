@@ -83,12 +83,26 @@ fieldset {
 }
 
 @media (min-width: 761px){
+    h2 {
+        box-shadow: none;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
     main{
         max-width: 33.33%;
         align-self: center;
         border: 1px solid #ddd;
     }
+
     .formRegister{
         padding: 15px;
+    }
+
+    .options {
+        margin-top: 0;
     }
 }
