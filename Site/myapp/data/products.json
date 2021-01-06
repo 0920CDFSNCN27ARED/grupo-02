@@ -3,7 +3,7 @@
         "id": 1,
         "name": "1 Letra o número chico",
         "description": "Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.",
-        "price": "1300",
+        "price": "1250",
         "image": "letra-numero-chico.jpg",
         "category": "decorada"
     },
@@ -11,9 +11,9 @@
         "id": 2,
         "name": "Rogel",
         "description": "Rogel clásico con merengue italiano, relleno de dulce de leche.",
-        "price": 950,
+        "price": "950",
         "image": "torta-rogel.jpg",
-        "category": "Clásica"
+        "category": "clásica"
     },
     {
         "id": 3,
@@ -34,17 +34,17 @@
     {
         "id": 5,
         "name": "Moana",
-        "description": "3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla",
-        "price": "3200",
+        "description": "3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla.",
+        "price": "3100",
         "image": "moana.jpeg",
-        "category": "Decorada"
+        "category": "clásica"
     },
     {
         "id": 6,
         "name": "Mini Flores",
         "description": "Pesa 1.5 kg y rinde 8 a 10 porciones. \r\nBizcochuelo de chocolate relleno de 2 capas de Nutella, buttercream de Nutella y pedacitos de Ferrero Rocher.",
         "price": "2800",
-        "image": "mini-flores-1609644310504.jpg",
+        "image": "mini-flores.jpg",
         "category": "clásica"
     },
     {
@@ -52,15 +52,15 @@
         "name": "Torta Oreo",
         "description": "Relleno de queso crema y dulce de leche con dos capas de galletitas Oreo y corazón de dulce de leche. Cobertura de dulce de leche y Oreos. ",
         "price": "1200",
-        "image": "oreo-1609644119698.jpg",
+        "image": "oreo.jpg",
         "category": "clásica"
     },
     {
         "id": 8,
-        "name": "Torta de frutillas",
-        "description": "Base de masa sablée, relleno de dulce de leche y crema chantilly o crema pastelera y cobertura de frutos rojos de estación (frutillas y/o arándanos en temporada primavera/verano) ",
-        "price": "800",
-        "image": "torta-frutillas-1609646416053.jpeg",
+        "name": "Torta de frutilla",
+        "description": "Base de masa sablée, relleno de dulce de leche y crema chantilly o crema pastelera y cobertura de frutos rojos de estación (frutillas y/o arándanos en temporada primavera/verano).",
+        "price": "890",
+        "image": "torta-frutillas.jpeg",
         "category": "clásica"
     }
 ]

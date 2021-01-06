@@ -1,5 +1,6 @@
-const { fstat } = require('fs');
+const fs = require('fs');
 const getProduct = require('../utils/getProducts');
+const path = require('path');
 let productController = {
     getProduct: (req,res)=>{
         const products = getProduct.getProducts();
@@ -44,12 +45,16 @@ let productController = {
         const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {
-                products[i].id = Number(req.body.id);
                 products[i].name = req.body.name;
                 products[i].description = req.body.description;
                 products[i].price = req.body.price;
                 products[i].category = req.body.category;
-                products[i].image = typeof(req.files[0]) === "undefined" ? products[i].image : req.files[0].filename;
+                const filename =  typeof(req.files[0]) === "undefined" ? products[i].image : req.files[0].filename;
+                const ruta = path.join(__dirname,'/../public/images/products-images',products[i].image);
+                if (products[i].image != filename){
+                    fs.unlinkSync(ruta);
+                }
+                products[i].image = filename;
                 console.log(req.files[0]);
                 getProduct.updateProduct(products);
                 return res.redirect('/product')
