@@ -61,5 +61,22 @@ let productController = {
             } 
         }
     },
+    getDelete: (req, res) =>{
+        const products = getProduct.getProducts();
+        const product = products.find((prod)=>{
+            return prod.id == req.params.id
+        });
+
+        res.render('products/delete',{products: product});
+    },
+    deleteProduct: (req, res) => {
+        let products = getProduct.getProducts();
+        products = products.filter(producto => {
+            return producto.id != req.params.id
+        });
+        getProduct.updateProduct(products);
+
+        return res.redirect('/product');
+    },
 };
 module.exports = productController;
