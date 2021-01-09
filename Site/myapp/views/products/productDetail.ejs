@@ -44,10 +44,10 @@
                                 <a href="/product/<%=products.id%>/edit">
                                     <input class="btn-edit" type="button" value="Editar Producto">
                                 </a>
-                                <a href="/product/<%=products.id%>/delete" >
-                                    <input class="btn-delete" type="button" name="delete" value="Eliminar Producto">
-                                </form>
                             </div>
+                        </form>
+                        <form action="/product/<%=products.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+                            <input class="btn-delete" type="submit" value="Eliminar Producto">
                         </form>
                     </div>
                 </div>

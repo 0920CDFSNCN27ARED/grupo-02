@@ -55,27 +55,22 @@ let productController = {
                     fs.unlinkSync(ruta);
                 }
                 products[i].image = filename;
-                console.log(req.files[0]);
                 getProduct.updateProduct(products);
                 return res.redirect('/product')
             } 
         }
     },
-    getDelete: (req, res) =>{
-        const products = getProduct.getProducts();
-        const product = products.find((prod)=>{
-            return prod.id == req.params.id
-        });
-
-        res.render('products/delete',{products: product});
-    },
     deleteProduct: (req, res) => {
         let products = getProduct.getProducts();
+        const imgDelete = products.find(prod => {
+            return prod.id == req.params.id
+        });
+        fs.unlinkSync(path.resolve('public/images/products-images/', imgDelete.image));
+
         products = products.filter(producto => {
             return producto.id != req.params.id
         });
         getProduct.updateProduct(products);
-
         return res.redirect('/product');
     },
 };
