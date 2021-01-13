@@ -1,3 +1,14 @@
+# Sprint-5 | Semana 11-ene-21
+
+## ¿Qué hicimos esta semana?
+    - Cerramos el sprint 4.
+
+## ¿Se encontró algún impedimiento?
+    - No realizar la weekly de la semana del 4-ene-21 de manera formal.
+## ¿Qué se hará esta semana?
+    - División tareas backlog.
+    - Comenzar con las tareas asignadas.
+    - Carga de tareas de sprint 5 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh).
 # Sprint-4 | Semana 26-dic-20
 
 ## ¿Qué hicimos esta semana?
