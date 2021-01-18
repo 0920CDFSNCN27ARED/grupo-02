@@ -15,19 +15,23 @@
                 </div>
             </section>
             <section>
-                <form class="formRegister" action="#" method="POST">
+                <form class="formRegister" action="/user/register" method="POST" enctype="multipart/form-data">
                     <fieldset>
                         <p>
-                            <input class="register" type="text" id="name" name="name" placeholder="Valeria">
+                            <input class="register" type="text" id="name" name="name" placeholder="Valeria" required>
                         </p>
                         <p>
-                            <input class="register" type="text" id="last-name" name="last-name" placeholder="Gomes">
+                            <input class="register" type="text" id="last_name" name="last_name" placeholder="Gomes" required>
                         </p>
                         <p>
-                            <input class="register" type="email" id="email" name="email" placeholder="valeria.gomes@gmail.com">
+                            <input class="register" type="email" id="email" name="email" placeholder="valeria.gomes@gmail.com" required>
                         </p>
                         <p>
-                            <input class="register" type="password" id="password" name="password" placeholder="******">
+                            <input class="register" type="password" id="password" name="password" placeholder="******" required>
+                        </p>
+                        <p>
+                            <label class="label" for="image">Imagen: </label>
+                            <input type="file" id="image" name="image" required>
                         </p>
                         <p class="psubmit">
                             <input class="created" type="submit" value="Registrarse">
