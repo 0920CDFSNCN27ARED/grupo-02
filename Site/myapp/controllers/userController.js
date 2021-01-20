@@ -1,6 +1,22 @@
 const bcrypt = require('bcrypt');
 const utilsUser = require('../utils/utilsUser');
 
+module.exports={
+    login:(req, res) => {
+        let users = utilsUser.getUsers();
+        const user = users.find((email)=>{
+            return (
+                user.email == req.body.user &&
+                bcrypt.compareSync(req.body.password, user.password);
+            );
+        });
+    
+        if (!email) {return res.redirect("/users/login2");
+        req.session.loggedUserId = user.id
+       
+        return res.redirect("/");
+    },
+
 let userController = {
     getLogin: (req,res)=>{
         res.render('users/login2');
