@@ -26,14 +26,14 @@ let userController = {
                 } 
             }
             if (usuarioLoguearse == undefined){
-                return res.render ('users/login2', {errors: [
+                return res.redirect ('users/login2', {errors: [
                     {msg: 'Credenciales inválidas'}
                 ]});
             } 
             req.session.usuarioLogueado  = usuarioLoguearse;
-            return res.render ('index', {usuarioLogueado: req.session.usuarioLogueado});
+            return res.redirect ('index');
         } else {
-            return res.render ('users/login2', {errors: errors.errors});
+            return res.redirect ('users/login2', {errors: errors.errors});
         }
     },
     getRegister: (req,res)=>{
