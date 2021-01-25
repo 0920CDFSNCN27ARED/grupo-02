@@ -31,7 +31,7 @@ let userController = {
                 ]});
             } 
             req.session.usuarioLogueado  = usuarioLoguearse;
-            return res.render ('index');
+            return res.render ('index', {usuarioLogueado: req.session.usuarioLogueado});
         } else {
             return res.render ('users/login2', {errors: errors.errors});
         }
