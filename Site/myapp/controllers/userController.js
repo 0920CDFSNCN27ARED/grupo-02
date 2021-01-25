@@ -1,25 +1,40 @@
 const bcrypt = require('bcrypt');
+const {check, validationResult, body} = require('express-validator');
 const utilsUser = require('../utils/utilsUser');
-
-module.exports={
-    login:(req, res) => {
-        let users = utilsUser.getUsers();
-        const user = users.find((email)=>{
-            return (
-                user.email == req.body.user &&
-                bcrypt.compareSync(req.body.password, user.password);
-            );
-        });
-    
-        if (!email) {return res.redirect("/users/login2");
-        req.session.loggedUserId = user.id
-       
-        return res.redirect("/");
-    },
 
 let userController = {
     getLogin: (req,res)=>{
         res.render('users/login2');
+    },
+    processLogin: (req, res) =>{
+        const errors = validationResult(req);
+        if (errors.isEmpty()){
+            let usersJSON = utilsUser.getUsers();
+            let users;
+            let usuarioLoguearse;
+            if (usersJSON == ''){
+                users = [];
+            } else {
+                users = usersJSON;
+            }
+            for (let i=0; i < users.length; i++){
+                if (users[i].email == req.body.email){
+                    if(bcrypt.compareSync(req.body.password, users[i].password)){
+                        usuarioLoguearse = users[i];
+                        break;
+                    } 
+                } 
+            }
+            if (usuarioLoguearse == undefined){
+                return res.render ('users/login2', {errors: [
+                    {msg: 'Credenciales inválidas'}
+                ]});
+            } 
+            req.session.usuarioLogueado  = usuarioLoguearse;
+            return res.render ('index');
+        } else {
+            return res.render ('users/login2', {errors: errors.errors});
+        }
     },
     getRegister: (req,res)=>{
         res.render('users/register');

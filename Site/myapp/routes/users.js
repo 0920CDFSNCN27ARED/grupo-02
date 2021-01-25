@@ -17,6 +17,10 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 router.get('/login', userController.getLogin);
+router.post('/login', [
+  check('email').isEmail().withMessage('Email inválido'),
+  check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
+], userController.processLogin);
 
 router.get('/register', userController.getRegister);
 router.post('/register',upload.any(), userController.postRegister);

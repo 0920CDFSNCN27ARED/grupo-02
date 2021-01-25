@@ -17,7 +17,17 @@
                                 <h3 class="panel-title">Acceder a su cuenta</h3>
                             </div>
                             <div class="panel-body">
-                                <form accept-charset="UTF-8" action="#" method="POST">
+                                <% if (typeof errors != 'undefined') { %>
+                                    <p style = "color:red">ERROR</p>
+                                    <ul>
+                                        <% for (let i= 0; i < errors.length; i++) { %>
+                                            <li>
+                                                <%=errors[i].msg%>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                <% } %>
+                                <form action="/user/login" method="POST">
                                     <fieldset>
                                         <div class="form-group">
                                             <input class="form-control" placeholder="tuemail@ejemplo.com" name="email" type="text">
@@ -31,11 +41,11 @@
                                                 <input name="remember" type="checkbox" value="Recordarme"> Recordarme
                                             </label>
                                         </div> -->
-                                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-                                        <br>
+                                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Ingresar">
+                                        <!-- <br>
                                         <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via Facebook">
                                         <br>
-                                        <input class="btn btn-lg btn-google btn-block" type="submit" value="Login via Google">
+                                        <input class="btn btn-lg btn-google btn-block" type="submit" value="Login via Google"> -->
                                     </fieldset>
                                 </form>
                             </div>
