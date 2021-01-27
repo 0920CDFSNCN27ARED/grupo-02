@@ -11,7 +11,7 @@
         "id": 2,
         "name": "Rogel",
         "description": "Rogel clásico con merengue italiano, relleno de dulce de leche.",
-        "price": "950",
+        "price": "940",
         "image": "torta-rogel.jpg",
         "category": "decorada"
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "Moana",
         "description": "3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla.",
-        "price": "3100",
+        "price": "3150",
         "image": "moana.jpeg",
         "category": "clásica"
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Torta Oreo",
         "description": "Relleno de queso crema y dulce de leche con dos capas de galletitas Oreo y corazón de dulce de leche. Cobertura de dulce de leche y Oreos. ",
-        "price": "1200",
+        "price": "1500",
         "image": "oreo.jpg",
         "category": "clásica"
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Torta de frutilla",
         "description": "Base de masa sablée, relleno de dulce de leche y crema chantilly o crema pastelera y cobertura de frutos rojos de estación (frutillas y/o arándanos en temporada primavera/verano).",
-        "price": "890",
+        "price": "900",
         "image": "torta-frutillas.jpeg",
         "category": "clásica"
     }

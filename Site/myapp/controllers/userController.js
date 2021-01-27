@@ -33,7 +33,7 @@ let userController = {
             req.session.idUserLogueado  = idUserLogueado;
             return res.redirect ('/');
         } else {
-            return res.render ('users/login2', {errors: errors.errors});
+            return res.render ('users/login2', {errors: errors.errors, user: req.loggedUser});
         }
     },
     getRegister: (req,res)=>{

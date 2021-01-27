@@ -28,7 +28,7 @@ let productController = {
         };
         productos.push(newProduct);
         getProduct.addProduct(productos);
-        res.redirect('/product/newProduct');
+        res.redirect('/product');
     },
     editProductForm: (req, res) => {
         const products = getProduct.getProducts();
