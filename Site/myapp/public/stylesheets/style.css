@@ -1,20 +1,23 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
   margin: auto;
   font-family: "Calibri","Roboto","arial";
   font-size: 15px;
-   color: grey;
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
   width: 100%;
   display: flex;
-  align-items: center;
   background-color: whitesmoke;
-  box-sizing: border-box;
+  height: 50px;
 }
 
 header button {
@@ -22,55 +25,39 @@ header button {
   padding: 10px;
   border-style: none;
   background-color: rgba(236, 133, 210, 0.774);
+  font-family: 'Cinzel', serif;	
+  font-size: 20px;
+  border-style: solid;
+  border-color: rgba(235, 31, 99, 0.479);
   color: white;
 }
 
 h1 {
-  font-family: 'Cinzel', serif;	
-  font-size: 20px;
-  border-style: solid;
-		border-color: rgba(235, 31, 99, 0.479);
-    border-width: 3px;
-    padding: 5px;
-    color: black;
+  display: none;
 }
 
 .nav-bar {
-  width: 40%;
-}
-
-.nav-bar ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-bar ul li {
-  list-style: none;
-  color: grey;
-  padding-left: 50px;
-  font-size: 19px;
-}
-
-nav.nav-bar ul li:hover {
-  color: black;
-  font-weight: bold;
+  display: none;
 }
 
 .img-cart {
-  width: 3%;
-  position: relative;
-  left: 75px;;
+  width: 50px;
+  right: 100px;
+  position: absolute;
 }
 
 .img-logo {
-  width: 8%;
-  position: relative;
-  left: 90px;
+  width: 100px;
+  height: 50px;
+  right: 0;
+  position: absolute;
 }
+
 footer {
   background-color: rgb(245, 231, 231);
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   padding: 15px 0px;
   color: rgb(105, 61, 61);
@@ -84,22 +71,22 @@ footer {
 
 .ul-footer {
   padding: 0px 0px;
-  margin: 0px 0px;;
+  margin: 0px 0px;
 }
 .ul-footer li {
   list-style: none;
 }
 
-.ul-footer li a{
+.ul-footer li a {
   text-decoration: none;
   color: rgb(105, 61, 61);
 }
 
-.ul-footer li a:hover{
+.ul-footer li a:hover {
   color: red
 }
 
-.socialRed i{
+.socialRed i {
   padding-right: 5px;
   color: rgb(228, 28, 178);
 }
@@ -107,187 +94,74 @@ footer {
 #fb {
   color: blue;
 }
-
-body {
-  margin: auto;
-  font-family: "Calibri","Roboto","arial";
-  font-size: 15px;
-   color: grey;
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+.socialRed {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 270.33px;
 }
 
-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: whitesmoke;
-  box-sizing: border-box;
+/* Tablet */
+
+@media (min-width: 601px) {
+  header button {
+    display: none;
+  }
+  .nav-bar {
+    display: flex;
+    width: 65%;
+  }
+  .nav-menu-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.nav-bar ul li:hover {
+    color: black;
+    font-weight: bold;
+  }
+
+  .socialRed {
+    display: inline;
+    width: auto;
+  }
+  footer {
+    flex-direction: row;
+  }
 }
 
- header button {
-  margin: 0px 12px;
-  padding: 10px;
-  border-style: none;
-  background-color: rgba(236, 133, 210, 0.774);
-  font-family: 'Cinzel', serif;	
-  font-size: 20px;
-  border-style: solid;
-  border-color: rgba(235, 31, 99, 0.479);
-  color: white;
-}
- 
+/* Desktop */
 
- @media (max-width:500px){
- header button {
-   display:none;
-  margin: 0px 12px;
-  padding: 10px;
-  border-style: none;
-  background-color: rgba(236, 133, 210, 0.774);
-  font-family: 'Cinzel', serif;	
-  font-size: 20px;
-  border-style: solid;
-  border-color: rgba(235, 31, 99, 0.479);
-  color: white;
-}
- }
- h1 {
-  font-family: 'Cinzel', serif;
+@media (min-width: 761px){
+  header {
+    height: max-content;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px 0;
+  }
+  h1 {
+    display: inline;
+    font-family: 'Cinzel', serif;
     font-size: 20px;
     border-style: solid;
     border-color: rgba(235, 31, 99, 0.479);
     border-width: 3px;
     padding: 5px;
     color: black;
-}
-
-
-@media (max-width:549px){
- h1 {
-   display:none;
-  font-family: 'Cinzel', serif;
-    font-size: 20px;
-    border-style: solid;
-    border-color: rgba(235, 31, 99, 0.479);
-    border-width: 3px;
-    padding: 5px;
-    color: black;
-}
-}
-
-.nav-bar {
-  width: 40%;
-}
-
-.nav-bar ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-bar ul li {
-  list-style: none;
-  color: grey;
-  padding-left: 11px;
-  font-size: 19px;
-}
-@media (max-width:500px){
-.nav-bar ul li {
-  left: 70%;
-  position: relative;
-  align-content: revert;
-  list-style: none;
-  color: grey;
-  padding-left: 11px;
-  font-size: 19px;
-}
-
-@media (max-width:900px){
-nav.nav-bar ul li:hover {
-  color: black;
-  font-weight: bold;
-}
-}
-@media (max-width:500px){
-.img-cart {
-  width: 30px;
-  position: relative;
-  left: 38%;;
-}
-
-.img-logo {
-  width: 50px;
-  position: relative;
-  left: 40%;
-}
-}
-
-}
-.img-cart {
-  width: 30px;
-  position: relative;
-  left: 1%;;
-}
-
-.img-logo {
-  width: 50px;
-  position: relative;
-  left: 2%;
-}
-
-@media (max-width:500px){
-.img-cart {
-  width: 30px;
-  position: relative;
-  left: 38%;;
-}
-
-.img-logo {
-  width: 50px;
-  position: relative;
-  left: 40%;
-}
-}
-
-footer {
-  background-color: rgb(245, 231, 231);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 0px;
-  color: rgb(105, 61, 61);
-}
-
-.p-footer {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0px;
-}
-
-.ul-footer {
-  padding: 0px 0px;
-  margin: 0px 0px;;
-}
-.ul-footer li {
-  list-style: none;
-}
-
-.ul-footer li a{
-  text-decoration: none;
-  color: rgb(105, 61, 61);
-}
-
-.ul-footer li a:hover{
-  color: red
-}
-
-.socialRed i{
-  padding-right: 5px;
-  color: rgb(228, 28, 178);
-}
-
-#fb {
-  color: blue;
+    height: max-content;
+  }
+  .nav-bar {
+    width: 39%;
+  }
+  .img-cart {
+    right: 0;
+    position: relative;
+  }
+  .img-logo {
+    right: 0;
+    position: relative;
+  }
 }
