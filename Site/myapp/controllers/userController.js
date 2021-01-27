@@ -11,7 +11,7 @@ let userController = {
         if (errors.isEmpty()){
             let usersJSON = utilsUser.getUsers();
             let users;
-            let usuarioLoguearse;
+            let idUserLogueado;
             if (usersJSON == ''){
                 users = [];
             } else {
@@ -20,17 +20,17 @@ let userController = {
             for (let i=0; i < users.length; i++){
                 if (users[i].email == req.body.email){
                     if(bcrypt.compareSync(req.body.password, users[i].password)){
-                        usuarioLoguearse = users[i];
+                        idUserLogueado = users[i].id;
                         break;
                     } 
                 } 
             }
-            if (usuarioLoguearse == undefined){
+            if (idUserLogueado == undefined){
                 return res.render ('users/login2', {errors: [
                     {msg: 'Credenciales inválidas'}
                 ]});
             } 
-            req.session.usuarioLogueado  = usuarioLoguearse;
+            req.session.idUserLogueado  = idUserLogueado;
             return res.redirect ('/');
         } else {
             return res.render ('users/login2', {errors: errors.errors});
