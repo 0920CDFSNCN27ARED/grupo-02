@@ -1,6 +1,6 @@
 let cartController = {
     getCart: (req,res)=>{
-        res.render('products/cart');
+        res.render('products/cart', {user: req.loggedUser});
     },
 };
 

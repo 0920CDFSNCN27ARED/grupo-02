@@ -7,13 +7,20 @@ const productRoutes = require('./routes/product');
 const methodOverride = require('method-override');
 const app = express();
 const session = require('express-session');
+const authenticate = require('./middlewares/authenticate');
+
+app.set('view engine', 'ejs');
 
 app.use(express.urlencoded( { extended: false }));
+app.use(express.json());
+
 app.use(methodOverride('_method'));
 
 app.use(express.static('public'));
-app.use(session({secret: 'Secret'}));
 app.set('view engine', 'ejs');
+
+app.use(session({secret: 'Secret'}));
+app.use(authenticate);
 
 app.use('/', indexRoutes);
 app.use('/user', userRoutes);

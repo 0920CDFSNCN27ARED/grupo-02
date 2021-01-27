@@ -4,8 +4,12 @@
     <nav class="nav-bar">
         <ul class="nav-menu-list">
             <li><a href="/product">Productos</a></li>
-            <li><a href="/user/register">Registrarse</a></li>
-            <li><a href="/user/login">Ingresar</a></li>
+            <% if (user) { %>  
+                <li><%=user.name%> <%=user.last_name%> </li>
+            <% } else { %>
+                <li><a href="/user/register">Registrarse</a></li>
+                <li><a href="/user/login">Ingresar</a></li>
+            <% }  %>
         </ul>
     </nav>
     <img class="img-cart" src="/images/cart.png" alt="Imagen de carrito de comprar">

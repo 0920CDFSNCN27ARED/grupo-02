@@ -4,7 +4,7 @@ const utilsUser = require('../utils/utilsUser');
 
 let userController = {
     getLogin: (req,res)=>{
-        res.render('users/login2');
+        res.render('users/login2', {user: req.loggedUser});
     },
     processLogin: (req, res) =>{
         const errors = validationResult(req);
@@ -37,7 +37,7 @@ let userController = {
         }
     },
     getRegister: (req,res)=>{
-        res.render('users/register');
+        res.render('users/register', {user: req.loggedUser});
     },
     postRegister: (req, res, next)=>{
         let users = utilsUser.getUsers();
