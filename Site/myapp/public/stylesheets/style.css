@@ -20,6 +20,11 @@ header {
   height: 50px;
 }
 
+header a {
+  color: #428bca;
+  text-decoration: none;
+}
+
 header button {
   margin: 0px 12px;
   padding: 10px;

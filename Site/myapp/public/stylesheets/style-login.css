@@ -4,6 +4,7 @@ body {
   background-color: #17a2b8;
   height: 100vh;
 }
+
 #login .container #login-row #login-column #login-box {
   margin-top: 150px;
   max-width: 600px;
@@ -26,66 +27,7 @@ body {
 	color: grey;
 }
 
-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: whitesmoke;
-  box-sizing: border-box;
-}
-
-header button {
-  margin: 0px 12px;
-  padding: 10px;
-  border-style: none;
-  background-color: rgba(236, 133, 210, 0.774);
-  color: white;
-}
-
-h1 {
-  font-family: 'Cinzel', serif;	
-  font-size: 20px;
-  border-style: solid;
-		border-color: rgba(235, 31, 99, 0.479);
-    border-width: 3px;
-    padding: 5px;
-    color: black;
-}
-
-.nav-bar {
-  width: 40%;
-}
-
-.nav-bar ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-bar ul li {
-  list-style: none;
-  color: grey;
-  padding-left: 50px;
-  font-size: 19px;
-}
-
-nav.nav-bar ul li:hover {
-  color: black;
-  font-weight: bold;
-}
-
-.img-cart {
-  width: 3%;
-  position: relative;
-  left: 75px;;
-}
-
-.img-logo {
-  width: 8%;
-  position: relative;
-  left: 90px;
-}
-
-main{
+main {
   position: relative;
 }
 
@@ -126,46 +68,4 @@ main{
   border-style: none;
   background-color:rgb(245, 238, 238);
   color: rgb(241, 123, 143);
-}
-
-
-footer {
-  background-color: rgb(245, 231, 231);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 0px;
-  color: rgb(105, 61, 61);
-}
-
-.p-footer {
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0px;
-}
-
-.ul-footer {
-  padding: 0px 0px;
-  margin: 0px 0px;;
-}
-.ul-footer li {
-  list-style: none;
-}
-
-.ul-footer li a{
-  text-decoration: none;
-  color: rgb(105, 61, 61);
-}
-
-.ul-footer li a:hover{
-  color: red
-}
-
-.socialRed i{
-  padding-right: 5px;
-  color: rgb(228, 28, 178);
-}
-
-#fb {
-  color: blue;
 }
