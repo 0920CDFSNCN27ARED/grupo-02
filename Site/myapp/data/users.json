@@ -181,29 +181,11 @@
     },
     {
         "id": 21,
-        "name": "Inés",
-        "last_name": "Gomes",
-        "email": "ines.gomes@gmail.com",
-        "password": "$2b$10$.1rJT8wfw4WvnLycnzRKjOk4HmuiaA1zaOYF5Kgjm//3rV8lkZ09a",
-        "category": "user",
-        "image": "IMG_20200303_105246.jpg"
-    },
-    {
-        "id": 22,
         "name": "Iliana",
         "last_name": "Jofre",
         "email": "ilianamicaela@hotmail.com",
-        "password": "$2b$10$8GfPgBXyliwd4OpoMI/IeuV8g6jIce2Q3lQ0GWK2u4RAWdUm.5VOa",
-        "category": "user",
-        "image": "WhatsApp Image 2019-11-02 at 19.jpeg"
-    },
-    {
-        "id": 23,
-        "name": "Valeria",
-        "last_name": "Gomes",
-        "email": "valeria.gomes@gmail.com",
-        "password": "$2b$10$1qrGSD/MymhPVrZCq6gVeeKgURiMjf/y6ORK/CiP8hVPyIyi4y/aS",
-        "category": "user",
-        "image": "IMG_20200303_105459.jpg"
+        "password": "$2b$10$IykX/wYV6BdAfJv//xvwtOv5pjH7PEUjOCkewQTt076QI/A5grn0W",
+        "category": "admin",
+        "image": "IMG_20200302_095608.jpg"
     }
 ]

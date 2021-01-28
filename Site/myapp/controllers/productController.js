@@ -11,7 +11,11 @@ let productController = {
         const product = products.find((prod)=>{
             return prod.id == req.params.id
         });
-        (!product) ? res.send('Error <404> No se encontró el producto solicitado') : res.render('products/productDetail',{products: product, user: req.loggedUser});
+        if (!product) {
+            res.send ('Error <404> No se encontró el producto solicitado');
+         } else {
+            res.render('products/productDetail',{products: product, user: req.loggedUser, admin: req.userAdmin});
+         }
     },
     newProductForm: (req, res)=>{
         res.render('products/new-Product', {user: req.loggedUser});

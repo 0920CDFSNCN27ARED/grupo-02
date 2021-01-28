@@ -40,15 +40,17 @@
                                 </div>
                             </div>
                             <input class="btn btn-success" type="submit" value="Agregar al carrito">
-                            <div class="btn-edit-delet">
-                                <a href="/product/<%=products.id%>/edit">
-                                    <input class="btn-edit" type="button" value="Editar Producto">
-                                </a>
-                            </div>
                         </form>
-                        <form action="/product/<%=products.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
-                            <input class="btn-delete" type="submit" value="Eliminar Producto">
-                        </form>
+                        <% if(admin) { %>
+                            <form action="/product/<%=products.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                <div class="btn-edit-delet">
+                                    <a href="/product/<%=products.id%>/edit">
+                                        <input class="btn-edit" type="button" value="Editar Producto">
+                                    </a>
+                                </div>
+                                <input class="btn-delete" type="submit" value="Eliminar Producto">
+                            </form>
+                        <% } %>
                     </div>
                 </div>
             </div>

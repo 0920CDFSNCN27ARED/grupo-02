@@ -5,7 +5,7 @@
         <ul class="nav-menu-list">
             <li><a href="/product">Productos</a></li>
             <% if (user) { %>  
-                <li><%=user.name%> <%=user.last_name%> </li>
+                <li><a href="#"><%=user.name%> <%=user.last_name%></a></li>
             <% } else { %>
                 <li><a href="/user/register">Registrarse</a></li>
                 <li><a href="/user/login">Ingresar</a></li>
