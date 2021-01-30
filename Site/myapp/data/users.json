@@ -187,5 +187,14 @@
         "password": "$2b$10$IykX/wYV6BdAfJv//xvwtOv5pjH7PEUjOCkewQTt076QI/A5grn0W",
         "category": "admin",
         "image": "IMG_20200302_095608.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Valeria",
+        "last_name": "Gomes",
+        "email": "valeria@gmail.com",
+        "password": "$2b$10$CehInIfNnGusdcROEIX5s.GSKrrYcv08spgnmtYba0uZRCDlObdBi",
+        "category": "user",
+        "image": "IMG_20200302_100204.jpg"
     }
 ]

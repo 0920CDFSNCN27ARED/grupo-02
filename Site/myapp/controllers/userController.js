@@ -26,14 +26,14 @@ let userController = {
                 } 
             }
             if (idUserLogueado == undefined){
-                return res.render ('users/login2', {errors: [
+                return res.render ('users/login2', {user: req.user, errors: [
                     {msg: 'Credenciales inválidas'}
                 ]});
             } 
             req.session.idUserLogueado  = idUserLogueado;
             return res.redirect ('/');
         } else {
-            return res.render ('users/login2', {errors: errors.errors, user: req.loggedUser});
+            return res.render ('users/login2', {errors: errors.errors, user: req.user});
         }
     },
     getRegister: (req,res)=>{
