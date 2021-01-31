@@ -5,6 +5,7 @@ userValidation = {
     isAdmin: (req, res, next) => {
         const id = req.session.idUserLogueado;
         const users = getUsers.getUsers();
+        if (!id) return next();
         const loggedUserAdmin = users.find((user) => {
             return user.id == id;
         });
