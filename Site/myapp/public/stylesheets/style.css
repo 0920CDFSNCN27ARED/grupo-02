@@ -28,6 +28,9 @@ header a {
 h1 {
   display: none;
 }
+.flex {
+  display: flex;
+}
 
 /* DEMO*/
 @media (max-width: 600px){
