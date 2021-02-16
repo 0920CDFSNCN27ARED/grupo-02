@@ -1,3 +1,16 @@
+# Sprint-5
+
+## Start Doing.
+-
+## More of.
+    - Orginzar mejor los tiempos por cualquier bug / issue que surja dado que se puede no llegar con el sprint si la resolución no es rápida y el equipo cuenta con un integrante menos. 
+## Keep Doing.
+    - Mantener el compromiso con el proyecto y continuar con instancias de pairprogaming.
+    - Mantener actualizado tablero de tabajo.
+## Less of.
+-
+## Stop Doing.
+-
 # Sprint-4
 
 ## Start Doing.
@@ -20,6 +33,7 @@
 
 ## Stop Doing.
     - Dejar de tomar una tarea como obligatoria a uno, es decir, que por estar asignada la tengo que hacer sí o sí.
+
 # Sprint-3
 
 ## Start Doing.

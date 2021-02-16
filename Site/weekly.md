@@ -1,3 +1,14 @@
+# Sprint-6 | Semana 15-ene-21
+
+## ¿Qué hicimos esta semana?
+    - Recién comenzamos el sprint, nos encotrabamos de vacaciones. 
+## ¿Se encontró algún impedimiento?
+    - Comenzamos el sprint muy tarde y con una persona menos. 
+## ¿Qué se hará esta semana?
+    - División tareas backlog.
+    - Comenzar con las tareas asignadas.
+    - Carga de tareas de sprint 6 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh).
+
 # Sprint-5 | Semana 11-ene-21
 
 ## ¿Qué hicimos esta semana?
@@ -9,6 +20,7 @@
     - División tareas backlog.
     - Comenzar con las tareas asignadas.
     - Carga de tareas de sprint 5 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh).
+
 # Sprint-4 | Semana 26-dic-20
 
 ## ¿Qué hicimos esta semana?
