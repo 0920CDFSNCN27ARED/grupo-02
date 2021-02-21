@@ -42,4 +42,3 @@ CREATE TABLE products (
     category VARCHAR(40),
     stock SMALLINT
 );
-
