@@ -1,6 +1,7 @@
 const fs = require('fs');
 const getProduct = require('../utils/getProducts');
 const path = require('path');
+const db = require("../database/models");
 let productController = {
     getProduct: (req,res)=>{
         const products = getProduct.getProducts();
@@ -76,6 +77,12 @@ let productController = {
         });
         getProduct.updateProduct(products);
         return res.redirect('/product');
+    },
+    prueba: (req, res) => {
+        db.Products.findAll()
+        .then(function(productos){
+            return res.render("prueba", {productos: productos});
+        })
     },
 };
 module.exports = productController;

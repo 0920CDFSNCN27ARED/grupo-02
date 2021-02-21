@@ -1,6 +1,4 @@
-const { DataTypes } = require('sequelize/types');
-
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = 'Sales';
     let cols = {
         id: {
@@ -45,6 +43,5 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         })
     };
-
-    return Users;
+    return Sales;
 }
