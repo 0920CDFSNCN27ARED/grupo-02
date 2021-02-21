@@ -17,7 +17,9 @@ var storage = multer.diskStorage({
 app.use(AdminValidation.isAdmin);
 app.use(AdminValidation.adminViews);
 var upload = multer({ storage: storage });
-router.get('/prueba', productController.prueba);
+
+router.get('/prueba', productController.prueba); /*prueba conexión DB*/
+
 router.get('/', productController.getProduct);
 router.get('/:id/detail', AdminValidation.isAdmin , productController.getProductDetail);
 

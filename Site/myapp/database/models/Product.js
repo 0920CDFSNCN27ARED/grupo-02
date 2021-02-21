@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
         category: {
             type: dataTypes.STRING(40)
         },
-        quantity: {
+        stock: {
             type: dataTypes.INTEGER
         },
     };

@@ -13,19 +13,19 @@
             <div class="row">
                 <div class="col-sm-5">
                     <article class="product">
-                        <img class= "img-responsive" src="/images/products-images/<%=products.image %>" alt="Producto seleccionado">
+                        <img class= "img-responsive" src="/images/products-images/<%=producto.image_name %>" alt="Producto seleccionado">
                     </artcile>
                 </div>
                 <div class="col-xs-7" style="border:0px solid gray">
-                    <h2><%= products.name %></h2>
-                    <p><%= products.description %></p>
-                    <h3 style="margin-top:0px">AR$ <%= products.price %></h3>
+                    <h2><%= producto.name %></h2>
+                    <p><%= producto.description %></p>
+                    <h3 style="margin-top:0px">AR$ <%= producto.price %></h3>
                     <div class="section">
                         <h6 class="title-attr" style="margin-top:15px;"><small>Especificaciones: </small></h6>
                         <form action="#">
                             <select name="category">
                                 <option class="option" value="none" selected>Ninguna</option>
-                                <option class="option" value="sn-tacc">Sin TACC</option>
+                                <option class="option" value="sin-tacc">Sin TACC</option>
                             </select>
                             <div class="section" style="padding-bottom:20px;">
                                 <h6 class="title-attr"><small>CANTIDAD</small></h6>
@@ -42,9 +42,9 @@
                             <input class="btn btn-success" type="submit" value="Agregar al carrito">
                         </form>
                         <% if(admin) { %>
-                            <form action="/product/<%=products.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
+                            <form action="/product/<%=producto.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
                                 <div class="btn-edit-delet">
-                                    <a href="/product/<%=products.id%>/edit">
+                                    <a href="/product/<%=producto.id%>/edit">
                                         <input class="btn-edit" type="button" value="Editar Producto">
                                     </a>
                                 </div>

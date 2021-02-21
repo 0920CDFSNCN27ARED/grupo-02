@@ -4,10 +4,16 @@ const path = require('path');
 const db = require("../database/models");
 let productController = {
     getProduct: (req,res)=>{
+        /*
         const products = getProduct.getProducts();
-        res.render('products/product', {products: products, user: req.loggedUser});
+        res.render('products/product', {products: products, user: req.loggedUser});*/
+        db.Products.findAll()
+        .then(function(productos){
+            return res.render("products/product", {productos: productos, user: req.loggedUser});
+        })
     },
     getProductDetail: (req, res)=>{
+        /*
         const products = getProduct.getProducts();
         const product = products.find((prod)=>{
             return prod.id == req.params.id
@@ -16,13 +22,18 @@ let productController = {
             res.send ('Error <404> No se encontró el producto solicitado');
          } else {
             res.render('products/productDetail',{products: product, user: req.loggedUser, admin: req.userAdmin});
-         }
+         }*/
+         db.Products.findByPk(req.params.id)
+            .then(function(producto) {
+                res.render('products/productDetail', {producto: producto, user: req.loggedUser, admin: req.userAdmin})
+            })
+
     },
     newProductForm: (req, res)=>{
         res.render('products/new-Product', {user: req.loggedUser});
     },
     newProductPost: (req, res, next) => {
-        let productos = getProduct.getProducts();
+       /* let productos = getProduct.getProducts();
         let newProduct = {
             id: productos[productos.length -1].id + 1,
             name: req.body.name,
@@ -33,10 +44,18 @@ let productController = {
         };
         productos.push(newProduct);
         getProduct.addProduct(productos);
+        res.redirect('/product');*/
+        db.Products.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image_name: req.files[0].filename,
+            category: req.body.category,
+        });
         res.redirect('/product');
     },
     editProductForm: (req, res) => {
-        const products = getProduct.getProducts();
+        /* const products = getProduct.getProducts();
         const product = products.find((prod)=>{
             return prod.id == req.params.id
         });
@@ -44,10 +63,14 @@ let productController = {
             res.status(404).send('Error <404> No se encontró el producto solicitado')
         }else{
             res.render('products/edit-product',{products: product, user: req.loggedUser});
-        }
+        }*/ 
+        db.Products.findByPk(req.params.id)
+            .then(function(producto) {
+                res.render('products/edit-product',{producto: producto, user: req.loggedUser});
+            });
     },
-    updateProduct: (req,res, next) => {
-        const products = getProduct.getProducts();
+    updateProduct: function (req,res) {
+        /*const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {
                 products[i].name = req.body.name;
@@ -63,7 +86,21 @@ let productController = {
                 getProduct.updateProduct(products);
                 return res.redirect('/product')
             } 
-        }
+        }*/
+        db.Products.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image_name: req.files[0] == undefined ? db.Products.image_name : req.files[0].filename,
+            category: req.body.category,
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.redirect('/product');
     },
     deleteProduct: (req, res) => {
         let products = getProduct.getProducts();
@@ -78,10 +115,10 @@ let productController = {
         getProduct.updateProduct(products);
         return res.redirect('/product');
     },
-    prueba: (req, res) => {
+    prueba: (req, res) => { /*prueba conexión DB*/
         db.Products.findAll()
         .then(function(productos){
-            return res.render("prueba", {productos: productos});
+            return res.render("products/prueba", {productos: productos});
         })
     },
 };
