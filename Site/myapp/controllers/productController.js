@@ -103,7 +103,7 @@ let productController = {
         res.redirect('/product');
     },
     deleteProduct: (req, res) => {
-        let products = getProduct.getProducts();
+       /* let products = getProduct.getProducts();
         const imgDelete = products.find(prod => {
             return prod.id == req.params.id
         });
@@ -112,7 +112,12 @@ let productController = {
         products = products.filter(producto => {
             return producto.id != req.params.id
         });
-        getProduct.updateProduct(products);
+        getProduct.updateProduct(products);*/ 
+        db.Products.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
         return res.redirect('/product');
     },
     prueba: (req, res) => { /*prueba conexión DB*/
