@@ -23,9 +23,6 @@ module.exports = (sequelize, dataTypes) => {
         category: {
             type: dataTypes.STRING(40)
         },
-        stock: {
-            type: dataTypes.INTEGER
-        },
     };
     let config = {
         tableName: 'products',
