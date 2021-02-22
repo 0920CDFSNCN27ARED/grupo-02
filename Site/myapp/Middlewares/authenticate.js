@@ -1,24 +1,19 @@
-const getUsers = require("../utils/utilsUser");
+const db = require('../database/models');
 
 function authenticate (req, res, next) {
     const id = req.session.idUserLogueado;
 
     if (!id) return next();
-
-    const users = getUsers.getUsers();
-
-    const loggedUser = users.find((user) => {
-        return user.id == id;
-    });
-
-    if (!loggedUser) {
+    
+    db.Users.findByPk(id)
+    .then(function(usuario){
+        req.loggedUser = usuario;
+        next();
+    })
+    .catch(function(error){
         delete req.session.idUserLogueado;
         return next();
-    }
-
-    req.loggedUser = loggedUser;
-
-    next();
+    })
 }
 
 module.exports = authenticate;

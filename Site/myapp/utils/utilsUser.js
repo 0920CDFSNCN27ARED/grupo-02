@@ -1,8 +1,12 @@
 const fs = require('fs');
+const db = require('../database/models');
 
 module.exports = {
     getUsers: () => {
-        return JSON.parse(fs.readFileSync(__dirname + '/../data/users.json', {encoding: 'utf-8'}));
+        db.Users.findAll()
+        .then(function(usuarios){
+            return usuarios;
+        })
     },
     addUser: (newUser)=>{
         fs.writeFileSync(__dirname + '/../data/users.json',JSON.stringify(newUser,null, 4));

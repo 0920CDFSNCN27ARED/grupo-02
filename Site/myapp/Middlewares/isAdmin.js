@@ -1,27 +1,25 @@
-const getUsers = require("../utils/utilsUser");
-
+const db = require('../database/models');
 
 userValidation = {
     isAdmin: (req, res, next) => {
         const id = req.session.idUserLogueado;
-        const users = getUsers.getUsers();
         if (!id) return next();
-        const loggedUserAdmin = users.find((user) => {
-            return user.id == id;
-        });
-        loggedUserAdmin.category == 'admin' ? req.userAdmin = true : req.userAdmin = false;
-        next ();
+        db.Users.findByPk(id)
+        .then(function(usuario){
+            usuario.category_id == 1 ? req.userAdmin = true : req.userAdmin = false;
+            next ();
+        })
     },
     adminViews: (req, res, next) =>  {
         const id = req.session.idUserLogueado;
-        const users = getUsers.getUsers();
-        const loggedUserAdmin = users.find((user) => {
-            return user.id == id;
-        });
-        if (loggedUserAdmin.category !== 'admin') {
-            return res.redirect ('/');
-        } 
-        next();
+        db.Users.findByPk(id)
+        .then(function(usuario){
+            if (usuario.category_id !== 1 ) {
+                return res.redirect ('/');
+            }
+            next();
+        })
+        
     }
 }
 module.exports = userValidation;

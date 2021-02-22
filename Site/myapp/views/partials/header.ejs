@@ -5,8 +5,8 @@
         <input type="checkbox" name="menu" id="touch">
         <ul class="nav-menu-list">
             <li><a href="/product">Productos</a></li>
-            <% if (user) { %>  
-                <li><a href="#">Hola, <%=user.name%> <%=user.last_name%>.</a></li>
+            <% if (user) { %>
+                <li><a href="#">Hola, <%=user.first_name%> <%=user.last_name%>.</a></li>
             <% } else { %>
                 <li><a href="/user/register">Registrarse</a></li>
                 <li><a href="/user/login">Ingresar</a></li>
