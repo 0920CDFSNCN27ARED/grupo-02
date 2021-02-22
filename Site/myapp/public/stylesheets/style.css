@@ -17,7 +17,7 @@ header {
   width: 100%;
   display: flex;
   background-color: whitesmoke;
-  height: 50px;
+  height: 12vh;
 }
 
 header a {
@@ -190,7 +190,6 @@ footer {
 
 @media (min-width: 761px){
   header {
-    height: max-content;
     align-items: center;
     justify-content: space-between;
   }

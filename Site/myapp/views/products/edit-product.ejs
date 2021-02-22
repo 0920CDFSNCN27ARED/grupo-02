@@ -7,39 +7,39 @@
     <body>
         <%- include('../partials/header') %>
         <main>
-            <h2 class="title-main">Editar: <%= producto.name %></h2>
-            <form class="formRegister" action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h2 class="title-main">Producto a editar: <%= producto.name %></h2>
+            <form action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <section class="inputs">
                         <p style="display: none">
-                            <label class="label" for="id">ID del producto: </label>
-                            <input class="register" type="text" id="id" name="id" value= "<%= producto.id %>">
+                            <label for="id">ID del producto: </label>
+                            <input class="form-control" type="text" id="id" name="id" value= "<%= producto.id %>">
                         </p>
                         <p>
-                            <label class="label" for="name">Nombre del producto: </label>
-                            <input class="style-border-input" type="text" id="name" name="name" value= "<%= producto.name %>" required>
+                            <label for="name">Nombre del producto: </label>
+                            <input class= "form-control" type="text" id="name" name="name" value= "<%= producto.name %>" required>
                         </p>
                         <p>
-                            <label class="label" for="price">Precio:</label>
-                            <input class="style-border-input" type="number" id="price" name="price" value= "<%= producto.price %>" required>
+                            <label for="price">Precio:</label>
+                            <input class="form-control" type="number" id="price" name="price" value= "<%= producto.price %>" required>
                         </p>
                         <p>
                             <label for="category">Categoría: </label>
-                            <select name="category" id="category" required>
+                            <select class="form-control" name="category" id="category" required>
                                 <option value="clásica" <%= producto.category == "clásica" ? "selected" : "" %> >Clásica</option>
                                 <option value="decorada" <%= producto.category == "decorada" ? "selected" : "" %> >Decorada</option>
                             </select>
+                        </p>
+                        <p>
+                            <input class="form-control"type="file" id="image" name="image">
                         </p>
                         <p> 
                             Imagen actual: 
                         </p>
                         <img class="img-now" src="/images/products-images/<%= producto.image_name %>" alt="Imágen de la torta">
                         <p>
-                            <input type="file" id="image" name="image">
-                        </p>
-                        <p>
-                            <label class="label" for="description">Descripción:</label><br>
-                            <textarea class="style-border-input" id="description" name="description" required><%= producto.description %></textarea>
+                            <label for="description">Descripción:</label><br>
+                            <textarea class="form-control" id="description" name="description" required><%= producto.description %></textarea>
                         </p>
                     </section>
                     <p>

@@ -14,6 +14,10 @@ main{
 h2 {
     display: none;
 }
+img{
+    
+    box-shadow: 2px 2px 5px rgb(211, 209, 209);
+}
 .articleA {
     display: flex;
     flex-direction: column;
@@ -42,9 +46,12 @@ h2 {
     text-align: center;
     letter-spacing: 3px;
     color: black;
+    margin-bottom: 15px;
 }
 mark {
     background-color: rgb(245, 223, 26);
+    
+    box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .conjunto {
     display: flex;
@@ -105,6 +112,7 @@ mark {
 iframe {
     width: 100%;
     border-radius: 5%;
+    box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 /* Fin Main Mobile*/ 
 /* Inicio - Main Tablet - no modificar */ 
