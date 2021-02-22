@@ -35,7 +35,8 @@ textarea{
 .style-border-input{
     border: solid 0.5px rgb(151, 77, 112);
 }
-.submit{    width: 100%;
+.submit{    
+    width: 100%;
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px;

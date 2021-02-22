@@ -1,13 +1,13 @@
 <header>
-    <h1>Regalá algo rico</br>podés programar tu pedido</h1>
+    <h1>~ La zuccheriera ~ Regalá algo rico</h1>
     <nav class="nav-bar">
         <label for="touch" class="button-menu"><i class="fas fa-bars"></i></label>
         <input type="checkbox" name="menu" id="touch">
         <ul class="nav-menu-list">
             <li><a href="/product">Productos</a></li>
             <% if (user) { %>
-                <li><a href="#">Mi Perfil</a></li>
-                <li><a href="user/logout">Cerrar sesión</a></li>
+                <li><a href="#"><!-- Mi Perfil--> <%=user.first_name%> <%=user.last_name%></a></li>
+                <li><a href="/user/logout">Cerrar sesión</a></li>
             <% } else { %>
                 <li><a href="/user/register">Registrarse</a></li>
                 <li><a href="/user/login">Ingresar</a></li>

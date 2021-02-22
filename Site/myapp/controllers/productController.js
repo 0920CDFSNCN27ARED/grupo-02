@@ -72,7 +72,7 @@ let productController = {
     updateProduct: async (req,res) => {
         let id = req.params.id;
         const Products = db.Products;
-        try { await Products.update (
+        await Products.update (
             {
                 name: req.body.name,
                 description: req.body.description,
@@ -82,9 +82,6 @@ let productController = {
             },
             { where: { id: id } }, 
         );
-        } catch (err) {
-            console.log(err);
-        }
         res.redirect('/product');
         /*const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
