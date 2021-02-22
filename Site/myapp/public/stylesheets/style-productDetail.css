@@ -9,6 +9,7 @@
 .image-withd{
   width: 100%;
   border-radius: 20px;
+  box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .h2{
   margin-bottom: 3%;
@@ -50,6 +51,7 @@ p{
   background-color: #f8402c;
   padding: 10px;
   border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .btn-success{ 
   padding: 10px;
@@ -58,4 +60,5 @@ p{
   border: 0px;
   background-color: rgb(29, 172, 29);
   color: honeydew;
+  box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
