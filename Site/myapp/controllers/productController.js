@@ -69,7 +69,23 @@ let productController = {
                 res.render('products/edit-product',{producto: producto, user: req.loggedUser});
             });
     },
-    updateProduct: function (req,res) {
+    updateProduct: async (req,res) => {
+        let id = req.params.id;
+        const Products = db.Products;
+        try { await Products.update (
+            {
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                image_name: req.files[0] == undefined ? Products.image_name : req.files[0].filename,
+                category: req.body.category,
+            },
+            { where: { id: id } }, 
+        );
+        } catch (err) {
+            console.log(err);
+        }
+        res.redirect('/product');
         /*const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {
@@ -87,22 +103,8 @@ let productController = {
                 return res.redirect('/product')
             } 
         }*/
-        db.Products.update({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image_name: req.files[0] == undefined ? db.Products.image_name : req.files[0].filename,
-            category: req.body.category,
-        },
-        {
-            where: {
-                id: req.params.id
-            }
-        });
-
-        res.redirect('/product');
     },
-    deleteProduct: (req, res) => {
+    deleteProduct: async (req, res) => {
        /* let products = getProduct.getProducts();
         const imgDelete = products.find(prod => {
             return prod.id == req.params.id
@@ -113,7 +115,7 @@ let productController = {
             return producto.id != req.params.id
         });
         getProduct.updateProduct(products);*/ 
-        db.Products.destroy({
+        await db.Products.destroy({
             where: {
                 id: req.params.id
             }

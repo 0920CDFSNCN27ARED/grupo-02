@@ -45,6 +45,9 @@ fieldset{
   border-radius: 6px;
   width: 100%;
 }
+.remember {
+  margin-bottom: 20px;
+}
 @media (min-width: 361px){
   .panel-title {
     padding: 2% 3.5%;

@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
         },
         name: {
-            type: dataTypes.STRING(40),
+            type: dataTypes.STRING
         },
         description: {
             type: dataTypes.TEXT,
@@ -18,10 +18,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         image_name: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING,
         },
         category: {
-            type: dataTypes.STRING(40)
+            type: dataTypes.STRING
         },
     };
     let config = {

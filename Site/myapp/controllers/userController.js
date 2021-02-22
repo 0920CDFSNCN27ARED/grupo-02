@@ -51,7 +51,11 @@ let userController = {
                     ]});
                 }
                 req.session.idUserLogueado  = idUserLogueado;
-                console.log(req.session.idUserLogueado);
+                if (req.body.remember != undefined){
+                    res.cookie("remember", idUserLogueado, {
+                        maxAge: 120000,
+                    })
+                }
                 return res.redirect ('/');
             })
             .catch(function(error){
@@ -83,6 +87,11 @@ let userController = {
             image_name: req.files[0].filename
         });
         res.redirect('/user/login');
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie("remember");
+        res.redirect("/");
     },
 }
 

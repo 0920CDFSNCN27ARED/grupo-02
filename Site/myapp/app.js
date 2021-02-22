@@ -8,6 +8,8 @@ const methodOverride = require('method-override');
 const app = express();
 const session = require('express-session');
 const authenticate = require('./middlewares/authenticate');
+const remember = require('./middlewares/remember');
+const cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
 
@@ -21,6 +23,8 @@ app.set('view engine', 'ejs');
 
 app.use(session({secret: 'Secret'}));
 app.use(authenticate);
+app.use(cookieParser());
+app.use(remember);
 
 app.use('/', indexRoutes);
 app.use('/user', userRoutes);
