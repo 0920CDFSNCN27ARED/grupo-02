@@ -8,7 +8,7 @@
         <%- include('../partials/header') %>
         <main>
             <h2 class="title-main">Producto a editar: <%= producto.name %></h2>
-            <form action="/product/:id/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/product/<%= producto.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <section class="inputs">
                         <p style="display: none">
