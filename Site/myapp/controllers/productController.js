@@ -71,6 +71,7 @@ let productController = {
     },
     updateProduct: async (req,res) => {
         const Products = db.Products;
+        const id = req.params.id;
         await Products.update (
             {
                 name: req.body.name,
@@ -79,9 +80,9 @@ let productController = {
                 image_name: req.files[0] == undefined ? Products.image_name : req.files[0].filename,
                 category: req.body.category,
             },
-            { where: { id: req.params.id } }, 
+            { where: { id: id } }, 
         );
-        res.redirect('/product/' + req.params.id + '/detail');
+        res.redirect('/product');
         /*const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {
