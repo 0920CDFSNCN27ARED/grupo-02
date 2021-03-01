@@ -10,6 +10,7 @@ const session = require('express-session');
 const authenticate = require('./middlewares/authenticate');
 const remember = require('./middlewares/remember');
 const cookieParser = require('cookie-parser');
+const apiProductsRouter = require('./routes/api/productsRoutes');
 
 app.set('view engine', 'ejs');
 
@@ -30,5 +31,7 @@ app.use('/', indexRoutes);
 app.use('/user', userRoutes);
 app.use('/cart', cartRoutes);
 app.use('/product', productRoutes);
+
+app.use('/api/products', apiProductsRouter);
 
 module.exports = app;
