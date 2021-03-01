@@ -1,3 +1,18 @@
+# Sprint-6
+
+## Start Doing.
+- Realizar el trabajo fuerte al inicio del sprint para poder sumar funcionalidades extras a lo pedido en el sprint.
+## More of.
+    - Orginzar mejor los tiempos por cualquier bug / issue que surja dado que se puede no llegar con el sprint si la resolución no es rápida.
+## Keep Doing.
+    - Mantener el compromiso con el proyecto y continuar con instancias de pairprogaming.
+    - Mantener actualizado tablero de tabajo.
+    - Mantener velocidad de resolución y proactividad para buscar soluciones (consultas en internet, profesor).
+## Less of.
+- 
+## Stop Doing.
+-
+
 # Sprint-5
 
 ## Start Doing.
