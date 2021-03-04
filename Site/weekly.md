@@ -1,3 +1,17 @@
+# Sprint-7 | Semana 22-feb-21
+
+## ¿Qué hicimos esta semana?
+    - Finalizar sprint 6.
+    - Corregir update de sprint 6 dado que la funcionalidad tenía un error. 
+    - Agregamos diseño a las vistas.
+    - Implementamos la DB y CRUD de productos / usuarios. 
+## ¿Se encontró algún impedimiento?
+    - Tuvimos un inconveniente con el update de la DB pero fue resuelto consultando al profesor. 
+## ¿Qué se hará esta semana?
+    - División tareas backlog.
+    - Comenzar con las tareas asignadas.
+    - Carga de tareas de sprint 7 en [Trello](https://trello.com/b/eFXBf6xZ/0920-grupo02-proyecto-integrador-dh).
+
 # Sprint-6 | Semana 15-ene-21
 
 ## ¿Qué hicimos esta semana?
