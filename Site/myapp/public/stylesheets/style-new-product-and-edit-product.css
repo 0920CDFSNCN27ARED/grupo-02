@@ -43,6 +43,18 @@ fieldset {
     border-radius: 4px;
     box-shadow: 2px 2px 5px rgb(211, 209, 209);
   }
+.error{
+    margin-top: 3%;
+    margin-left: 2%;
+}
+.error p {
+    font-size: 17px;
+}
+.errorLi {
+    margin-top: 0.5%;
+    font-size: 14px;
+    color: grey;
+}
 @media (min-width: 361px){
 .inputs  p input {
     margin-top: 1%;

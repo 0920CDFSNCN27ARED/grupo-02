@@ -6,34 +6,46 @@
     </head>
     <body>
         <%- include('../partials/header') %>
+        <div class='error'> 
+            <% if (typeof errors != 'undefined') { %>
+                <p style = "color:red">Error al cargar nuevo producto</p>
+                <ul>
+                    <% for (let i= 0; i < errors.length; i++) { %>
+                        <li class='errorLi' >
+                            <%=errors[i].msg%>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
         <main>
             <h2 class="title-main">Cargar un nuevo producto</h2>
             <form class="formRegister" action="/product/newProduct" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <section class="inputs">
                         <p>
-                            <label class="label" for="name">Nombre del producto: </label>
-                            <input class="style-border-input" type="text" id="name" name="name" placeholder="Torta de manzana" required>
+                            <label for="name">Nombre del producto: </label>
+                            <input class="form-control" type="text" id="name" name="name" placeholder="Torta de manzana">
                         </p>
                         <p>
-                            <label class="label" for="price">Precio:</label>
-                            <input class="style-border-input" type="number" id="price" name="price" placeholder="1000" required>
+                            <label for="price">Precio:</label>
+                            <input class="form-control" type="number" id="price" name="price" placeholder="1000">
                         </p>
                         <p>
-                            <label class="label"  for="category">Categoría: </label>
-                            <select name="category" id="category" required>
+                            <label for="category">Categoría: </label>
+                            <select class="form-control" name="category" id="category">
                                 <option value="">-Elegir-</option>
                                 <option value="Clásica">Clásica</option>
                                 <option value="Decorada">Decorada</option>
                             </select>
                         </p>
                         <p>
-                            <label class="label"  for="image">Imagen: </label>
-                            <input type="file" id="image" name="image" required>
+                            <label for="image">Imagen: </label>
+                            <input class="form-control" type="file" id="image" name="image">
                         </p>
                         <p>
-                            <label class="label" for="description">Descripción:</label><br>
-                            <textarea class="style-border-input"  id="description" name="description" placeholder="Agregar descripción del producto" required></textarea>
+                            <label for="description">Descripción:</label><br>
+                            <textarea class="form-control" id="description" name="description" placeholder="Agregar descripción del producto"></textarea>
                         </p>
                     </section>
                     <p>

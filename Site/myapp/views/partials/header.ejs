@@ -4,11 +4,13 @@
         <label for="touch" class="button-menu"><i class="fas fa-bars"></i></label>
         <input type="checkbox" name="menu" id="touch">
         <ul class="nav-menu-list">
-            <li><a href="/product">Productos</a></li>
             <% if (user) { %>
                 <li><a href="#"><!-- Mi Perfil--> <%=user.first_name%> <%=user.last_name%></a></li>
+                <li><a href="/product/newproduct">Nuevo Producto</a></li>
+                <li><a href="/product">Listado de Productos</a></li>
                 <li><a href="/user/logout">Cerrar sesión</a></li>
             <% } else { %>
+                <li><a href="/product">Productos</a></li>
                 <li><a href="/user/register">Registrarse</a></li>
                 <li><a href="/user/login">Ingresar</a></li>
             <% }  %>

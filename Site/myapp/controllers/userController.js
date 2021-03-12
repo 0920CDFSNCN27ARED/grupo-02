@@ -66,6 +66,7 @@ let userController = {
         res.render('users/register', {user: req.loggedUser});
     },
     postRegister: (req, res, next)=>{
+        console.log(validationResult(req));
         /*let users = utilsUser.getUsers();
         let newUser = {
             id: users[users.length -1].id + 1,

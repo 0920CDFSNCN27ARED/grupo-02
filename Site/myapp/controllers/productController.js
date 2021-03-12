@@ -1,7 +1,8 @@
-const fs = require('fs');
-const getProduct = require('../utils/getProducts');
-const path = require('path');
+/*const fs = require('fs');*/
+/*const getProduct = require('../utils/getProducts');*/ /* Se utiliza para levantar datos del JSON, al vincular database/models no es necesario */
+/*const path = require('path');*/
 const db = require("../database/models");
+const {check, validationResult, body} = require('express-validator');
 let productController = {
     getProduct: (req,res)=>{
         /*
@@ -33,18 +34,11 @@ let productController = {
         res.render('products/new-Product', {user: req.loggedUser});
     },
     newProductPost: (req, res, next) => {
-       /* let productos = getProduct.getProducts();
-        let newProduct = {
-            id: productos[productos.length -1].id + 1,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.files[0].filename,
-            category: req.body.category
-        };
-        productos.push(newProduct);
-        getProduct.addProduct(productos);
-        res.redirect('/product');*/
+        console.log(validationResult(req));
+        const errors = validationResult(req);
+        if (!errors.isEmpty()){
+            return res.render ('products/new-Product', {errors: errors.errors, user: req.loggedUser})
+        }
         db.Products.create({
             name: req.body.name,
             description: req.body.description,
@@ -52,7 +46,19 @@ let productController = {
             image_name: req.files[0].filename,
             category: req.body.category,
         });
-        res.redirect('/product');
+        res.redirect('/product/' + producto.id + "/detail");
+        /* let productos = getProduct.getProducts();
+            let newProduct = {
+                id: productos[productos.length -1].id + 1,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.files[0].filename,
+                category: req.body.category
+            };
+            productos.push(newProduct);
+            getProduct.addProduct(productos);
+            res.redirect('/product');*/
     },
     editProductForm: (req, res) => {
         /* const products = getProduct.getProducts();
