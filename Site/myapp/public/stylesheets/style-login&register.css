@@ -48,6 +48,9 @@ fieldset{
 .remember {
   margin-bottom: 20px;
 }
+.errorLi {
+  margin: 0.5%;
+}
 @media (min-width: 361px){
   .panel-title {
     padding: 2% 3.5%;

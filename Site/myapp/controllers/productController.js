@@ -34,7 +34,6 @@ let productController = {
         res.render('products/new-Product', {user: req.loggedUser});
     },
     newProductPost: (req, res, next) => {
-        console.log(validationResult(req));
         const errors = validationResult(req);
         if (!errors.isEmpty()){
             return res.render ('products/new-Product', {errors: errors.errors, user: req.loggedUser})
