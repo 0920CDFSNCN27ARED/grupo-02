@@ -69,16 +69,18 @@ let userController = {
         const errors = validationResult(req);
         if (!errors.isEmpty()){
             return res.render ('users/register', {errors: errors.errors, user: req.loggedUser})
+        } else {
+                db.Users.create({
+                first_name: req.body.name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                category_id: 1,
+                image_name: req.files[0].filename
+            });
+            res.redirect('/user/login');
         }
-        db.Users.create({
-            first_name: req.body.name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            category_id: 2,
-            image_name: req.files[0].filename
-        });
-        res.redirect('/user/login');
+        
         /*let users = utilsUser.getUsers();
         let newUser = {
             id: users[users.length -1].id + 1,

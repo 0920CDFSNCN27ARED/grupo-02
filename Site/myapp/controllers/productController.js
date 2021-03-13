@@ -35,17 +35,22 @@ let productController = {
     },
     newProductPost: (req, res, next) => {
         const errors = validationResult(req);
-        if (!errors.isEmpty()){
+        console.log(errors)
+        if (! errors.isEmpty()){
             return res.render ('products/new-Product', {errors: errors.errors, user: req.loggedUser})
+        } else {
+                db.Products.create({
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    image_name: req.files[0].filename,
+                    category: req.body.category,
+                })
+                .then(function(producto){
+                res.redirect('/product/' + producto.id + "/detail");
+                })
         }
-        db.Products.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image_name: req.files[0].filename,
-            category: req.body.category,
-        });
-        res.redirect('/product/' + producto.id + "/detail");
+        
         /* let productos = getProduct.getProducts();
             let newProduct = {
                 id: productos[productos.length -1].id + 1,
@@ -68,26 +73,34 @@ let productController = {
             res.status(404).send('Error <404> No se encontró el producto solicitado')
         }else{
             res.render('products/edit-product',{products: product, user: req.loggedUser});
-        }*/ 
+        }*/
         db.Products.findByPk(req.params.id)
             .then(function(producto) {
                 res.render('products/edit-product',{producto: producto, user: req.loggedUser});
             });
     },
-    updateProduct: async (req,res) => {
-        const Products = db.Products;
-        const id = req.params.id;
-        await Products.update (
-            {
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                image_name: req.files[0] == undefined ? Products.image_name : req.files[0].filename,
-                category: req.body.category,
-            },
-            { where: { id: id } }, 
-        );
-        res.redirect('/product');
+    updateProduct: (req,res, next) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()){
+            db.Products.findByPk(req.params.id)
+                .then(function(producto){
+                    return res.render ('products/edit-product', {errors: errors.errors, producto: producto , user: req.loggedUser})
+                })
+        }else{
+            const Products = db.Products;
+            const id = req.params.id;
+            Products.update (
+                {
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    image_name: req.files[0] == undefined ? Products.image_name : req.files[0].filename,
+                    category: req.body.category,
+                },
+                { where: { id: id } }, 
+            );
+            res.redirect('/product');
+        }
         /*const products = getProduct.getProducts();
         for (let i = 0; products.length; i++) {
             if (req.body.id == products[i].id) {

@@ -6,26 +6,34 @@
     </head>
     <body>
         <%- include('../partials/header') %>
+        <div class='error'>
+            <% if (typeof errors !='undefined' ) { %>
+                <p style="color:red">Error al editar el producto</p>
+                <ul>
+                    <% for (let i=0; i < errors.length; i++) { %>
+                        <li class='errorLi'>
+                            <%=errors[i].msg%>
+                        </li>
+                        <% } %>
+                </ul>
+                <% } %>
+        </div>
         <main>
             <h2 class="title-main">Producto a editar: <%= producto.name %></h2>
             <form action="/product/<%= producto.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                 <fieldset>
                     <section class="inputs">
-                        <p style="display: none">
-                            <label for="id">ID del producto: </label>
-                            <input class="form-control" type="text" id="id" name="id" value= "<%= producto.id %>">
-                        </p>
                         <p>
                             <label for="name">Nombre del producto: </label>
-                            <input class= "form-control" type="text" id="name" name="name" value= "<%= producto.name %>" required>
+                            <input class= "form-control" type="text" id="name" name="name" value= "<%= producto.name %>">
                         </p>
                         <p>
                             <label for="price">Precio:</label>
-                            <input class="form-control" type="number" id="price" name="price" value= "<%= producto.price %>" required>
+                            <input class="form-control" type="number" id="price" name="price" value= "<%= producto.price %>">
                         </p>
                         <p>
                             <label for="category">Categoría: </label>
-                            <select class="form-control" name="category" id="category" required>
+                            <select class="form-control" name="category" id="category">
                                 <option value="clásica" <%= producto.category == "clásica" ? "selected" : "" %> >Clásica</option>
                                 <option value="decorada" <%= producto.category == "decorada" ? "selected" : "" %> >Decorada</option>
                             </select>
@@ -39,7 +47,7 @@
                         <img class="img-now" src="/images/products-images/<%= producto.image_name %>" alt="Imágen de la torta">
                         <p>
                             <label for="description">Descripción:</label><br>
-                            <textarea class="form-control" id="description" name="description" required><%= producto.description %></textarea>
+                            <textarea class="form-control" id="description" name="description"><%= producto.description %></textarea>
                         </p>
                     </section>
                     <p>

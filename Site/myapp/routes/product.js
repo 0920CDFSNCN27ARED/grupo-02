@@ -26,15 +26,23 @@ router.get('/:id/detail', AdminValidation.isAdmin , productController.getProduct
 
 router.get('/newProduct', AdminValidation.adminViews, productController.newProductForm);
 router.post('/newProduct', upload.any(), [
-  check('name').isLength( {min: 4}).withMessage('No se cargo nombre del producto'),
-  check('price').isFloat( {min:0} ).withMessage('No se cargo precio del producto'),
-  check('category').notEmpty().withMessage('No se cargo categoría del producto'),
-  check('image').notEmpty().withMessage('No se cargo imágen del producto'),
-  check('description').isLength( {min: 5} ).withMessage('No se cargo descripción del producto'),
+  check('name').isLength( {min: 4}).withMessage('No se cargó nombre del producto'),
+  check('price').isFloat( {min:0} ).withMessage('No se cargó precio del producto'),
+  check('category').notEmpty().withMessage('No se cargó categoría del producto'),
+  check('image').custom((value, req) =>{
+    if (! req.file) throw new Error("No se cargó una imagen");
+    return true
+  }),
+  check('description').isLength( {min: 5} ).withMessage('No se cargó descripción del producto')
 ], productController.newProductPost);
 
 router.get('/:id/edit', AdminValidation.adminViews, productController.editProductForm);
-router.put('/:id/edit', upload.any(), productController.updateProduct);
+router.put('/:id/edit', upload.any(),[
+  check('name').isLength( {min: 4}).withMessage('No se cargó nombre del producto'),
+  check('price').isFloat( {min:0} ).withMessage('No se cargó precio del producto'),
+  check('category').notEmpty().withMessage('No se cargó categoría del producto'),
+  check('description').isLength( {min: 5} ).withMessage('No se cargó descripción del producto'),
+], productController.updateProduct);
 
 router.delete('/:id/delete', AdminValidation.adminViews, productController.deleteProduct);
 
