@@ -43,7 +43,7 @@ router.post('/register',upload.any(), [
   .withMessage("El campo email debe estar completo"),
   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
   check('image').custom((value, {req}) =>{
-    if (! req.files) throw new Error("No se cargó alta imagen");
+    if (! req.files) throw new Error("No se cargó una imagen");
     return true
   }),
 ], userController.postRegister);

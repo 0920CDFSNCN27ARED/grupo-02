@@ -29,8 +29,8 @@ router.post('/newProduct', upload.any(), [
   check('name').isLength( {min: 4}).withMessage('No se cargó nombre del producto'),
   check('price').isFloat( {min:0} ).withMessage('No se cargó precio del producto'),
   check('category').notEmpty().withMessage('No se cargó categoría del producto'),
-  check('image').custom((value, req) =>{
-    if (! req.file) throw new Error("No se cargó una imagen");
+  check('image').custom((value, { req }) =>{
+    if (! req.files) throw new Error("No se cargó una imagen");
     return true
   }),
   check('description').isLength( {min: 5} ).withMessage('No se cargó descripción del producto')
