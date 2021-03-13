@@ -113,6 +113,18 @@ iframe {
     border-radius: 5%;
     box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
+.return:link {
+    color: #1c61f5;
+}
+
+.return:visited {
+    color: #9a2ee2;
+}
+
+.return:hover {
+    color: #adc0e7
+}
+
 /* Fin Main Mobile*/ 
 /* Inicio - Main Tablet - no modificar */ 
 @media (min-width: 601px){

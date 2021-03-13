@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const {check, validationResult, body} = require('express-validator');
-const utilsUser = require('../utils/utilsUser');
+/* const utilsUser = require('../utils/utilsUser'); */ /* JSON de usuarios, se migró a la DB*/
 const db = require("../database/models");
 
 let userController = {
@@ -66,7 +66,6 @@ let userController = {
         res.render('users/register', {user: req.loggedUser});
     },
     postRegister: (req, res, next)=>{
-        console.log(validationResult(req));
         const errors = validationResult(req);
         if (!errors.isEmpty()){
             return res.render ('users/register', {errors: errors.errors, user: req.loggedUser})

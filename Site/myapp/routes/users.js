@@ -6,6 +6,7 @@ const path = require('path');
 const {check, validationResult, body} = require('express-validator');
 const isLogged = require('../middlewares/userLogged');
 const db = require("../database/models");
+const { resolve } = require('path');
 const app = express();
 
 var storage = multer.diskStorage({
@@ -28,11 +29,19 @@ router.post('/login', [
 
 router.get('/register', isLogged, userController.getRegister);
 router.post('/register',upload.any(), [
-  check('name').isLength( {min: 1} ).withMessage('El campo nombre no puede estar vacío y solo puede contener letras'),
-  check('last_name').isLength( {min: 1} ).withMessage('El campo apellido no puede estar vacío y solo puede contener letras'),
-  check('email').isEmail().withMessage('Email inválido'),
+  check('name').isLength( {min: 1} ).withMessage('Debes ingresar un nombre. El campo solo puede contener letras.'),
+  check('last_name').isLength( {min: 1} ).withMessage('Debes ingresar un nombre. El campo solo puede contener letras.'),
+  check("email").isEmail().withMessage("Debes ingresa un email válido")
+  .custom(async (value) => {
+    const mail = await db.Users.findOne({ where: { email: value } });
+    if (mail !== null) {
+      throw new Error("El email ingresado se encuentra registrado");
+    }
+    return true;
+  })
+  .isLength()
+  .withMessage("El campo email debe estar completo"),
   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
-  check('image').notEmpty().withMessage('Es necesario cargar una imágen para el avatar'),
 ], userController.postRegister);
 router.get('/logout', userController.logout);
 
