@@ -30,8 +30,22 @@ router.post('/newProduct', upload.any(), [
   check('price').isFloat( {min:0} ).withMessage('No se cargó precio del producto'),
   check('category').notEmpty().withMessage('No se cargó categoría del producto'),
   check('image').custom((value, { req }) =>{
-    if (! req.files) throw new Error("No se cargó una imagen");
-    return true
+    if (! req.files) {
+      throw new Error("No se cargó una imagen")
+    }else{
+      console.log(req)
+      const extension = (path.extname(req.files[0].mimetype)).toLowerCase();
+      switch (extension) {
+          case '.jpg':
+              return '.jpg';
+          case '.jpeg':
+              return '.jpeg';
+          case  '.png':
+              return '.png';
+          default:
+              throw new Error("La imagen debe ser .jpg .jpeg o .png");
+      }
+    }
   }),
   check('description').isLength( {min: 5} ).withMessage('No se cargó descripción del producto')
 ], productController.newProductPost);
