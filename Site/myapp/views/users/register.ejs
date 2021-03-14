@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
     <head>
         <%- include('../partials/head') %>
-        <link  href="/stylesheets/style-login&register.css" rel="stylesheet">
+        <link  href='/stylesheets/style-login&register.css' rel='stylesheet'>
+        <script src='/js/validation-register.js'></script>
     </head>
     <body>
         <%- include('../partials/header') %>
         <main>
             <% if (typeof errors != 'undefined') { %>
-                <p style = "color:red">Error en el registro</p>
+                <p style = 'color:red'>Error en el registro</p>
                 <ul>
                     <% for (let i= 0; i < errors.length; i++) { %>
                         <li class='errorLi' >
@@ -17,35 +18,38 @@
                     <% } %>
                 </ul>
             <% } %>
-            <div class="panel">
-                <section class="panel-heading">
-                    <h2 class="panel-title">Creá tu cuenta</h2>
-                <!--<div class="buttons">
-                        <button class="gmail" name="gmail"><i class="fab fa-google-plus-g fa-2x"></i></button>
-                        <button class="facebook"><i id="fb" class="fab fa-facebook-square fa-2x"></i></button>
+            <div class='panel'>
+                <section class='panel-heading'>
+                    <h2 class='panel-title'>Creá tu cuenta</h2>
+                <!--<div class='buttons'>
+                        <button class='gmail' name='gmail'><i class='fab fa-google-plus-g fa-2x'></i></button>
+                        <button class='facebook'><i id='fb' class='fab fa-facebook-square fa-2x'></i></button>
                     </div>-->
                 </section>
-                <section class="panel-body">
-                    <form action="/user/register" method="POST" enctype="multipart/form-data">
+                <section class='panel-body'>
+                    <form class='register' action='/user/register' method='POST' enctype='multipart/form-data'>
                         <fieldset>
-                            <p class="form-group">
-                                <input class="form-control" type="text" id="name" name="name" placeholder="Valeria">
+                            <p class='form-group'>
+                                <input id='name' class='form-control name nameFeedback feedback' type='text' id='name' name='name' placeholder='Valeria'>
                             </p>
-                            <p class="form-group">
-                                <input class="form-control" type="text" id="last_name" name="last_name" placeholder="Gomes">
+                            <p class='form-group'>
+                                <input id='last_name' class='form-control last_name nameFeedback feedback' type='text' id='last_name' name='last_name' placeholder='Gomes'>
+                                <div id="nameFeedback" class="feedback"></div>
                             </p>
-                            <p class="form-group">
-                                <input class="form-control" type="email" id="email" name="email" placeholder="valeria.gomes@gmail.com">
+                            <p class='form-group'>
+                                <input isd='email' class='form-control validate nameFeedback feedback' type='email' id='email' name='email' placeholder='valeria.gomes@gmail.com'>
+                                <div id="nameFeedback" class="feedback"></div>
                             </p>
-                            <p class="form-group">
-                                <input class="form-control" type="password" id="password" name="password" placeholder="******" minlength="8">
+                            <p class='form-group'>
+                                <input id='password' class='form-control validate nameFeedback feedback' type='password' id='password' name='password' placeholder='******' minlength='8'>
+                                <div id="nameFeedback" class="feedback"></div>
                             </p>
-                            <p class="form-group">
-                                <label class="label" for="image">Imagen: </label>
-                                <input type="file" id="image" name="image">
+                            <p class='form-group'>
+                                <label is='image' class='label validate nameFeedback feedback' for='image'>Imagen: </label>
+                                <input type='file' id='image' name='image'>
                             </p>
                             <p>
-                                <input class="btn-submit" type="submit" value="Registrarse">
+                                <input class='btn-submit' type='submit' value='Registrarse'>
                             </p>
                         </fieldset>
                     </form>
