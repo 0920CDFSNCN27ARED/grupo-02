@@ -43,10 +43,9 @@ router.post('/register',upload.any(), [
   .withMessage("El campo email debe estar completo"),
   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
   check('image').custom((value, {req}) =>{
-    if (! req.files) {
+    if (req.files.length == 0) {
       throw new Error("No se cargó una imagen")
     }else{
-      console.log(req)
       const extension = (path.extname(req.files[0].mimetype)).toLowerCase();
       switch (extension) {
           case '.jpg':

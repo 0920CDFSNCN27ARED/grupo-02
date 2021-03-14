@@ -30,10 +30,9 @@ router.post('/newProduct', upload.any(), [
   check('price').isFloat( {min:0} ).withMessage('No se cargó precio del producto'),
   check('category').notEmpty().withMessage('No se cargó categoría del producto'),
   check('image').custom((value, { req }) =>{
-    if (! req.files) {
+    if (req.files.length == 0) {
       throw new Error("No se cargó una imagen")
     }else{
-      console.log(req)
       const extension = (path.extname(req.files[0].mimetype)).toLowerCase();
       switch (extension) {
           case '.jpg':
