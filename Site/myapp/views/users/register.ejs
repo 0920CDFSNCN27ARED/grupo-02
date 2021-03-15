@@ -30,23 +30,25 @@
                     <form class='register' action='/user/register' method='POST' enctype='multipart/form-data'>
                         <fieldset>
                             <p class='form-group'>
-                                <input id='name' class='form-control name nameFeedback feedback' type='text' id='name' name='name' placeholder='Valeria'>
-                            </p>
-                            <p class='form-group'>
-                                <input id='last_name' class='form-control last_name nameFeedback feedback' type='text' id='last_name' name='last_name' placeholder='Gomes'>
+                                <input class='form-control overall' type='text' id='name' name='name' placeholder='Valeria'>
                                 <div id="nameFeedback" class="feedback"></div>
                             </p>
                             <p class='form-group'>
-                                <input isd='email' class='form-control validate nameFeedback feedback' type='email' id='email' name='email' placeholder='valeria.gomes@gmail.com'>
-                                <div id="nameFeedback" class="feedback"></div>
+                                <input class='form-control overall' type='text' id='last_name' name='last_name' placeholder='Gomes'>
+                                <div id="last_nameFeedback" class="feedback"></div>
                             </p>
                             <p class='form-group'>
-                                <input id='password' class='form-control validate nameFeedback feedback' type='password' id='password' name='password' placeholder='******' minlength='8'>
-                                <div id="nameFeedback" class="feedback"></div>
+                                <input class='form-control overall' type='email' id='email' name='email' placeholder='valeria.gomes@gmail.com'>
+                                <div id="emailFeedback" class="feedback"></div>
                             </p>
                             <p class='form-group'>
-                                <label is='image' class='label validate nameFeedback feedback' for='image'>Imagen: </label>
+                                <input class='form-control overall' type='password' id='password' name='password' placeholder='******' minlength='8'>
+                                <div id="passwordFeedback" class="feedback"></div>
+                            </p>
+                            <p class='form-group'>
+                                <label class='label overall' for='image'>Imagen: </label>
                                 <input type='file' id='image' name='image'>
+                                <div id="imageFeedback" class="image"></div>
                             </p>
                             <p>
                                 <input class='btn-submit' type='submit' value='Registrarse'>
