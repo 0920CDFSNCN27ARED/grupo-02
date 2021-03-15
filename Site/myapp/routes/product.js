@@ -33,14 +33,14 @@ router.post('/newProduct', upload.any(), [
     if (req.files.length == 0) {
       throw new Error("No se cargó una imagen")
     }else{
-      const extension = (path.extname(req.files[0].mimetype)).toLowerCase();
+      const extension = (req.files[0].mimetype).toLowerCase().split('/')[1];
       switch (extension) {
-          case '.jpg':
-              return '.jpg';
-          case '.jpeg':
-              return '.jpeg';
-          case  '.png':
-              return '.png';
+          case 'jpg':
+              return 'jpg';
+          case 'jpeg':
+              return 'jpeg';
+          case  'png':
+              return 'png';
           default:
               throw new Error("La imagen debe ser .jpg .jpeg o .png");
       }
