@@ -3,7 +3,7 @@
     <head>
         <%- include('../partials/head') %>
         <link  href='/stylesheets/style-login&register.css' rel='stylesheet'>
-        
+        <script src='/js/validation-login.js'></script>
     </head>
     <body>
         <%- include('../partials/header') %>
@@ -27,13 +27,15 @@
                             <% } %>
                         </ul>
                     <% } %>
-                    <form class ='formulario' action='/user/login' method='POST'>
+                    <form class ='formulario login' action='/user/login' method='POST'>
                         <fieldset>
                             <p class='form-group'>
-                                <input class='form-control email' placeholder='tuemail@ejemplo.com' name='email' type='text'>
+                                <input class='form-control overall' id='email' placeholder='tuemail@ejemplo.com' name='email' type='text'>
+                                <div id="emailFeedback" class="feedback"></div>
                             </p>
-                            <p class='form-group'>
-                                <input class='form-control' placeholder='Password' name='password' type='password'>
+                            <p class='form-group overall'>
+                                <input class='form-control' id='password' placeholder='Password' name='password' type='password'>
+                                <div id="passwordFeedback" class="feedback"></div>
                             </p>
                                 <label>
                                     <input class='remember' name='remember' type='checkbox' value='Recordarme'> Recordarme
