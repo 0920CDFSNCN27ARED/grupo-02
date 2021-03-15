@@ -2,7 +2,6 @@ let errors = [];
 window.addEventListener('load', function() {
     let formulario = document.querySelector('form.register');
     formulario.onsubmit = function (event)  {
-        event.preventDefault();
         errors = [];
         clearValidations();
         const msgLength = "El campo no puede estar vacío";
@@ -23,20 +22,6 @@ window.addEventListener('load', function() {
         }
     }
 });
-function checkErrors(){
-    if (errors.length > 0){
-        console.log(errors);
-        errors.forEach((e) => {
-            const feedbackDiv = document.getElementById(e.feedbackID);
-            const input = document.getElementById(e.input);
-            feedbackDiv.innerHTML = e.errorMsg;
-            input.classList.add('is-invalid');
-            feedbackDiv.classList.add('alert', 'alert-danger')
-        }); 
-        return true;
-    }
-    return false;
-};
 function validateNotEmpty (input, feedbackID, errorMsg) {
     const inputValid = document.getElementById(input);
     if (inputValid.value.trim() == '') {
@@ -65,7 +50,7 @@ function validateLength (input, feedbackID, errorMsg, minLength) {
 };
 function fileValidation (input, feedbackID, errorMsg) {
     let fileInput = document.getElementById(input);
-    let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/;
+    let allowedExtensions = /(.jpg|.jpeg|.png)$/;
     if(!fileInput.value.match(allowedExtensions)){ 
         const error = {
             feedbackID,
@@ -74,7 +59,7 @@ function fileValidation (input, feedbackID, errorMsg) {
         };
         errors.push(error);
     } else {
-        inputValid.classList.add('is-valid');
+        fileInput.classList.add('is-valid');
     }
 };
 function clearValidations() {
@@ -89,3 +74,17 @@ function clearValidations() {
       feedback.innerHTML = '';
     }
 }
+function checkErrors(){
+    if (errors.length > 0){
+        console.log(errors);
+        errors.forEach((e) => {
+            const feedbackDiv = document.getElementById(e.feedbackID);
+            const input = document.getElementById(e.input);
+            feedbackDiv.innerHTML = e.errorMsg;
+            input.classList.add('is-invalid');
+            feedbackDiv.classList.add('alert', 'alert-danger')
+        }); 
+        return true;
+    }
+    return false;
+};
