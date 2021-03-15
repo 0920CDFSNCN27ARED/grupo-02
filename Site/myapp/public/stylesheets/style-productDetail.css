@@ -1,10 +1,11 @@
 .row {
+  margin: 2% 0%; 
+  width: 100%;
   display: flex;
   align-items: center;
 }
 .image{
-  width: 25%;
-  margin: 3% 2% 3% 10%;
+  margin: 2%;
 }
 .image-withd{
   width: 100%;
@@ -12,10 +13,9 @@
   box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .h2{
-  margin-bottom: 3%;
-}
-p{
-  padding-top: 3%;
+  margin-bottom: 2%;
+  font-size: 145%;
+  font-weight: bold;
 }
 .description{
   font-style: oblique;
@@ -33,32 +33,60 @@ p{
   border-radius: 4px;
   box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
-.edit-delete {
+form {
   display: flex;
+  flex-direction: column;
 }
 .btn-edit{
-  margin-right: 5px;
-  border-radius:0;
+  width: 100%;
+  margin-bottom: 2%;
   border: none;
   color: #fff;
   background-color: #f5b107;
   padding: 10px;
   border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .btn-delete{
-  border-radius:0;  border: none;
+  border: none;
   color: #fff;
+  margin-bottom: 2%;
   background-color: #f8402c;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .btn-success{ 
+  align-items: center;
   padding: 10px;
-  margin: 20px 0px 25px 0px;
+  margin-bottom: 2%;
   border-radius: 5px;
   border: 0px;
   background-color: rgb(29, 172, 29);
   color: honeydew;
   box-shadow: 2px 2px 5px rgb(211, 209, 209);
+}
+@media (min-width: 360px) {
+  .image{
+    margin: auto;
+    width: 45%;
+  }
+  .h2{
+    margin-top: 2%;
+  }
+}
+@media (min-width: 760px) {
+  .row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+  }
+  .image {
+    width: 25%;
+    margin: 1% 5%;
+  }
+  .data {
+    width: 35%;
+    margin: 1% 5%;
+  }
 }

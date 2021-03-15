@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <%- include('../partials/head') %>
+        <link  href='/stylesheets/style-login&register.css' rel='stylesheet'>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <div class='error'>
+                <% if (typeof errors !='undefined' ) { %>
+                    <p style='color:red'>Error en los datos</p>
+                    <ul>
+                        <% for (let i=0; i < errors.length; i++) { %>
+                            <li class='errorLi'>
+                                <%=errors[i].msg%>
+                            </li>
+                            <% } %>
+                    </ul>
+                <% } %>
+            </div>
+            <div class='panel'>
+                <section class='panel-heading'>
+                    <h2 class='panel-title'>Editar perfil</h2>
+                </section>
+                <section class='panel-body'>
+                    <form class='register' action='/user/profile/edit/<%= user.id %>?_method=PUT' method='POST' enctype='multipart/form-data'>
+                        <fieldset>
+                            <p class='form-group'>
+                                <label class='label overall' for='name'>Nombre  </label>
+                                <input class='form-control overall' type='text' id='name' name='name' value="<%=user.first_name%>">
+                                <div id="nameFeedback" class="feedback"></div>
+                            </p>
+                            <p class='form-group'>
+                                <label class='label overall' for='last_name'>Apellido  </label>
+                                <input class='form-control overall' type='text' id='last_name' name='last_name' value='<%=user.last_name%>'>
+                                <div id="last_nameFeedback" class="feedback"></div>
+                            </p>
+                            <!--<p class='form-group'>
+                                <label class='label overall' for='email'>Email  </label>
+                                <input class='form-control overall' type='email' id='email' name='email' value='<%=user.email%>'>
+                                <div id="emailFeedback" class="feedback"></div>
+                            </p>
+                            <p class='form-group'>
+                                <label class='label overall' for='password'>Password  </label>
+                                <input class='form-control overall' type='password' id='password' name='password' placeholder='******'>
+                                <div id="passwordFeedback" class="feedback"></div>
+                            </p>
+                            <p> 
+                                Imagen actual: 
+                            </p>
+                            <img class="img-now img-profile" src="/images/products-images/<%= user.image_name %>" alt="Imágen de la torta">
+                            <p class='form-group'>
+                                <label class='label overall' for='image'>Imagen </label>
+                                <input type='file' id='image' name='image'>
+                                <div id="imageFeedback" class="image"></div>
+                            </p>-->
+                            <p>
+                                <input class='btn-submit' type='submit' value='Guardar cambios'>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

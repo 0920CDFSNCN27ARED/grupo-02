@@ -1,57 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang='es'>
     <head>
         <%- include('../partials/head') %>
-        <link href="/stylesheets/style-new-product-and-edit-product.css" rel="stylesheet">
+        <link href='/stylesheets/style-new-product-and-edit-product.css' rel='stylesheet'>
     </head>
     <body>
         <%- include('../partials/header') %>
-        <div class='error'>
-            <% if (typeof errors !='undefined' ) { %>
-                <p style="color:red">Error al editar el producto</p>
-                <ul>
-                    <% for (let i=0; i < errors.length; i++) { %>
-                        <li class='errorLi'>
-                            <%=errors[i].msg%>
-                        </li>
-                        <% } %>
-                </ul>
-                <% } %>
-        </div>
         <main>
-            <h2 class="title-main">Producto a editar: <%= producto.name %></h2>
-            <form action="/product/<%= producto.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class='error'>
+                <% if (typeof errors !='undefined' ) { %>
+                    <p style='color:red'>Error al editar el producto</p>
+                    <ul>
+                        <% for (let i=0; i < errors.length; i++) { %>
+                            <li class='errorLi'>
+                                <%=errors[i].msg%>
+                            </li>
+                            <% } %>
+                    </ul>
+                <% } %>
+            </div>
+            <h2 class='title-main'>Producto a editar: <%= producto.name %></h2>
+            <form action='/product/<%= producto.id %>/edit?_method=PUT' method='POST' enctype='multipart/form-data'>
                 <fieldset>
-                    <section class="inputs">
+                    <section class='inputs'>
                         <p>
-                            <label for="name">Nombre del producto: </label>
-                            <input class= "form-control" type="text" id="name" name="name" value= "<%= producto.name %>">
+                            <label for='name'>Nombre del producto: </label>
+                            <input class= 'form-control' type='text' id='name' name='name' value= '<%= producto.name %>'>
                         </p>
                         <p>
-                            <label for="price">Precio:</label>
-                            <input class="form-control" type="number" id="price" name="price" value= "<%= producto.price %>">
+                            <label for='price'>Precio:</label>
+                            <input class='form-control' type='number' id='price' name='price' value= '<%= producto.price %>'>
                         </p>
                         <p>
-                            <label for="category">Categoría: </label>
-                            <select class="form-control" name="category" id="category">
-                                <option value="clásica" <%= producto.category == "clásica" ? "selected" : "" %> >Clásica</option>
-                                <option value="decorada" <%= producto.category == "decorada" ? "selected" : "" %> >Decorada</option>
+                            <label for='category'>Categoría: </label>
+                            <select class='form-control' name='category' id='category'>
+                                <option value='clásica' <%= producto.category == 'clásica' ? 'selected' : '' %> >Clásica</option>
+                                <option value='decorada' <%= producto.category == 'decorada' ? 'selected' : '' %> >Decorada</option>
                             </select>
                         </p>
                         <p>
-                            <input class="form-control"type="file" id="image" name="image">
+                            <input class='form-control'type='file' id='image' name='image'>
                         </p>
                         <p> 
                             Imagen actual: 
                         </p>
-                        <img class="img-now" src="/images/products-images/<%= producto.image_name %>" alt="Imágen de la torta">
+                        <img class='img-now' src='/images/products-images/<%= producto.image_name %>' alt='Imágen de la torta'>
                         <p>
-                            <label for="description">Descripción:</label><br>
-                            <textarea class="form-control" id="description" name="description"><%= producto.description %></textarea>
+                            <label for='description'>Descripción:</label><br>
+                            <textarea class='form-control' id='description' name='description'><%= producto.description %></textarea>
                         </p>
                     </section>
                     <p>
-                        <input class="submit" type="submit" value="Guardar cambios">
+                        <input class='submit' type='submit' value='Guardar cambios'>
                     </p>
                 </fieldset>
             </form>

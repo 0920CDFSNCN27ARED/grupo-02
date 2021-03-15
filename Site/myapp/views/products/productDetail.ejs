@@ -9,11 +9,9 @@
         <main>
             <div class="row">
                 <section class="image">
-                    <article>
-                        <img class="image-withd" src="/images/products-images/<%=producto.image_name %>" alt="Producto seleccionado">
-                    </artcile>
+                    <img class="image-withd" src="/images/products-images/<%=producto.image_name %>" alt="Producto seleccionado">
                 </section>
-                <section>
+                <section class='data'>
                     <h2 class="h2"><%= producto.name %></h2>
                     <p class="description"><%= producto.description %></p>
                     <p class="price">AR$ <%= producto.price %></p>

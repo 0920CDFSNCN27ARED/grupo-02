@@ -1,14 +1,11 @@
-<article class="item">
-    <a class="ancla" href="/product/<%=productos.id%>/detail">
-        <img class="image-product" src="/images/products-images/<%=productos.image_name %>" alt="<%= productos.name %>" width="100%">
+<article class='item'>
+    <a class='ancla' href='/product/<%=productos.id%>/detail'>
+        <img class='image-product' src='/images/products-images/<%=productos.image_name %>' alt='<%= productos.name %>' width='100%'>
     </a>
-    <div class="description-item" style="width: 100%;">
-        <a class="ancla" href="/product/<%=productos.id%>/detail">
-            <h4 class="description"><%=productos.name %></h4>
+    <div class='description-item' style='width: 100%;'>
+        <a class='ancla' href='/product/<%=productos.id%>/detail'>
+            <h4 class='description'><%=productos.name %></h4>
         </a>
-        <div class="info">
-            <p class="price">$<%=productos.price %></p>
-            <p class="category">Categoría: <%=productos.category %></p>
-        </div>
+        <p class='price'>$<%=productos.price %></p>
     </div>
 </article>

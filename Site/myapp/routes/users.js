@@ -4,7 +4,7 @@ const userController = require('../controllers/userController');
 const multer = require('multer');
 const path = require('path');
 const {check, validationResult, body} = require('express-validator');
-const isLogged = require('../middlewares/userLogged');
+const LoggedValidation = require('../middlewares/LoggedValidation');
 const db = require('../database/models');
 const app = express();
 
@@ -18,15 +18,15 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({ storage: storage });
-app.use(isLogged);
+app.use(LoggedValidation.isLogged);
 
-router.get('/login', isLogged, userController.getLogin);
+router.get('/login', LoggedValidation.isLogged, userController.getLogin);
 router.post('/login', [
   check('email').isEmail().withMessage('Email inválido'),
   check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
 ], userController.processLogin);
 
-router.get('/register', isLogged, userController.getRegister);
+router.get('/register', LoggedValidation.isLogged, userController.getRegister);
 router.post('/register',upload.any(), [
   check('name').isLength( {min: 1} ).withMessage('Debes ingresar un nombre. El campo solo puede contener letras.'),
   check('last_name').isLength( {min: 1} ).withMessage('Debes ingresar un nombre. El campo solo puede contener letras.'),
@@ -60,5 +60,8 @@ router.post('/register',upload.any(), [
   }),
 ], userController.postRegister);
 router.get('/logout', userController.logout);
+router.get('/profile', LoggedValidation.notLogged, userController.profile);
+router.get('/profile/edit/:id', LoggedValidation.notLogged, userController.profileEdit);
+router.put('/profile/edit/:id',upload.any(), LoggedValidation.notLogged, userController.updateUser);
 
 module.exports = router;

@@ -20,20 +20,19 @@ img {
     box-shadow: 2px 2px 5px rgb(211, 209, 209);
 }
 .description-item {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 1%;
     padding: 0% 5%;
+    font-size: 0.9em;
 }
 h4 {
     font-size: 1.4em;
     color: rgb(197, 94, 158);
     margin: 4% 0%;
 }
-.info{
-    display: flex;
-    align-items: center;
-    margin-bottom: 5%;
-}
 .price {
-    font-size: 1.6em;
+    font-size: 1em;
     font-weight: bold;
     color: rgb(204, 32, 138);
     margin: 0%;
@@ -50,17 +49,13 @@ h4 {
         flex-wrap: wrap;
     }
     .products .item {
-        width: 42%;
+        width: 25%;
     }
     h4 {
         font-size: 1.2em;
     }
-    .price {
-        font-size: 1.4em;
-    }
-    .category {
-        font-size: 0.9em;
-        margin: 0% 7%;
+    .description-item {
+        font-size: 0.8em;
     }
 }
 @media (min-width: 769px){
@@ -68,6 +63,12 @@ h4 {
         margin: 3% 1%;
     }
     .products .item {
-        width: 30%;
+        width: 20%;
+    }
+    .price {
+        font-size: 1.2em;
+    }
+    .description-item {
+        font-size: 1em;
     }
 }

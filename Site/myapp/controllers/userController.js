@@ -74,7 +74,6 @@ let userController = {
                 first_name: req.body.name,
                 last_name: req.body.last_name,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
                 category_id: 2,
                 image_name: req.files[0].filename
             });
@@ -98,6 +97,25 @@ let userController = {
         req.session.destroy();
         res.clearCookie("remember");
         res.redirect("/");
+    },
+    profile: (req,res) => {
+        return res.render ('users/profile',{user: req.loggedUser})
+    },
+    profileEdit: (req,res) => {
+        return res.render ('users/profileEdit',{user: req.loggedUser})
+    },
+    updateUser: (req, res, next) => {
+        console.log(req.params.id);
+            const Users = db.Users;
+            const id = req.params.id;
+            Users.update (
+                {
+                    first_name: req.body.name,
+                    last_name: req.body.last_name,
+                },
+                { where: { id: id } }, 
+            );
+        return res.redirect ('/user/profile')
     },
 }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <%- include('../partials/head') %>
+        <link  href='/stylesheets/style-login&register.css' rel='stylesheet'>
+    </head>
+    <body>
+        <%- include('../partials/header') %>
+        <main>
+            <div class='panel'>
+                <section class='panel-heading'>
+                    <h2 class='panel-title'>Datos de perfil</h2>
+                </section>
+                <section class='panel-body'>
+                            <p>Nombre y apellido: <%=user.first_name%> <%=user.last_name%></p>
+                            <p>Email: <%=user.email%></p>
+                            <% if (user.category_id = 1) { %> 
+                                <p>Categoría de usuario: Administrador</p>
+                            <% } %>
+                            <p>Avatar: </p>
+                            <p>
+                                <img class='img-now img-profile' src='/images/products-images/<%= user.image_name %>' alt='Imágen de la torta'>
+                            </p>
+                            <p>
+                                <a href='/user/profile/edit/<%= user.id %>'><button class='btn-edit' type='button'>Editar Datos</button></a>
+                                <a href='/'><button class='btn-inicio' type='button'>Volver al inicio</button></a>
+                            </p>
+                </section>
+            </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

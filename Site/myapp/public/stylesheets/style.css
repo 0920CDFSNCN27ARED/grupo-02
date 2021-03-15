@@ -1,6 +1,5 @@
 *{
-    margin: 0;
-    box-sizing: border-box;
+    margin: 0%;
 }
 
 body {
@@ -148,7 +147,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    width: 270.33px;
+    width: 100%;
 }
 
 /* Tablet */
