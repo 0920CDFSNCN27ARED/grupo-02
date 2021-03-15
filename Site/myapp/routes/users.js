@@ -6,7 +6,6 @@ const path = require('path');
 const {check, validationResult, body} = require('express-validator');
 const isLogged = require('../middlewares/userLogged');
 const db = require('../database/models');
-const { resolve } = require('path');
 const app = express();
 
 var storage = multer.diskStorage({
