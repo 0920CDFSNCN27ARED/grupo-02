@@ -80,11 +80,10 @@ let productController = {
     },
     updateProduct: (req,res, next) => {
         const errors = validationResult(req);
-        console.log(req)
         if (!errors.isEmpty()){
             db.Products.findByPk(req.params.id)
                 .then(function(producto){
-                    return res.render ('products/edit-product', {errors: errors.errors, producto: producto.producto, user: req.loggedUser})
+                    return res.render ('products/edit-product', {errors: errors.errors, producto: producto, user: req.loggedUser})
                 })
         }else{
             const Products = db.Products;
