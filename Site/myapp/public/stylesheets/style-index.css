@@ -232,6 +232,9 @@ iframe {
     }
 }
 @media (min-width: 961px){
+    .max-height{
+        height: 500px;
+    }
     .banner {
         background-color: rgb(245, 238, 238);
         background-repeat: no-repeat;
