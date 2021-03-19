@@ -74,6 +74,7 @@ let userController = {
                 first_name: req.body.name,
                 last_name: req.body.last_name,
                 email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
                 category_id: 2,
                 image_name: req.files[0].filename
             });

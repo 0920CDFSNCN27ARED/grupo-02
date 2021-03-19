@@ -5,15 +5,17 @@ window.addEventListener('load', function() {
         errors = [];
         clearValidations();
         const msgLength = "El campo no puede estar vacío";
-        
+        validateNotEmpty('name', 'nameFeedback', msgLength);
         validateLength('name', 'nameFeedback', 'El nombre debe tener al menos 2 caracteres', 2);
+        validateNotEmpty('last_name', 'last_nameFeedback', msgLength);
         validateLength('last_name', 'last_nameFeedback', 'El apellido debe tener al menos 2 caracteres', 2);
+
+        validateNotEmpty('password', 'passwordFeedback', msgLength);
         validateLength('password', 'passwordFeedback', 'La contraseña debe tener al menos 8 caracteres', 8);
 
-        validateNotEmpty('name', 'nameFeedback', msgLength);
-        validateNotEmpty('last_name', 'last_nameFeedback', msgLength);
+        
+        
         validateNotEmpty('email', 'emailFeedback', msgLength);
-        validateNotEmpty('password', 'passwordFeedback', msgLength);
 
         fileValidation('image', 'imageFeedback', 'Se debe cargar una imagen con formato .jpg .jpeg o .png');
 

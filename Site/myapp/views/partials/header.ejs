@@ -6,7 +6,7 @@
         <ul class="nav-menu-list">
             <% if (user) { %>
                 <li><a href="/user/profile">Mi Perfil</a></li>
-                <% if (user.category_id = 1) { %> 
+                <% if (user.category_id == 1) { %> 
                     <li><a href="/product/newproduct">Nuevo Producto</a></li>
                 <% } %>
                 <li><a href="/product">Listado de Productos</a></li>
