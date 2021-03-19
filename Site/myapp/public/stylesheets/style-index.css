@@ -233,7 +233,7 @@ iframe {
 }
 @media (min-width: 961px){
     .max-height{
-        height: 500px;
+        height: 60vh;
     }
     .banner {
         background-color: rgb(245, 238, 238);
