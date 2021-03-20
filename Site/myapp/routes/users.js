@@ -8,7 +8,8 @@ const LoggedValidation = require('../middlewares/LoggedValidation');
 const db = require('../database/models');
 const app = express();
 
-var storage = multer.diskStorage({
+
+let storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/images/users');
   },
@@ -16,8 +17,8 @@ var storage = multer.diskStorage({
     cb(null, (file.originalname).split('.')[0] + path.extname(file.originalname));
   }
 })
+let upload = multer({ storage: storage });
 
-var upload = multer({ storage: storage });
 app.use(LoggedValidation.isLogged);
 
 router.get('/login', LoggedValidation.isLogged, userController.getLogin);
@@ -63,5 +64,6 @@ router.get('/logout', userController.logout);
 router.get('/profile', LoggedValidation.notLogged, userController.profile);
 router.get('/profile/edit/:id', LoggedValidation.notLogged, userController.profileEdit);
 router.put('/profile/edit/:id',upload.any(), LoggedValidation.notLogged, userController.updateUser);
+router.delete('/:id/delete', userController.deleteUser);
 
 module.exports = router;

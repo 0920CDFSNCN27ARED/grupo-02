@@ -118,6 +118,14 @@ let userController = {
             );
         return res.redirect ('/user/profile')
     },
+    deleteUser: async (req, res) => {
+        await db.Users.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        return res.redirect('/user/login');
+    }
 }
 
 module.exports = userController;

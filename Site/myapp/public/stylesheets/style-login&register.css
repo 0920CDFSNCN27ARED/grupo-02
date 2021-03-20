@@ -76,6 +76,16 @@ fieldset{
   border-radius: 5px;
   width: 100%;
 }
+.btn-delete{
+  border: none;
+  color: #fff;
+  margin-bottom: 2%;
+  background-color: #f8402c;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(211, 209, 209);
+  width: 100%;
+}
 @media (min-width: 361px){
   .panel-title {
     padding: 2% 1%;

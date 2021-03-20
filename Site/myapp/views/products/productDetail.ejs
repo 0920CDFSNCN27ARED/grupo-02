@@ -16,7 +16,7 @@
                     <p class="description"><%= producto.description %></p>
                     <p class="price">AR$ <%= producto.price %></p>
                     <p>Especificaciones:</p>
-                        <form action="#">
+                        <form action="#" method="POST">
                             <select class="form-control" name="category">
                                 <option class="option" value="none" selected>Ninguna</option>
                                 <option class="option" value="sin-tacc">Sin TACC</option>
@@ -28,13 +28,17 @@
                             <input class="btn-success" type="submit" value="Agregar al carrito">
                         </form>
                         <% if(admin) { %>
-                            <form class="edit-delete" action="/product/<%=producto.id%>/delete?_method=DELETE" method="POST" enctype="multipart/form-data">
-                                <div class="btn-edit-delet">
+                            <form action="/product/<%=producto.id%>/delete?_method=PUT" method="POST">
+                                <fieldset>
                                     <a href="/product/<%=producto.id%>/edit">
                                         <input class="btn-edit" type="button" value="Editar Producto">
                                     </a>
-                                </div>
-                                <input class="btn-delete" type="submit" value="Eliminar Producto">
+                                </fieldset>
+                            </form>
+                            <form class="edit-delete" action="/product/<%=producto.id%>/delete?_method=DELETE" method="POST">
+                                <fieldset>
+                                    <input class="btn-delete" type="submit" value="Eliminar Producto">
+                                </fieldset>
                             </form>
                         <% } %>
                     </div>

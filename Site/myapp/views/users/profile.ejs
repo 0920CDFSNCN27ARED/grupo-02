@@ -14,12 +14,12 @@
                 <section class='panel-body'>
                             <p>Nombre y apellido: <%=user.first_name%> <%=user.last_name%></p>
                             <p>Email: <%=user.email%></p>
-                            <% if (user.category_id = 1) { %> 
+                            <% if (user.category_id == 1) { %> 
                                 <p>Categoría de usuario: Administrador</p>
                             <% } %>
                             <p>Avatar: </p>
                             <p>
-                                <img class='img-now img-profile' src='/images/products-images/<%= user.image_name %>' alt='Imágen de la torta'>
+                                <img class='img-now img-profile' src='/images/users/<%= user.image_name %>' alt='Imágen del usuario'>
                             </p>
                             <p>
                                 <a href='/user/profile/edit/<%= user.id %>'><button class='btn-edit' type='button'>Editar Datos</button></a>

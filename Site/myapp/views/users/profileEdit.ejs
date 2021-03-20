@@ -60,6 +60,11 @@
                             </p>
                         </fieldset>
                     </form>
+                    <form class="edit-delete" action="/user/<%= user.id %>/delete?_method=DELETE" method="POST">
+                        <fieldset>
+                            <input class="btn-delete" type="submit" value="Eliminar Cuenta">
+                        </fieldset>
+                    </form>
                 </section>
             </div>
         </main>

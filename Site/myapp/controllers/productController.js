@@ -78,7 +78,7 @@ let productController = {
                 res.render('products/edit-product',{producto: producto, user: req.loggedUser});
             });
     },
-    updateProduct: (req,res, next) => {
+    updateProduct: async (req,res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()){
             db.Products.findByPk(req.params.id)
@@ -88,7 +88,7 @@ let productController = {
         }else{
             const Products = db.Products;
             const id = req.params.id;
-            Products.update (
+            await Products.update (
                 {
                     name: req.body.name,
                     description: req.body.description,
