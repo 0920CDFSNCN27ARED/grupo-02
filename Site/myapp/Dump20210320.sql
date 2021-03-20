@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `coredb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `coredb`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
 -- Host: localhost    Database: coredb
@@ -54,7 +56,7 @@ CREATE TABLE `products` (
   `image_name` varchar(100) DEFAULT NULL,
   `category` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +65,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Cheesecake Frutos Rojos','Base de galletitas crocante, relleno de queso crema y cobertura de frutos rojos según estación (compota casera, con frutillas y arandanos en temporada o frutos rojos congelados fuera de temporada).',1200,'cake-frutilla.jpeg','clásica'),(6,'Rogel ','Rogel clásico con merengue italiano, relleno de dulce de leche.',950,'rogel.jpg','clásica'),(7,'1 Letra o número chico','Letra o número de tamaño chico (15 x 20 cm aproximadamente). Opciones de base: Galletita de Vainilla, Chocolate o Almendras o Merengue crocante (sin TACC). Relleno: Dulce de leche + Ganache de chocolate (Semiamargo,, con leche o blanco). Decoración: Flores de Buttercream en gama de colores a elección y Merenguitos.',1250,'Letra-numero-chico-2.jpg','decorada'),(8,'Moana','3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla.',3550,'moana.jpeg','decorada'),(9,'Mini Flores','Pesa 1.5 kg y rinde 8 a 10 porciones. \\r\\nBizcochuelo de chocolate relleno de 2 capas de Nutella, buttercream de Nutella y pedacitos de Ferrero Rocher.',2800,'mini-flores.jpg','decorada'),(11,'Torta Oreo','Relleno de queso crema y dulce de leche con dos capas de galletitas Oreo y corazón de dulce de leche. Cobertura de dulce de leche y Oreos.\r\n',1250,'oreo.jpg','clásica'),(13,'Torta de Prueba ','Probando update',1234,'torta-manzana.jpeg','clásica');
+INSERT INTO `products` VALUES (1,'Cheesecake Frutos Rojos','Base de galletitas crocante, relleno de queso crema y cobertura de frutos rojos según estación (compota casera, con frutillas y arandanos en temporada o frutos rojos congelados fuera de temporada).',1200,'cake-frutilla.jpeg','clásica'),(6,'Rogel ','Rogel clásico con merengue italiano, relleno de dulce de leche.',1230,'rogel.jpg','clásica'),(8,'Moana','3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla.',3600,'moana.jpeg','decorada'),(9,'Mini Flores','Pesa 1.5 kg y rinde 8 a 10 porciones. \\r\\nBizcochuelo de chocolate relleno de 2 capas de Nutella, buttercream de Nutella y pedacitos de Ferrero Rocher.',2850,'mini-flores.jpg','decorada'),(11,'Torta Oreo','Relleno de queso crema y dulce de leche con dos capas de galletitas Oreo y corazón de dulce de leche. Cobertura de dulce de leche y Oreos.\r\n',1250,'oreo.jpg','clásica'),(13,'Torta de Prueba ','Probando update',1234,'torta-manzana.jpeg','clásica');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +118,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `users_category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +127,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Jandy','Climar','jclimar0@google.ru','AbLCNvOMLd',2,'test'),(2,'Jandy','Climar','jclimar0@google.ru','AbLCNvOMLd',1,'test'),(3,'Annetta','Hirschmann','ahirschmann2@craigslist.org','VrInNscXMn',2,'‪‪test‪'),(4,'Anet','Vickress','avickress3@jugem.jp','jIYaNWt',2,'img.jpg'),(5,'Aloysia','McJury','amcjury4@example.com','6FboOJRUIy',2,'img.jpg'),(6,'Pascale','Neligan','pneligan5@godaddy.com','jntRj24',2,'img.jpg'),(7,'Luke','Avramovitz','lavramovitz6@list-manage.com','tXQu9IfEI',2,'img.jpg'),(8,'Corilla','Banck','cbanck7@github.io','vnv5s0oMxp',2,'img.jpg'),(9,'Ferdinand','Graysmark','fgraysmark8@hubpages.com','aH6GT1V',2,'img.jpg'),(10,'Danika','Hinge','dhinge9@cam.ac.uk','2l2Sfehu',2,'hola.jpg'),(11,'Ili','Jofre','ili@gmail.com','$2b$10$LHNWx4kcf68Oz0hAUb9sCedniv1dVFUe3QtlsHSD4QuHBDe.p9SrG',2,'Apolo.jpeg'),(12,'Iliana','Jofre','ilianamicaela@hotmail.com','$2b$10$20x940nszKb46xN8HC.rxO7btQ9LDkxCHoA6nzERWWOYEux/V53pi',1,'Apolo.jpeg');
+INSERT INTO `users` VALUES (1,'Jandy','Climar','jclimar0@google.ru','AbLCNvOMLd',2,'test'),(2,'Jandy','Climar','jclimar0@google.ru','AbLCNvOMLd',1,'test'),(3,'Annetta','Hirschmann','ahirschmann2@craigslist.org','VrInNscXMn',2,'‪‪test‪'),(4,'Anet','Vickress','avickress3@jugem.jp','jIYaNWt',2,'img.jpg'),(5,'Aloysia','McJury','amcjury4@example.com','6FboOJRUIy',2,'img.jpg'),(6,'Pascale','Neligan','pneligan5@godaddy.com','jntRj24',2,'img.jpg'),(7,'Luke','Avramovitz','lavramovitz6@list-manage.com','tXQu9IfEI',2,'img.jpg'),(8,'Corilla','Banck','cbanck7@github.io','vnv5s0oMxp',2,'img.jpg'),(9,'Ferdinand','Graysmark','fgraysmark8@hubpages.com','aH6GT1V',2,'img.jpg'),(10,'Danika','Hinge','dhinge9@cam.ac.uk','2l2Sfehu',2,'hola.jpg'),(11,'Ili','Jofre','ili@gmail.com','$2b$10$LHNWx4kcf68Oz0hAUb9sCedniv1dVFUe3QtlsHSD4QuHBDe.p9SrG',2,'Apolo.jpeg'),(12,'Iliana Micaela','Jofre','ilianamicaela@hotmail.com','$2b$10$20x940nszKb46xN8HC.rxO7btQ9LDkxCHoA6nzERWWOYEux/V53pi',1,'Apolo.jpeg'),(25,'Enzo','Becce','enzo.becce@gmail.com','$2b$10$yj1NCyq/GMElwZ0E0ktcfuuzTSAy/0iMAcBaOI5.he8isyDM1UgkW',1,'IMG_20200302_074750.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,6 +154,10 @@ LOCK TABLES `users_category` WRITE;
 INSERT INTO `users_category` VALUES (1,'admin'),(2,'user');
 /*!40000 ALTER TABLE `users_category` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'coredb'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -162,4 +168,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-25 20:49:48
+-- Dump completed on 2021-03-20 17:11:35
