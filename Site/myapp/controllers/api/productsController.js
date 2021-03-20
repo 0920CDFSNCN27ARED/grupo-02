@@ -3,22 +3,41 @@ const db = require('../../database/models')
 module.exports = {
     products: async (req,res)=>{
         const count = await db.Products.count();
-        const page = req.query.page ? req.query.page : 0;
+        const page = req.query.page ? Number(req.query.page) : 0;
         const products = await db.Products.findAll({
             order: [['id', 'DESC']],
-            offset: page * 3,
-            limit: 3
-        })
+            offset: page * 8,
+            limit: 8,
+        });
+
+        const nextPage = count <= (page + 1 * 8) ? null : req.baseUrl + `?page=${ page + 1}`;
+        const prevPage = page == 0 ? null : req.baseUrl + `?page=${ page - 1}`;
+
+        for(let i = 0; i < products.length; i++){
+            products[i].dataValues.detail = '/api/products/' + products[i].dataValues.id
+        }
+
+        console.log(req.query);
         res.send({
             meta: {
                 url: req.originalUrl,
                 status: 200,
+                nextPage: nextPage,
+                prevPage: prevPage,
                 total_count: count
             },
             data: products
         })
     },
-    offers: (req, res)=>{
-        res.send('No hay ofertas por ahora :(')
+    detail: async (req, res)=>{
+        const product = await db.Products.findByPk(req.params.id);
+
+        res.send({
+            meta: {
+                url: req.originalUrl,
+                status: 200,
+            },
+            data: product
+        })
     },
 }
