@@ -6,11 +6,11 @@ module.exports = {
         const page = req.query.page ? Number(req.query.page) : 0;
         const products = await db.Products.findAll({
             order: [['id', 'DESC']],
-            offset: page * 8,
-            limit: 8,
+            offset: page * 10,
+            limit: 10,
         });
 
-        const nextPage = count <= (page + 1 * 8) ? null : req.baseUrl + `?page=${ page + 1}`;
+        const nextPage = count <= (page + 10) ? null : req.baseUrl + `?page=${ page + 1}`;
         const prevPage = page == 0 ? null : req.baseUrl + `?page=${ page - 1}`;
 
         for(let i = 0; i < products.length; i++){
@@ -26,7 +26,7 @@ module.exports = {
                 prevPage: prevPage,
                 total_count: count
             },
-            data: products
+            data: { products }
         })
     },
     detail: async (req, res)=>{
@@ -37,7 +37,7 @@ module.exports = {
                 url: req.originalUrl,
                 status: 200,
             },
-            data: product
+            data: { product }
         })
     },
 }

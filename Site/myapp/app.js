@@ -11,6 +11,7 @@ const authenticate = require('./middlewares/authenticate');
 const remember = require('./middlewares/remember');
 const cookieParser = require('cookie-parser');
 const apiProductsRouter = require('./routes/api/productsRoutes');
+const apiUsersRoutes = require('./routes/api/usersRoutes');
 
 app.set('view engine', 'ejs');
 
@@ -33,6 +34,7 @@ app.use('/cart', cartRoutes);
 app.use('/product', productRoutes);
 
 app.use('/api/products', apiProductsRouter);
+app.use('/api/users', apiUsersRoutes);
 
 app.use ((req,res,next) => {
     res.status(404).render('non-found');
