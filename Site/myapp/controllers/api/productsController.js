@@ -15,6 +15,7 @@ module.exports = {
 
         for(let i = 0; i < products.length; i++){
             products[i].dataValues.detail = '/api/products/' + products[i].dataValues.id
+            products[i].dataValues.image_name = 'localhost:3000/images/products-images/' + products[i].dataValues.image_name.replace(' ', '%');
         }
 
         console.log(req.query);
@@ -31,6 +32,7 @@ module.exports = {
     },
     detail: async (req, res)=>{
         const product = await db.Products.findByPk(req.params.id);
+        product.dataValues.image_name = 'localhost:3000/images/products-images/' + product.dataValues.image_name.replace(' ', '%');
 
         res.send({
             meta: {
