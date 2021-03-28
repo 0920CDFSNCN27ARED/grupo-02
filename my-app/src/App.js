@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import SideMenu from './components/side-menu/side-menu';
+import Header from './components/header/header';
+import DataCardBig from './components/data-cards/data-card-big/data-big-card';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div id='wrapper'>
+        <SideMenu/>
+        <div id='content-wrapper' class='d-flex flex-column'>
+          <div id='content'>
+            <Header/>
+          </div>
+          <div class="container-fluid">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800">App Dashboard</h1>
+            </div>
+            <div class="row">
+              <DataCardBig title= 'Products in Data Base' value='13' icon='fa-clipboard-list' color= 'primary'/>
+              <DataCardBig title= 'Amount in products' value='$ 23000' icon='fa-dollar-sign' color= 'success'/>
+              <DataCardBig title= 'Users quantity' value='20' icon='fa-user-check' color= 'warning'/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
