@@ -3,7 +3,8 @@ import Header from './components/header/header';
 import DataCardSmall from './components/data-cards/data-card-small/data-small-card';
 import DataCardBig from "./components/data-cards/data-card-big/data-big-card";
 import DataBigCardCategory from "./components/category-card/data-big-card-category"; 
-import ProductDetailCard from "./components/product-detail-card/ProductDetail"
+import ProductDetailCard from "./components/product-detail-card/ProductDetail";
+import Footer from './components/footer/footer';
 import './App.css';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
               <ProductDetailCard />
             </div>
           </div>
+          < Footer />
         </div>
       </div>
     </div>
