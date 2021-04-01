@@ -1,6 +1,7 @@
 import SideMenu from './components/side-menu/side-menu';
 import Header from './components/header/header';
-import DataCardBig from './components/data-cards/data-card-big/data-big-card';
+import DataCardSmall from './components/data-cards/data-card-small/data-small-card';
+import DataCardBig from "./components/data-cards/data-card-big/data-big-card";
 import './App.css';
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
               <h1 class="h3 mb-0 text-gray-800">App Dashboard</h1>
             </div>
             <div class="row">
-              <DataCardBig title= 'Products in Data Base' value='13' icon='fa-clipboard-list' color= 'primary'/>
-              <DataCardBig title= 'Amount in products' value='$ 23000' icon='fa-dollar-sign' color= 'success'/>
-              <DataCardBig title= 'Users quantity' value='20' icon='fa-user-check' color= 'warning'/>
+              <DataCardSmall title= 'Products in Data Base' value='13' icon='fa-clipboard-list' color= 'primary'/>
+              <DataCardSmall title= 'Amount in products' value='$ 23000' icon='fa-dollar-sign' color= 'success'/>
+              <DataCardSmall title= 'Users quantity' value='20' icon='fa-user-check' color= 'warning'/>
             </div>
           </div>
         </div>
