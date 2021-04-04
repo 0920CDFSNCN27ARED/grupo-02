@@ -8,6 +8,28 @@ import Footer from './components/footer/footer';
 import './App.css';
 
 function App() {
+
+  const cardSmallValue = [
+    {
+      title: 'Products in Data Base',
+      value:'13',
+      icon:'fa-clipboard-list',
+      color: 'primary',
+    },
+    {
+      title: 'Amount in products',
+      value:'$ 12000',
+      icon:'fa-dollar-sign',
+      color: 'success',
+    },
+    {
+      title: 'Users quantity',
+      value:'20',
+      icon:'fa-user-check',
+      color: 'warning',
+    },
+  ]
+
   return (
     <div className='App'>
       <div id='wrapper'>
@@ -21,9 +43,16 @@ function App() {
               <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
             </div>
             <div className="row">
-              <DataCardSmall title= 'Products in Data Base' value='13' icon='fa-clipboard-list' color= 'primary'/>
-              <DataCardSmall title= 'Amount in products' value='$ 23000' icon='fa-dollar-sign' color= 'success'/>
-              <DataCardSmall title= 'Users quantity' value='20' icon='fa-user-check' color= 'warning'/>
+              {
+                cardSmallValue.map ((indice, index) => {
+                  return <DataCardSmall
+                    key={index}
+                    title={indice.title}
+                    value={indice.value}
+                    icon={indice.icon}
+                    color={indice.color}/>
+                })
+              }
             </div>
             <div className="row">
                 <DataCardBig />
