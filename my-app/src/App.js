@@ -2,7 +2,7 @@ import SideMenu from './components/side-menu/side-menu';
 import Header from './components/header/header';
 import DataCardSmall from './components/data-cards/data-card-small/data-small-card';
 import DataCardBig from "./components/data-cards/data-card-big/data-big-card";
-import DataBigCardCategory from "./components/category-card/data-big-card-category"; 
+import DataBigCardCategory from "./components/data-categories-cards/data-big-card-category"; 
 import ProductDetailCard from "./components/product-detail-card/ProductDetail";
 import Footer from './components/footer/footer';
 import './App.css';
