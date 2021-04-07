@@ -12,4 +12,3 @@ module.exports = {
         fs.writeFileSync(__dirname + '/../data/users.json',JSON.stringify(newUser,null, 4));
     },
 }
-

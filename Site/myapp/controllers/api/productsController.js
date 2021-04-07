@@ -3,8 +3,8 @@ const db = require('../../database/models')
 module.exports = {
     products: async (req,res)=>{
         res.set({
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:3001",
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
         })
         const count = await db.Products.count();
         const page = req.query.page ? Number(req.query.page) : 0;
@@ -47,8 +47,8 @@ module.exports = {
     },
     count: async (req, res) => {
         res.set({
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:3001",
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
         })
         const count = await db.Products.count();
         const products = await db.Products.findAll();
@@ -60,4 +60,16 @@ module.exports = {
             totalPrice,
         })
     },
+    last: async (req, res) => {
+        res.set({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
+        })
+        const max = await db.Products.max('id');
+        const product = await db.Products.findByPk(max);
+        res.send({
+            product,
+        })
+    },
+
 }

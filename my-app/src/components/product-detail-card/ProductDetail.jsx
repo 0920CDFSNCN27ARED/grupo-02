@@ -1,5 +1,5 @@
 import DetailProduct from './DetailProduct';
-import { Component } from "react";
+import { Component } from 'react';
 class ProductDetailCard extends Component {
         constructor(props){
           super(props);
@@ -28,9 +28,9 @@ class ProductDetailCard extends Component {
     }
     render () {
         return (
-            <div className= "card-body">
-                <div className="table-responsive">
-                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+            <div className= 'card-body'>
+                <div className='table-responsive'>
+                    <table className='table table-bordered' id='dataTable' width='100%' cellSpacing='0'>
                         <thead>
                             <tr>
                                 <th>Name</th>

@@ -12,7 +12,7 @@ var storage = multer.diskStorage({
     cb(null, 'public/images/products-images');
   },
   filename: function (req, file, cb) {
-    cb(null, (file.originalname).split(".")[0] + path.extname(file.originalname));
+    cb(null, (file.originalname).split('.')[0] + path.extname(file.originalname));
   }
 })
 app.use(AdminValidation.isAdmin);
@@ -31,7 +31,7 @@ router.post('/newProduct', upload.any(), [
   check('category').notEmpty().withMessage('No se cargó categoría del producto'),
   check('image').custom((value, { req }) =>{
     if (req.files.length == 0) {
-      throw new Error("No se cargó una imagen")
+      throw new Error('No se cargó una imagen')
     }else{
       const extension = (req.files[0].mimetype).toLowerCase().split('/')[1];
       switch (extension) {
@@ -42,7 +42,7 @@ router.post('/newProduct', upload.any(), [
           case  'png':
               return 'png';
           default:
-              throw new Error("La imagen debe ser .jpg .jpeg o .png");
+              throw new Error('La imagen debe ser .jpg .jpeg o .png');
       }
     }
   }),

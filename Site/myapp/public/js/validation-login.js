@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     formulario.onsubmit = function (event)  {
         errors = [];
         clearValidations();
-        const msgLength = "El campo no puede estar vacío";
+        const msgLength = 'El campo no puede estar vacío';
         
         validateLength('password', 'passwordFeedback', 'La contraseña debe tener al menos 8 caracteres', 8);
 

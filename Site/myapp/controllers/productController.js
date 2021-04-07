@@ -1,7 +1,7 @@
 /*const fs = require('fs');*/
 /*const getProduct = require('../utils/getProducts');*/ /* Se utiliza para levantar datos del JSON, al vincular database/models no es necesario */
 /*const path = require('path');*/
-const db = require("../database/models");
+const db = require('../database/models');
 const {check, validationResult, body} = require('express-validator');
 let productController = {
     getProduct: (req,res)=>{
@@ -10,7 +10,7 @@ let productController = {
         res.render('products/product', {products: products, user: req.loggedUser});*/
         db.Products.findAll()
         .then(function(productos){
-            return res.render("products/product", {productos: productos, user: req.loggedUser});
+            return res.render('products/product', {productos: productos, user: req.loggedUser});
         })
     },
     getProductDetail: (req, res)=>{
@@ -46,7 +46,7 @@ let productController = {
                     category: req.body.category,
                 })
                 .then(function(producto){
-                res.redirect('/product/' + producto.id + "/detail");
+                res.redirect('/product/' + producto.id + '/detail');
                 })
         }
         
@@ -107,7 +107,7 @@ let productController = {
                 products[i].description = req.body.description;
                 products[i].price = req.body.price;
                 products[i].category = req.body.category;
-                const filename =  typeof(req.files[0]) === "undefined" ? products[i].image : req.files[0].filename;
+                const filename =  typeof(req.files[0]) === 'undefined' ? products[i].image : req.files[0].filename;
                 const ruta = path.join(__dirname,'/../public/images/products-images',products[i].image);
                 if (products[i].image != filename){
                     fs.unlinkSync(ruta);
@@ -139,7 +139,7 @@ let productController = {
     prueba: (req, res) => { /*prueba conexión DB*/
         db.Products.findAll()
         .then(function(productos){
-            return res.render("products/prueba", {productos: productos});
+            return res.render('products/prueba', {productos: productos});
         })
     },
 };

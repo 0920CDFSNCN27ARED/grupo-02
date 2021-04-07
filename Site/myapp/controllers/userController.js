@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const {check, validationResult, body} = require('express-validator');
 /* const utilsUser = require('../utils/utilsUser'); */ /* JSON de usuarios, se migró a la DB*/
-const db = require("../database/models");
+const db = require('../database/models');
 
 let userController = {
     getLogin: (req,res)=>{
@@ -52,7 +52,7 @@ let userController = {
                 }
                 req.session.idUserLogueado  = idUserLogueado;
                 if (req.body.remember != undefined){
-                    res.cookie("remember", idUserLogueado, {
+                    res.cookie('remember', idUserLogueado, {
                         maxAge: 120000,
                     })
                 }
@@ -96,8 +96,8 @@ let userController = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        res.clearCookie("remember");
-        res.redirect("/");
+        res.clearCookie('remember');
+        res.redirect('/');
     },
     profile: (req,res) => {
         return res.render ('users/profile',{user: req.loggedUser})

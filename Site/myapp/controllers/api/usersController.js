@@ -46,4 +46,14 @@ module.exports = {
             data:{ user }
         })
     },
+    count: async (req, res) => {
+        res.set({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
+        })
+        const count = await db.Users.count();
+        res.send({
+            count,
+        })
+    },
 }

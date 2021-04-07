@@ -1,4 +1,4 @@
-const db = require("../database/models");
+const db = require('../database/models');
 
 function rememberMiddleware (req, res, next){
     next();

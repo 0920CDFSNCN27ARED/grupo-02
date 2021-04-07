@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
     formulario.onsubmit = function (event)  {
         errors = [];
         clearValidations();
-        const msgLength = "El campo no puede estar vacío";
+        const msgLength = 'El campo no puede estar vacío';
         validateNotEmpty('name', 'nameFeedback', msgLength);
         validateLength('name', 'nameFeedback', 'El nombre debe tener al menos 2 caracteres', 2);
         validateNotEmpty('last_name', 'last_nameFeedback', msgLength);

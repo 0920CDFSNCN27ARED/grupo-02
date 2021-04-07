@@ -1,58 +1,58 @@
-import avatarImage from "../../assets/vector-logo.png";
+import avatarImage from '../../assets/vector-logo.png';
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav className='navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow'>
             <button
-                id="sidebarToggleTop"
-                className="btn btn-link d-md-none rounded-circle mr-3"
+                id='sidebarToggleTop'
+                className='btn btn-link d-md-none rounded-circle mr-3'
             >
-                <i className="fa fa-bars"></i>
+                <i className='fa fa-bars'></i>
             </button>
 
-            <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown no-arrow mx-1">
+            <ul className='navbar-nav ml-auto'>
+                <li className='nav-item dropdown no-arrow mx-1'>
                     <a
-                        className="nav-link dropdown-toggle"
-                        href="/"
-                        id="alertsDropdown"
+                        className='nav-link dropdown-toggle'
+                        href='/'
+                        id='alertsDropdown'
                     >
-                        <i className="fas fa-bell fa-fw"></i>
-                        <span className="badge badge-danger badge-counter">
+                        <i className='fas fa-bell fa-fw'></i>
+                        <span className='badge badge-danger badge-counter'>
                             5
                         </span>
                     </a>
                 </li>
 
-                <li className="nav-item dropdown no-arrow mx-1">
+                <li className='nav-item dropdown no-arrow mx-1'>
                     <a
-                        className="nav-link dropdown-toggle"
-                        href="/"
-                        id="messagesDropdown"
+                        className='nav-link dropdown-toggle'
+                        href='/'
+                        id='messagesDropdown'
                     >
-                        <i className="fas fa-envelope fa-fw"></i>
-                        <span className="badge badge-danger badge-counter">
+                        <i className='fas fa-envelope fa-fw'></i>
+                        <span className='badge badge-danger badge-counter'>
                             +99
                         </span>
                     </a>
                 </li>
 
-                <div className="topbar-divider d-none d-sm-block"></div>
+                <div className='topbar-divider d-none d-sm-block'></div>
 
-                <li className="nav-item dropdown no-arrow">
+                <li className='nav-item dropdown no-arrow'>
                     <a
-                        className="nav-link dropdown-toggle"
-                        href="/"
-                        id="userDropdown"
+                        className='nav-link dropdown-toggle'
+                        href='/'
+                        id='userDropdown'
                     >
-                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">
+                        <span className='mr-2 d-none d-lg-inline text-gray-600 small'>
                             La zuccheriera
                         </span>
                         <img
-                            className="img-profile rounded-circle"
+                            className='img-profile rounded-circle'
                             src={avatarImage}
-                            width="60"
-                            alt="User Avatar"
+                            width='60'
+                            alt='User Avatar'
                         />
                     </a>
                 </li>
