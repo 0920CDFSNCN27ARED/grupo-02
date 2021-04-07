@@ -18,7 +18,6 @@ module.exports = {
             products[i].dataValues.image_name = 'localhost:3000/images/products-images/' + products[i].dataValues.image_name.replace(' ', '%');
         }
 
-        console.log(req.query);
         res.send({
             meta: {
                 url: req.originalUrl,
@@ -27,7 +26,7 @@ module.exports = {
                 prevPage: prevPage,
                 total_count: count
             },
-            data: { products }
+            data: products
         })
     },
     detail: async (req, res)=>{
@@ -40,6 +39,21 @@ module.exports = {
                 status: 200,
             },
             data: { product }
+        })
+    },
+    count: async (req, res) => {
+        res.set({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "http://localhost:3001",
+        })
+        const count = await db.Products.count();
+        const products = await db.Products.findAll();
+        const totalPrice = products.reduce((acc, prod) => {
+            return acc + Number(prod.price);
+        }, 0);
+        res.send({
+            count,
+            totalPrice,
         })
     },
 }
