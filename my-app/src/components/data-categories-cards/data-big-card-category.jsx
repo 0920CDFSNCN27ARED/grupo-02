@@ -10,8 +10,6 @@ function DataBigCardCategory (){
             cantidadDisponible: '3',
         },
       ]
-    
-    
     return (
         <div className='col-lg-6 mb-4'>
             <div className='card shadow mb-4'>
