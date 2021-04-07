@@ -34,24 +34,26 @@ class App extends Component {
     };
   }
   async componentDidMount() {
-    const productos = await fetch('http://localhost:3000/api/products/count');
-    const count = await productos.json();
+    let products = await fetch('http://localhost:3000/api/products/count');
+    products = await products.json();
+    let users = await fetch('http://localhost:3000/api/users/count');
+    users = await users.json();
     const cardSmallValue = [
         {
           title: 'Products in Data Base',
-          value: count.count,
+          value: products.count,
           icon:'fa-clipboard-list',
           color: 'primary',
         },
         {
           title: 'Amount in products',
-          value: `$ ${count.totalPrice}`,
+          value: `$ ${products.totalPrice}`,
           icon:'fa-dollar-sign',
           color: 'success',
         },
         {
           title: 'Users quantity',
-          value:'N/A',
+          value: users.count,
           icon:'fa-user-check',
           color: 'warning',
         },
