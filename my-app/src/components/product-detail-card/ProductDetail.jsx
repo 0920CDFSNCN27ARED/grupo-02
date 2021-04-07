@@ -1,58 +1,66 @@
 import DetailProduct from './DetailProduct';
-function ProductDetailCard () {
-    const ProductsValue = [
-        {
-            name: 'Rogel',
-            description: 'Rogel clásico con merengue italiano, relleno de dulce de leche.',
-            price: '1230',
-            category: 'Clásica',
-        },
-        {
-            name: 'Cheesecake Frutos Rojos',
-            description: '4Base de galletitas crocante, relleno de queso crema y cobertura de frutos rojos según estación (compota casera, con frutillas y arandanos en temporada o frutos rojos congelados fuera de temporada).',
-            price: '1200',
-            category: 'Clásica',
-        },
-        {
-            name: 'Moana',
-            description: '3 capas de bizcochuelo humedecido con almíbar y 2 capas de relleno. Bizcochuelo vainilla o chocolate relleno de 1 capa de ganache de chocolate semiamargo y 1 capa de compota de frambuesas y buttercream de vainilla.',
-            price: '3050',
-            category: 'Decorada',
-        },
-    ]
-    return (
-        <div className="card-body">
-            <div className="table-responsive">
-                <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                        </tr>
-                    </tfoot>
-                    {
-                        ProductsValue.map ((indice, index) => {
-                            return <DetailProduct
-                            key={index}
-                            name={indice.name}
-                            description={indice.description}
-                            price={indice.price}
-                            category={indice.category} />
-                        })
-                    }
-                </table>
+import { Component } from "react";
+class ProductDetailCard extends Component {
+        constructor(props){
+          super(props);
+          this.state = {
+            ProductsValue: [
+                {
+                    name: 'N/A',
+                    description: 'N/A',
+                    price: 'N/A',
+                    category: 'N/A',
+                },
+            ],
+        };
+    }
+    async componentDidMount() {
+        const products = await fetch('http://localhost:3000/api/products');
+        const productsJson = await products.json();
+        console.log(productsJson);
+        const ProductsValue = [];
+        productsJson.data.map ((producto) => {
+            ProductsValue.push(producto);
+        });
+        this.setState({
+            ProductsValue,
+        });
+    }
+    render () {
+        return (
+            <div className= "card-body">
+                <div className="table-responsive">
+                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                            </tr>
+                        </tfoot>
+                        {
+                            this.state.ProductsValue.map ((indice, index) => {
+                                return <DetailProduct
+                                key={index}
+                                name={indice.name}
+                                description={indice.description}
+                                price={indice.price}
+                                category={indice.category} />
+                            })
+                        }
+                    </table>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 export default ProductDetailCard;
