@@ -4,7 +4,7 @@ function DataCardBig(props) {
         <div className='col-lg-6 mb-4'>
             <div className='card shadow mb-4'>
                 <div className='card-header py-3'>
-                    <h6 className='m-0 font-weight-bold text-primary'>Last product in Data Dase</h6>
+                    <h6 className='m-0 font-weight-bold text-primary'>Last product in Database</h6>
                 </div>
                 <div className='card-body'>
                     <div className='text-center'>
@@ -19,7 +19,7 @@ function DataCardBig(props) {
                     <h3>$ {props.price}</h3>
                     <p>{props.category}</p>
                     <p>{props.description}</p>
-                    <a href='http://localhost:3000/product'>View published products in web</a>
+                    <a href={props.link} target='_blank'>View published product in web</a>
                 </div>
             </div>
         </div>

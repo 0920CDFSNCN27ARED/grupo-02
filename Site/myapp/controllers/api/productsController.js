@@ -1,3 +1,4 @@
+const { sequelize } = require('../../database/models');
 const db = require('../../database/models')
 
 module.exports = {
@@ -92,4 +93,22 @@ module.exports = {
             data: lastThree
         })
     },
+    categories: async (req, res) => {
+        res.set({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
+        });
+        const categories = await db.Products.findAll({
+            group: ['category'],
+            attributes: ['category', [sequelize.fn('COUNT', 'category'), 'categoryCount']],
+        });
+        res.send({
+            meta: {
+                url: req.originalUrl,
+                status: 200,
+            },
+            data: categories
+        })
+
+    }
 }

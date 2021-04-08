@@ -17,7 +17,6 @@ class ProductDetailCard extends Component {
     async componentDidMount() {
         const products = await fetch('http://localhost:3000/api/products');
         const productsJson = await products.json();
-        console.log(productsJson);
         const ProductsValue = [];
         productsJson.data.map ((producto) => {
             ProductsValue.push(producto);

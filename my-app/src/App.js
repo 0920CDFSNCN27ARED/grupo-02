@@ -72,9 +72,9 @@ class App extends Component {
           description: lastProduct.data.description,
           category: lastProduct.data.category,
           price: lastProduct.data.price,
+          id: lastProduct.data.id,
         }
       ];
-      console.log(lastProduct.data.name);   
     this.setState({
       cardSmallValue,
       cardBigValue,
@@ -115,6 +115,7 @@ class App extends Component {
                       description={indice.description}
                       price={indice.price}
                       category={indice.category}
+                      link={`http://localhost:3000/product/${indice.id}/detail`}
                     />
                   })
                 }
