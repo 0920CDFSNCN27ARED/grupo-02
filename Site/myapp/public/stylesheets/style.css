@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
 header {
@@ -17,6 +18,7 @@ header {
   display: flex;
   background-color: whitesmoke;
   height: 12vh;
+  justify-content: space-between;
 }
 
 header a {
@@ -29,6 +31,20 @@ h1 {
 }
 .flex {
   display: flex;
+}
+
+.nav-bar{
+  margin: auto 0;
+}
+
+.nav-bar-img{
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+
+#carouselExampleIndicators {
+ display: none; 
 }
 
 /* DEMO*/
@@ -89,15 +105,12 @@ h1 {
 .img-cart {
   width: 35px;
   right: 100px;
-  position: absolute;
-  align-self: center;
 }
 
 .img-logo {
   width: 100px;
   height: 50px;
   right: 0;
-  position: absolute;
 }
 
 footer {
@@ -153,6 +166,9 @@ footer {
 /* Tablet */
 
 @media (min-width: 601px) {
+  #carouselExampleIndicators {
+    display: block; 
+  }
   .button-menu, #touch {
     display: none;
   }
