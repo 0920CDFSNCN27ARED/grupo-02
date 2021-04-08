@@ -68,8 +68,28 @@ module.exports = {
         const max = await db.Products.max('id');
         const product = await db.Products.findByPk(max);
         res.send({
-            product,
+            meta: {
+                url: req.originalUrl,
+                status: 200,
+            },
+            data: product
         })
     },
-
+    lastThree: async (req,res) => {
+        res.set({
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': 'http://localhost:3001',
+        })
+        const lastThree = await db.Products.findAll({
+            order: [['id', 'DESC']],
+            limit: 3,
+        });
+        res.send({
+            meta: {
+                url: req.originalUrl,
+                status: 200,
+            },
+            data: lastThree
+        })
+    },
 }

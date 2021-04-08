@@ -15,8 +15,11 @@ function DataCardBig(props) {
                             alt='dummy'
                         />
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-                    <a target='_blank' rel='nofollow' href='/'>View product detail</a>
+                    <h2>{props.name}</h2>
+                    <h3>$ {props.price}</h3>
+                    <p>{props.category}</p>
+                    <p>{props.description}</p>
+                    <a href='http://localhost:3000/product'>View published products in web</a>
                 </div>
             </div>
         </div>

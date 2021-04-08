@@ -31,6 +31,12 @@ class App extends Component {
           color: 'warning',
         },
       ],
+      cardBigValue: [
+        {
+          name: 'N/A',
+          description: 'N/A',
+        }
+      ]
     };
   }
   async componentDidMount() {
@@ -38,6 +44,8 @@ class App extends Component {
     products = await products.json();
     let users = await fetch('http://localhost:3000/api/users/count');
     users = await users.json();
+    let lastProduct = await fetch('http://localhost:3000/api/products/last');
+    lastProduct = await lastProduct.json();
     const cardSmallValue = [
         {
           title: 'Products in Data Base',
@@ -58,11 +66,21 @@ class App extends Component {
           color: 'warning',
         },
       ];
+      const cardBigValue = [
+        {
+          name: lastProduct.data.name,
+          description: lastProduct.data.description,
+          category: lastProduct.data.category,
+          price: lastProduct.data.price,
+        }
+      ];
+      console.log(lastProduct.data.name);   
     this.setState({
       cardSmallValue,
+      cardBigValue,
     })
   }
-  
+
   render() {
     return (
       <div className ='App'>
@@ -89,8 +107,18 @@ class App extends Component {
                 }
               </div>
               <div className='row'>
-                  <DataCardBig />
-                  <DataBigCardCategory />
+                {
+                  this.state.cardBigValue.map ((indice, index) => {
+                    return <DataCardBig 
+                      key={index}
+                      name={indice.name}
+                      description={indice.description}
+                      price={indice.price}
+                      category={indice.category}
+                    />
+                  })
+                }
+                <DataBigCardCategory />
               </div>
               <h1 className='h3 mb-2 text-gray-800'>All Database Products</h1>
               <div className='card shadow mb-4'>

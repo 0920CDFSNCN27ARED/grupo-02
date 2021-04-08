@@ -4,6 +4,7 @@ const productController = require('../../controllers/api/productsController');
 
 router.get('/', productController.products);
 router.get('/count', productController.count);
+router.get('/lastThree', productController.lastThree);
 router.get('/last', productController.last);
 router.get('/:id', productController.detail);
 
