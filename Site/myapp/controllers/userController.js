@@ -47,7 +47,7 @@ let userController = {
                     idUserLogueado = usuario.id;
                 } else {
                     return res.render ('users/login2', {user: req.user, errors: [
-                        {msg: 'Contraseña incorrecta'}
+                        {msg: 'Las credenciales no coinciden'}
                     ]});
                 }
                 req.session.idUserLogueado  = idUserLogueado;
@@ -106,6 +106,12 @@ let userController = {
         return res.render ('users/profileEdit',{user: req.loggedUser})
     },
     updateUser: (req, res, next) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()){
+            return res.render ('users/profileEdit', {errors: errors.errors, user: req.loggedUser})
+        } else {
+
+        }
         console.log(req.params.id);
             const Users = db.Users;
             const id = req.params.id;

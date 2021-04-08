@@ -63,7 +63,10 @@ router.post('/register',upload.any(), [
 router.get('/logout', userController.logout);
 router.get('/profile', LoggedValidation.notLogged, userController.profile);
 router.get('/profile/edit/:id', LoggedValidation.notLogged, userController.profileEdit);
-router.put('/profile/edit/:id',upload.any(), LoggedValidation.notLogged, userController.updateUser);
+router.put('/profile/edit/:id',upload.any(), [
+  check('name').isLength({min:2}).withMessage('Es necesario ingresar un nombre válido. Mínimo dos caracteres.'),
+  check('last_name').isLength({min:2}).withMessage('Es necesario ingresar un apellido válido. Mínimo dos caracteres.'),
+], LoggedValidation.notLogged, userController.updateUser);
 router.delete('/:id/delete', userController.deleteUser);
 
 module.exports = router;

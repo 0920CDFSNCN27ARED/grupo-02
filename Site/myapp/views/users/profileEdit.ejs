@@ -3,6 +3,7 @@
     <head>
         <%- include('../partials/head') %>
         <link  href='/stylesheets/style-login&register.css' rel='stylesheet'>
+        <script src='/js/validation-profile.js'></script>
     </head>
     <body>
         <%- include('../partials/header') %>
@@ -24,7 +25,7 @@
                     <h2 class='panel-title'>Editar perfil</h2>
                 </section>
                 <section class='panel-body'>
-                    <form class='register' action='/user/profile/edit/<%= user.id %>?_method=PUT' method='POST' enctype='multipart/form-data'>
+                    <form class='form-register' action='/user/profile/edit/<%= user.id %>?_method=PUT' method='POST' enctype='multipart/form-data'>
                         <fieldset>
                             <p class='form-group'>
                                 <label class='label overall' for='name'>Nombre  </label>
